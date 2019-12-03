@@ -48,10 +48,10 @@
 		"CANCEL": "Cancel"
 	},
 	"NO_INTERNET_VIEW": {
-		"NETWORK_WAS_DISCONNECTED": "Network was disconnected"
+		"NETWORK_WAS_DISCONNECTED": "Packmam is now loading"
 	},
 	"NO_SERVER_VIEW": {
-		"NO_SERVER": "Server connection is lost"
+		"NO_SERVER": "Packmam is now loading"
 	},
 	"GET_PRODUCT_VIEW": {
 		"GOT_IT": "Got It",

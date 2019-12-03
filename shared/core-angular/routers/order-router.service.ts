@@ -68,6 +68,18 @@ export class OrderRouter implements IOrderRouter {
 		return this._orderFactory(order);
 	}
 
+	async payWithPaymentCommon(
+		orderId: string,
+		confirmId: string
+	): Promise<Order> {
+		const order = await this.router.run<IOrder>(
+			'payWithPaymentCommon',
+			orderId,
+			confirmId
+		);
+		return this._orderFactory(order);
+	}
+
 	async refundWithStripe(orderId: string): Promise<Order> {
 		const order = await this.router.run<IOrder>(
 			'refundWithStripe',

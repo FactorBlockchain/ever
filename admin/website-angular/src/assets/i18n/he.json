@@ -118,7 +118,7 @@
 	},
 	"HEADER_VIEW": {
 		"ADMIN": "מנהל מערכת",
-		"EVER": "EverHE",
+		"EVER": "PackmamHE",
 		"PROFILE": "פרופיל",
 		"LOG_OUT": "להתנתק"
 	},
@@ -637,7 +637,7 @@
 				},
 				{
 					"TITLE": "ההזמנה הושלמה!",
-					"DETAILS": "תודה על השימוש ב-Ever",
+					"DETAILS": "תודה על השימוש ב-Packmam",
 					"NOT_PAID_NOTE": ""
 				}
 			],

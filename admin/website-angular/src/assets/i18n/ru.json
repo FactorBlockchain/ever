@@ -118,7 +118,7 @@
 	},
 	"HEADER_VIEW": {
 		"ADMIN": "Администратор",
-		"EVER": "Евер",
+		"EVER": "Packmam",
 		"PROFILE": "Профиль",
 		"LOG_OUT": "Выйти"
 	},
@@ -637,7 +637,7 @@
 				},
 				{
 					"TITLE": "Заказ завершен!",
-					"DETAILS": "Спасибо за использование Ever",
+					"DETAILS": "Спасибо за использование Packmam",
 					"NOT_PAID_NOTE": ""
 				}
 			],

@@ -20,6 +20,11 @@ export class GeoLocationsMerchantsService {
 							username
 							name
 							logo
+							geoLocation {
+								loc {
+									coordinates
+								}
+							}
 						}
 					}
 				`,

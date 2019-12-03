@@ -37,7 +37,7 @@ export class MainPage implements OnInit {
 
 	watchLocation() {
 		setInterval(() => {
-			if (this.isOnline) {
+			if (true) {
 				const carrier$ = this.carrierRouter
 					.get(this.store.carrierId)
 					.subscribe(async (carrier) => {

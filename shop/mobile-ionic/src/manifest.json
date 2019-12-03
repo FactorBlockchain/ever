@@ -1,6 +1,6 @@
 {
-	"name": "ever-shop",
-	"short_name": "ever-shop",
+	"name": "Packmam-shop",
+	"short_name": "Packmam-shop",
 	"start_url": "index.html",
 	"display": "standalone",
 	"gcm_sender_id": "103953800507",

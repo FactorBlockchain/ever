@@ -7,7 +7,7 @@
 	"SIDEBAR_SIDE": "left",
 	"INVITE_VIEW": {
 		"WELCOME_TO": "Добро Пожаловать в",
-		"EVER": "Ever",
+		"EVER": "Packmam",
 		"INFO_MISSING": "Некоторая информация отсутствует!",
 		"YOUR_INVITE_CODE": "Ваш код приглашения",
 		"INVITED_TEXT": {
@@ -96,7 +96,7 @@
 			},
 			{
 				"TITLE": "Заказ доставлен!",
-				"DETAILS": "Спасибо за использование Ever"
+				"DETAILS": "Спасибо за использование Packmam"
 			}
 		],
 		"STATUSES_TAKEAWAY": {
@@ -188,7 +188,7 @@
 		"SECONDS": "Секунд"
 	},
 	"CONNECTION_ERROR_VIEW": {
-		"TITLE": "Не удалось подключиться к Ever",
+		"TITLE": "Не удалось подключиться к Packmam",
 		"DESCRIPTION": [
 			"Проверьте подключение к",
 			"Интернету и повторите попытку.",

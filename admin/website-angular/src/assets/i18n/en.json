@@ -120,7 +120,7 @@
 	},
 	"HEADER_VIEW": {
 		"ADMIN": "Admin",
-		"EVER": "Ever",
+		"EVER": "Packmam",
 		"PROFILE": "Profile",
 		"LOG_OUT": "Log out"
 	},
@@ -639,7 +639,7 @@
 				},
 				{
 					"TITLE": "Order Completed!",
-					"DETAILS": "Thanks for using Ever",
+					"DETAILS": "Thanks for using Packmam",
 					"NOT_PAID_NOTE": ""
 				}
 			],

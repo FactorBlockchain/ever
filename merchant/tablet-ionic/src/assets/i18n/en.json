@@ -7,7 +7,7 @@
 	"CURRENT_DIRECTION": "ltr",
 	"SIDEBAR_SIDE": "left",
 	"SIDE_MENU": {
-		"TITLE": "Ever Merchants",
+		"TITLE": "Packmam Merchants",
 		"GROUPS": {
 			"NO_TITLE": {
 				"DIVER_TITLE": "",
@@ -407,11 +407,11 @@
 		"CUSTOMER": "Customer"
 	},
 	"CONNECTION_ERROR_VIEW": {
-		"TITLE": "No connection to Ever",
+		"TITLE": "No connection to Packmam",
 		"DESCRIPTION": [
 			"Please make sure you are",
 			"connected to the internet",
-			"or try Ever app later."
+			"or try Packmam app later."
 		]
 	},
 	"CUSTOMER_ORDERS_POP_UP": {

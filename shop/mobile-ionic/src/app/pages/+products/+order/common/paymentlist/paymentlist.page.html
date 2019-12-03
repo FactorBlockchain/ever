@@ -1,0 +1,36 @@
+<!-- this files uses translations from ./language.i18n.json -->
+
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+
+		<ion-title>paymentlist</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="goBack()">
+				<i class="fa fa-angle-left back-btn"></i>
+				<span>aa</span>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content scroll="false">
+	<ion-list>
+		<ion-item (click)="payWithIAMPORT()">
+			<ion-label>IAMPORT</ion-label>
+		</ion-item>
+		<ion-item (click)="payWithPaypal()">
+			<ion-label>PAYPAL</ion-label>
+		</ion-item>
+		<!-- <ion-item>
+				<ion-label>עברית</ion-label>
+				
+			</ion-item>
+			<ion-item>
+				<ion-label>Русский</ion-label>
+				
+			</ion-item> -->
+	</ion-list>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>map2</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<carrier-map #gmap class="map"></carrier-map>
+</ion-content>
+
+<!-- https://stackoverflow.com/questions/39221325/how-to-create-an-overlay-page-in-ionic-2 -->
+<div
+	class="merchant-overlay"
+	padding
+	[hidden]="overlayHidden"
+	*ngIf="selectedMerchant"
+	(click)="selectMerchant(selectedMerchant)"
+>
+	<ion-label> {{ selectedMerchant.name }} </ion-label>
+	<!-- https://stackoverflow.com/questions/56964851/ngfor-conditional-template-throw-error-as-cant-have-multiple-template-bind -->
+	<ng-container *ngIf="selectedMerchant.products">
+		<ion-label
+			*ngFor="let product of selectedMerchant.products"
+			lines="none"
+		>
+			{{product.product.title}}
+		</ion-label>
+	</ng-container>
+</div>

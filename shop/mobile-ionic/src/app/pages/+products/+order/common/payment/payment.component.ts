@@ -9,6 +9,7 @@ import { ModalController } from '@ionic/angular';
 import { OrderPage } from '../../order.page';
 import { ILocaleMember } from '@modules/server.common/interfaces/ILocale';
 import { ProductLocalesService } from '@modules/client.common.angular2/locale/product-locales.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'e-cu-payment',
@@ -32,7 +33,8 @@ export class PaymentComponent {
 		private orderRouter: OrderRouter,
 		private store: Store,
 		public modalController: ModalController,
-		private readonly _translateProductLocales: ProductLocalesService
+		private readonly _translateProductLocales: ProductLocalesService,
+		private router: Router
 	) {
 		this.getUserCard();
 	}
@@ -52,76 +54,86 @@ export class PaymentComponent {
 		);
 	}
 
+	// paymentlistURL(){
+	// 	this.
+	// }
+
 	async toPaymentStage() {
-		if (!this.stripePublishableKey) {
-			throw Error("Can't pay in app");
-		}
-
-		if (environment.ORDER_INFO_TYPE === 'popup') {
-			this.modalController.dismiss();
-		}
-
-		const pay_text = 'Pay {{amount}}';
-
-		const close = () => {
-			if (environment.ORDER_INFO_TYPE === 'popup') {
-				this.showOrderInfoModal();
-			}
-		};
-
-		const handler = (<any>window).StripeCheckout.configure({
-			panelLabel: pay_text,
-			key: this.stripePublishableKey,
-			image: environment.STRIPE_POP_UP_LOGO,
-			currency: 'ILS', // TODO: load currency from server!
-			allowRememberMe: false,
-			token: async (token) => {
-				const user = await this.userRouter.updateEmail(
-					this.store.userId,
-					token['email'] as string
-				);
-
-				try {
-					const cardId = await this.userRouter.addPaymentMethod(
-						user.id,
-						token.id
-					);
-
-					try {
-						let order = await this.orderRouter.payWithStripe(
-							this.store.userId,
-							cardId
-						);
-						console.log('Payment Done!');
-						try {
-							order = await this.orderRouter.confirm(
-								this.store.userId
-							);
-							console.log('Order Confirmed!');
-						} catch (err) {
-							console.error('Could not confirm the order!');
-						}
-					} catch (err) {
-						alert('Payment Failed!');
-						console.error('Payment Failed!', err);
-					}
-				} catch (err) {
-					console.error('Payment Method creation failed!', err);
-				}
-				close();
-			},
-
-			closed: () => close()
+		var totprice = 0;
+		this.order.products.forEach((element) => {
+			totprice += element.price;
 		});
+		localStorage.setItem('orderprice', totprice.toString());
+		this.router.navigateByUrl('paymentlist');
+		// if (!this.stripePublishableKey) {
+		// 	throw Error("Can't pay in app");
+		// }
 
-		const currentOrderProduct = this.order.products[0];
-		const currentProduct = currentOrderProduct.product;
+		// if (environment.ORDER_INFO_TYPE === 'popup') {
+		// 	this.modalController.dismiss();
+		// }
 
-		handler.open({
-			name: this.localeTranslate(currentProduct.title),
-			description: this.localeTranslate(currentProduct.description),
-			amount: currentOrderProduct.price * 100
-		});
+		// const pay_text = 'Pay {{amount}}';
+
+		// const close = () => {
+		// 	if (environment.ORDER_INFO_TYPE === 'popup') {
+		// 		this.showOrderInfoModal();
+		// 	}
+		// };
+
+		// const handler = (<any>window).StripeCheckout.configure({
+		// 	panelLabel: pay_text,
+		// 	key: this.stripePublishableKey,
+		// 	image: environment.STRIPE_POP_UP_LOGO,
+		// 	currency: 'ILS', // TODO: load currency from server!
+		// 	allowRememberMe: false,
+		// 	token: async (token) => {
+		// 		const user = await this.userRouter.updateEmail(
+		// 			this.store.userId,
+		// 			token['email'] as string
+		// 		);
+
+		// 		try {
+		// 			const cardId = await this.userRouter.addPaymentMethod(
+		// 				user.id,
+		// 				token.id
+		// 			);
+
+		// 			try {
+		// let order = await this.orderRouter.payWithStripe(
+		// 	this.store.userId,
+		// 	cardId
+		// );
+		// console.log('Payment Done!');
+		// 				try {
+		// 					order = await this.orderRouter.confirm(
+		// 						this.store.userId
+		// 					);
+		// 					console.log('Order Confirmed!');
+		// 				} catch (err) {
+		// 					console.error('Could not confirm the order!');
+		// 				}
+		// 			} catch (err) {
+		// 				alert('Payment Failed!');
+		// 				console.error('Payment Failed!', err);
+		// 			}
+		// 		} catch (err) {
+		// 			console.error('Payment Method creation failed!', err);
+		// 		}
+		// 		close();
+		// 	},
+
+		// 	closed: () => close()
+		// });
+
+		// const currentOrderProduct = this.order.products[0];
+		// const currentProduct = currentOrderProduct.product;
+
+		// handler.open({
+		// 	name: this.localeTranslate(currentProduct.title),
+		// 	description: this.localeTranslate(currentProduct.description),
+		// 	amount: currentOrderProduct.price * 100
+		// });
 	}
 
 	private async getUserCard() {

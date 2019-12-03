@@ -146,7 +146,7 @@ export class ByCodePage implements OnDestroy {
 			this.store.backToDetails = null;
 			return;
 		}
-		await this.router.navigate(['/products'], { skipLocationChange: true });
+		await this.router.navigate(['/map2'], { skipLocationChange: true });
 		this._hasNewcustomer = true;
 	}
 

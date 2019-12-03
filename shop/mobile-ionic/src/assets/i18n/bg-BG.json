@@ -7,7 +7,7 @@
 	"SIDEBAR_SIDE": "left",
 	"INVITE_VIEW": {
 		"WELCOME_TO": "Добре дошли",
-		"EVER": "Евър",
+		"EVER": "Packmam",
 		"INFO_MISSING": "Част от информацията липсва!",
 		"YOUR_INVITE_CODE": "Вашият поканен код",
 		"INVITED_TEXT": {
@@ -96,7 +96,7 @@
 			},
 			{
 				"TITLE": "Поръчка завършена!",
-				"DETAILS": "Благодарим Ви, че използвате Ever",
+				"DETAILS": "Благодарим Ви, че използвате Packmam",
 				"NOT_PAID_NOTE": ""
 			}
 		],
@@ -142,7 +142,7 @@
 		}
 	},
 	"SIDE_MENU": {
-		"TITLE": "Ever",
+		"TITLE": "Packmam",
 		"GROUPS": {
 			"NO_TITLE": {
 				"DIVER_TITLE": "",
@@ -189,7 +189,7 @@
 		"SECONDS": "Секунди"
 	},
 	"CONNECTION_ERROR_VIEW": {
-		"TITLE": "Няма връзка с Ever",
+		"TITLE": "Няма връзка с Packmam",
 		"DESCRIPTION": [
 			"Моля, уверете се, че сте",
 			"свързани с интернет",

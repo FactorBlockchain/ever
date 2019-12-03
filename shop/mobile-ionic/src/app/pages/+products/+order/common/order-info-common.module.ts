@@ -30,7 +30,6 @@ const COMPONENTS = [
 	],
 	entryComponents: [...COMPONENTS],
 	declarations: [...COMPONENTS],
-	exports: [...COMPONENTS],
-	providers: []
+	exports: [...COMPONENTS]
 })
 export class OrderInfoCommonModule {}

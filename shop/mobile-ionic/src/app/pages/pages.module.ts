@@ -66,6 +66,15 @@ const routes: Routes = [
 		path: '',
 		pathMatch: 'full',
 		redirectTo: 'invite'
+	},
+	{
+		path: 'map2',
+		loadChildren: './+map2/map2.module#Map2PageModule'
+	},
+	{
+		path: 'paymentlist',
+		loadChildren:
+			'./+products/+order/common/paymentlist/paymentlist.module#PaymentlistPageModule'
 	}
 ];
 

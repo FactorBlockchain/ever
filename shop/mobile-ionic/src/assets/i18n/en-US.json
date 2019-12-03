@@ -7,7 +7,7 @@
 	"SIDEBAR_SIDE": "left",
 	"INVITE_VIEW": {
 		"WELCOME_TO": "Welcome to",
-		"EVER": "Ever",
+		"EVER": "Packmam",
 		"INFO_MISSING": "Some of the information missing!",
 		"YOUR_INVITE_CODE": "Your invite code",
 		"INVITED_TEXT": {
@@ -96,7 +96,7 @@
 			},
 			{
 				"TITLE": "Order Completed!",
-				"DETAILS": "Thanks for using Ever",
+				"DETAILS": "Thanks for using Packmam",
 				"NOT_PAID_NOTE": ""
 			}
 		],
@@ -142,7 +142,7 @@
 		}
 	},
 	"SIDE_MENU": {
-		"TITLE": "Ever",
+		"TITLE": "Packmam",
 		"GROUPS": {
 			"NO_TITLE": {
 				"DIVER_TITLE": "",
@@ -189,11 +189,11 @@
 		"SECONDS": "Seconds"
 	},
 	"CONNECTION_ERROR_VIEW": {
-		"TITLE": "No connection to Ever",
+		"TITLE": "No connection to Packmam",
 		"DESCRIPTION": [
 			"Please make sure you are",
 			"connected to the internet",
-			"or try Ever app later."
+			"or try Packmam app later."
 		]
 	},
 	"MERCHANTS_VIEW": {
@@ -202,7 +202,7 @@
 		"WITH_NAME": "Merchants with name"
 	},
 	"NO_SERVER_VIEW": {
-		"NO_SERVER": "Server connection is lost"
+		"NO_SERVER": "Packmam is loading now"
 	},
 	"OR": "Or",
 	"OR_LOWERCASE": "or",

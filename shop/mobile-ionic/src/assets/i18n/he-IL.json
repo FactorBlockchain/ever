@@ -7,7 +7,7 @@
 	"SIDEBAR_SIDE": "right",
 	"INVITE_VIEW": {
 		"WELCOME_TO": "ברוך הבא ל-",
-		"EVER": "Ever",
+		"EVER": "Packmam",
 		"INFO_MISSING": "אנא מלא את המידע החסר.",
 		"YOUR_INVITE_CODE": "קוד ההזמנה שלך",
 		"INVITED_TEXT": {
@@ -96,7 +96,7 @@
 			},
 			{
 				"TITLE": "ההזמנה הושלמה!",
-				"DETAILS": "תודה על השימוש ב-Ever",
+				"DETAILS": "תודה על השימוש ב-Packmam",
 				"NOT_PAID_NOTE": "תכין/י את הארנק (%s במזומן)."
 			}
 		],
@@ -142,7 +142,7 @@
 		}
 	},
 	"SIDE_MENU": {
-		"TITLE": "Ever",
+		"TITLE": "Packmam",
 		"GROUPS": {
 			"NO_TITLE": {
 				"DIVER_TITLE": "",
@@ -189,7 +189,7 @@
 		"SECONDS": "שניות"
 	},
 	"CONNECTION_ERROR_VIEW": {
-		"TITLE": "אין חיבור ל-Ever",
+		"TITLE": "אין חיבור ל-Packmam",
 		"DESCRIPTION": [
 			"בבקשה תוודא שאתה",
 			"מחובר לאינטרנט או תנסה",

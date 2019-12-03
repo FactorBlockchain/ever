@@ -55,10 +55,10 @@ export const env: Env = cleanEnv(
 		LOGIN_LOGO: str({ default: 'assets/imgs/ever-logo.svg' }),
 		NO_INTERNET_LOGO: str({ default: 'assets/imgs/ever-logo.svg' }),
 
-		COMPANY_NAME: str({ default: 'Ever Co. LTD' }),
-		APP_NAME: str({ default: 'Ever® Carrier' }),
+		COMPANY_NAME: str({ default: 'Packmam Co. LTD' }),
+		APP_NAME: str({ default: 'Packmam® Carrier' }),
 
-		DEFAULT_LOGIN_USERNAME: str({ default: 'ever' }),
+		DEFAULT_LOGIN_USERNAME: str({ default: 'Packmam' }),
 		DEFAULT_LOGIN_PASSWORD: str({ default: 'changeme' }),
 
 		GOOGLE_MAPS_API_KEY: str({ default: '' }),

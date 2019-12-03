@@ -5,7 +5,7 @@ import Warehouse from '@modules/server.common/entities/Warehouse';
 import Utils from '@modules/server.common/utils';
 import GeoLocation from '@modules/server.common/entities/GeoLocation';
 
-const IN_STORE_DISTANCE = 50;
+const IN_STORE_DISTANCE = 500;
 
 @Resolver('GeoLocationMerchants')
 export class GeoLocationMerchantsResolver {

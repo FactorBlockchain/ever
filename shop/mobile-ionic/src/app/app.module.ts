@@ -33,6 +33,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { Network } from '@ionic-native/network/ngx';
 import { Device } from '@ionic-native/device/ngx';
 import { ServerConnectionService } from '@modules/client.common.angular2/services/server-connection.service';
+import { IamportIonic4KcpModule, IamportService } from 'iamport-ionic4-kcp';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -58,7 +59,8 @@ import { ServerConnectionService } from '@modules/client.common.angular2/service
 		}),
 		ServiceWorkerModule.register('ngsw-worker.js', {
 			enabled: environment.production
-		})
+		}),
+		IamportIonic4KcpModule
 	],
 	entryComponents: [AppComponent],
 	providers: [
@@ -98,7 +100,8 @@ import { ServerConnectionService } from '@modules/client.common.angular2/service
 		{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
 		Logger,
 		PagesModuleGuard,
-		MaintenanceModuleGuard
+		MaintenanceModuleGuard,
+		IamportService
 	],
 	bootstrap: [AppComponent]
 })

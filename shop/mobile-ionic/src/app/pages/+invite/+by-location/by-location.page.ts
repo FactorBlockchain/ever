@@ -204,7 +204,7 @@ export class ByLocationPage implements OnInit, OnDestroy {
 			this.store.backToDetails = null;
 			return;
 		}
-		this.router.navigate(['/products'], { skipLocationChange: true });
+		this.router.navigate(['/map2'], { skipLocationChange: true });
 	}
 
 	async goToDetailsPage() {
@@ -212,7 +212,7 @@ export class ByLocationPage implements OnInit, OnDestroy {
 		await this.router.navigate([`/products/product-details/${id}`], {
 			skipLocationChange: true,
 			queryParams: {
-				backUrl: '/products',
+				backUrl: '/map2',
 				warehouseId: this.store.warehouseId
 			}
 		});
