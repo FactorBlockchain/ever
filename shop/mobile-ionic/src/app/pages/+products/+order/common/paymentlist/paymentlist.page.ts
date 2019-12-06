@@ -10,6 +10,7 @@ import { Store } from 'app/services/store.service';
 import { OrderRouter } from '@modules/client.common.angular2/routers/order-router.service';
 import { IamportService } from 'iamport-ionic4-kcp';
 import { AlertController } from '@ionic/angular';
+import { Location } from '@angular/common';
 
 @Component({
 	selector: 'e-cu-paymentlist',
@@ -23,7 +24,8 @@ export class PaymentlistPage implements OnInit {
 		private store: Store,
 		private orderRouter: OrderRouter,
 		public iamport: IamportService,
-		public alertController: AlertController
+		public alertController: AlertController,
+		private location: Location
 	) {}
 
 	paymentAmount: string = localStorage.getItem('orderprice');
@@ -98,9 +100,7 @@ export class PaymentlistPage implements OnInit {
 												this.store.orderId
 											);
 											console.log('Payment Done!');
-											this.router.navigateByUrl(
-												'orders-history'
-											);
+											this.location.back();
 										}
 									},
 									async (e) => {
@@ -173,7 +173,7 @@ export class PaymentlistPage implements OnInit {
 					);
 					order = await this.orderRouter.confirm(this.store.orderId);
 					console.log('Payment Done!');
-					this.router.navigateByUrl('orders-history');
+					this.location.back();
 				}
 			})
 			.catch(async (err) => {
@@ -184,5 +184,9 @@ export class PaymentlistPage implements OnInit {
 				});
 				await alertCtrl.present();
 			});
+	}
+
+	goBack() {
+		this.location.back();
 	}
 }
