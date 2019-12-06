@@ -41,7 +41,7 @@ You can also track feature requests from the community in the [separate repo](ht
 
 ### Disclaimer
 
-_A word of caution_: We are in α (alpha), i.e. Ever® Platform™ is very much under development (work in progress, WIP).  
+_A word of caution_: We are in α (alpha), i.e. Ever® Platform™ is very much under development (work in progress, WIP).
 Expect _lots_ of changes and some :bug: and please be nice! :stuck_out_tongue_winking_eye:
 
 ## Technology Stack and Requirements
@@ -227,15 +227,15 @@ View full list of our [contributors](https://github.com/ever-co/ever/graphs/cont
 
 ## Security
 
-Ever Platform follows good security practices, but 100% security cannot be guaranteed in any software!  
-Ever Platform is provided AS IS without any warranty. Use at your own risk!  
+Ever Platform follows good security practices, but 100% security cannot be guaranteed in any software!
+Ever Platform is provided AS IS without any warranty. Use at your own risk!
 See more details in the [LICENSE.md](LICENSE.md).
 
 In a production setup, all client-side to server-side (backend, APIs) communications should be encrypted using HTTPS/WSS/SSL (REST APIs, GraphQL endpoint, Socket.io WebSockets, etc.).
 
 ## License
 
-This software is available under [Ever® Platform Community™ Edition](https://github.com/ever-co/ever/blob/master/LICENSE.md#ever-platform-community-edition-license) and [Ever® Platform Enterprise™](https://github.com/ever-co/ever/blob/master/LICENSE.md#ever-platform-enterprise-license) Licenses. 
+This software is available under [Ever® Platform Community™ Edition](https://github.com/ever-co/ever/blob/master/LICENSE.md#ever-platform-community-edition-license) and [Ever® Platform Enterprise™](https://github.com/ever-co/ever/blob/master/LICENSE.md#ever-platform-enterprise-license) Licenses.
 
 #### The default Ever® Platform™ license, without a valid Ever® Platform Enterprise™ License agreement, is the Ever® Platform Community™ Edition License.
 
@@ -245,7 +245,7 @@ This software is available under [Ever® Platform Community™ Edition](https://
 
 ## Trademarks
 
-**Ever**® is a registered trademark of [Ever Co. LTD](https://ever.co).  
+**Ever**® is a registered trademark of [Ever Co. LTD](https://ever.co).
 **Ever® Platform™**, **Ever® Platform Community™** and **Ever® Platform Enterprise™** are all trademarks of [Ever Co. LTD](https://ever.co).
 
 The trademarks may only be used with the written permission of Ever Co. LTD. and may not be used to promote or otherwise market competitive products or services.
@@ -264,3 +264,6 @@ All other brand and product names are trademarks, registered trademarks or servi
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io)
 
 #### *** If you are running IT Company, check our new project [Gauzy](https://github.com/ever-co/gauzy) ***
+
+
+Factorblockchain team working on this file
