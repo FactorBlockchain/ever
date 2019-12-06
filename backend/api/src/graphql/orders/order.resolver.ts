@@ -727,6 +727,20 @@ export class OrderResolver {
 	}
 
 	@Mutation()
+	async payOrderWithPaymentCommon(
+		_context,
+		{
+			orderId,
+			confirmId
+		}: {
+			orderId: Order['id'];
+			confirmId: string;
+		}
+	): Promise<Order> {
+		return this._ordersService.payWithPaymentCommon(orderId, confirmId);
+	}
+
+	@Mutation()
 	async payOrderWithStripe(
 		_context,
 		{

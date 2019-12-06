@@ -238,6 +238,71 @@ export class OrdersService extends DBService<Order>
 	 * TODO: move to separate Payments Service
 	 *
 	 * @param {Order['id']} orderId
+	 * @param {string} confirmId CC Id which will be used to pay
+	 * @returns {Promise<Order>}
+	 * @memberof OrdersService
+	 */
+	@asyncListener()
+	async payWithPaymentCommon(
+		orderId: Order['id'],
+		confirmId: string
+	): Promise<Order> {
+		await this._throwIfNotExists(orderId);
+
+		const callId = uuid();
+
+		this.log.info(
+			{ callId, orderId, cardId: confirmId },
+			'.payWithPaymentCommon(orderId, cardId) called'
+		);
+
+		let order: Order;
+
+		try {
+			const _order = await this.get(orderId)
+				.pipe(first())
+				.toPromise();
+
+			if (_order != null) {
+				order = _order;
+
+				const user = await this.usersService
+					.get(order.user.id)
+					.pipe(first())
+					.toPromise();
+
+				if (user != null) {
+					order = await this.update(orderId, {
+						stripeChargeId: confirmId,
+						isPaid: true
+					});
+				} else {
+					throw new Error('User specified in order is not found!');
+				}
+			} else {
+				throw new Error("couldn't find order with such id");
+			}
+		} catch (err) {
+			this.log.error(
+				{ callId, orderId, cardId: confirmId, err },
+				'.payWithPaymentCommon(orderId, cardId) thrown error!'
+			);
+			throw err;
+		}
+
+		this.log.info(
+			{ callId, orderId, cardId: confirmId, order },
+			'.payWithPaymentCommon(orderId, cardId) accepted payment'
+		);
+
+		return order;
+	}
+
+	/**
+	 * Pay with Stripe for given order with given CC
+	 * TODO: move to separate Payments Service
+	 *
+	 * @param {Order['id']} orderId
 	 * @param {string} cardId CC Id which will be used to pay
 	 * @returns {Promise<Order>}
 	 * @memberof OrdersService
@@ -430,7 +495,9 @@ export class OrdersService extends DBService<Order>
 
 				if (!wProduct) {
 					throw new Error(
-						`WarehouseOrdersService got call to create(userId, orderProducts) - But there is no product with the id ${args.productId}!`
+						`WarehouseOrdersService got call to create(userId, orderProducts) - But there is no product with the id ${
+							args.productId
+						}!`
 					);
 				}
 
@@ -536,7 +603,9 @@ export class OrdersService extends DBService<Order>
 
 				if (!wProduct) {
 					throw new Error(
-						`WarehouseOrdersService got call to create(userId, orderProducts) - But there is no product with the id ${args.productId}!`
+						`WarehouseOrdersService got call to create(userId, orderProducts) - But there is no product with the id ${
+							args.productId
+						}!`
 					);
 				}
 

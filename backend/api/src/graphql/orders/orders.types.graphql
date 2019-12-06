@@ -159,6 +159,8 @@ type Mutation {
 	): Order
 
 	payOrderWithStripe(orderId: String!, cardId: String!): Order
+
+	payOrderWithPaymentCommon(orderId: String!, confirmId: String!): Order
 }
 
 enum OrderWarehouseStatus {
