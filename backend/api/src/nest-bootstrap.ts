@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import { NestFactory } from '@nestjs/core';
 import { ApplicationModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
@@ -10,6 +11,7 @@ import {
 	SwaggerDocument
 } from '@nestjs/swagger/dist/interfaces';
 import { INestApplication } from '@nestjs/common';
+import { HttpsOptions } from '@nestjs/common/interfaces/external/https-options.interface';
 
 const log: Logger = createEverLogger({ name: 'bootstrapNest' });
 
@@ -17,9 +19,13 @@ declare const module: any;
 
 export async function bootstrapNest(): Promise<void> {
 	const port: number = env.GQLPORT;
-
+	let httpsOptions: HttpsOptions = {
+		key: fs.readFileSync(env.HTTPS_KEY_PATH),
+		cert: fs.readFileSync(env.HTTPS_CERT_PATH)
+	};
 	const app: INestApplication = await NestFactory.create(ApplicationModule, {
-		logger: new EverbieNestJSLogger()
+		logger: new EverbieNestJSLogger(),
+		httpsOptions: httpsOptions
 	});
 
 	app.enableCors();
