@@ -35,6 +35,19 @@ import { Device } from '@ionic-native/device/ngx';
 import { ServerConnectionService } from '@modules/client.common.angular2/services/server-connection.service';
 import { IamportIonic4KcpModule, IamportService } from 'iamport-ionic4-kcp';
 
+import { SharedModule } from 'shared/shared.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { NativeImports } from 'shared/helpers/native';
+import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import {
+	createTranslateLoader,
+	IonicGestureConfig
+} from 'shared/helpers/config';
+
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
@@ -60,7 +73,13 @@ import { IamportIonic4KcpModule, IamportService } from 'iamport-ionic4-kcp';
 		ServiceWorkerModule.register('ngsw-worker.js', {
 			enabled: environment.production
 		}),
-		IamportIonic4KcpModule
+		IamportIonic4KcpModule,
+		SharedModule,
+		AngularFireModule.initializeApp(environment.firebaseConfig),
+		AngularFireAuthModule,
+		AngularFireMessagingModule,
+		AngularFirestoreModule,
+		AngularFireStorageModule
 	],
 	entryComponents: [AppComponent],
 	providers: [
@@ -101,7 +120,12 @@ import { IamportIonic4KcpModule, IamportService } from 'iamport-ionic4-kcp';
 		Logger,
 		PagesModuleGuard,
 		MaintenanceModuleGuard,
-		IamportService
+		IamportService,
+		NativeImports,
+		{
+			provide: HAMMER_GESTURE_CONFIG,
+			useClass: IonicGestureConfig
+		}
 	],
 	bootstrap: [AppComponent]
 })

@@ -9,6 +9,7 @@ export const OrderFragment = gql`
 		deliveryTime
 		createdAt
 		status
+		isPaid
 		user {
 			id
 			geoLocation {

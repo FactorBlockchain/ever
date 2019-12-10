@@ -6,7 +6,7 @@
 	<section class="address">
 		<div class="top">{{ 'TO' | translate }}: {{ customerAddress }}</div>
 		<div class="bottom">{{ createdAt | date: 'short' }}</div>
-		<span *ngIf="!isTakeaway">
+		<span *ngIf="!isPaid">
 			<small *ngIf="deliveryTime" class="delivery-time">
 				{{ deliveryTime }}</small
 			>
@@ -23,7 +23,7 @@
 				{{ 'FAILED' | translate }}</small
 			>
 		</span>
-		<small *ngIf="isTakeaway" class="delivery-time">{{
+		<small *ngIf="isPaid" class="delivery-time">{{
 			'COMPLETED' | translate
 		}}</small>
 	</section>

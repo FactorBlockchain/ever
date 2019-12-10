@@ -93,6 +93,45 @@
 					</ion-item>
 				</ion-menu-toggle>
 			</ion-item-group>
+			<ion-item-group>
+				<ion-item-divider>
+					<ion-label>{{
+						'SIDE_MENU.GROUPS.INFO.DIVER_TITLE' | translate
+					}}</ion-label>
+				</ion-item-divider>
+				<ion-menu-toggle [autoHide]="true">
+					<ion-item
+						routerLink="/people"
+						routerDirection="root"
+						routerLinkActive="activated"
+					>
+						<ion-icon name="help-circle"></ion-icon>
+						<ion-label>
+							People
+						</ion-label>
+					</ion-item>
+					<ion-item
+						routerLink="/profile"
+						routerDirection="root"
+						routerLinkActive="activated"
+					>
+						<ion-icon name="help-circle"></ion-icon>
+						<ion-label>
+							Profile
+						</ion-label>
+					</ion-item>
+					<ion-item
+						routerLink="/messages"
+						routerDirection="root"
+						routerLinkActive="activated"
+					>
+						<ion-icon name="help-circle"></ion-icon>
+						<ion-label>
+							Messages
+						</ion-label>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-item-group>
 			<!-- <ion-item-group>
 				<ion-item-divider>
 					<ion-label>{{

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.ever.customer" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.firebaseapp.ionicmessengerstarter" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>ever.shop.mobile</name>
     <description>Packmam Mobile Shop App</description>
     <author email="ever@ever.co" href="https://ever.co/">Ever Co. LTD</author>

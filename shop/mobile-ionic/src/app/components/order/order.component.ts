@@ -106,6 +106,10 @@ export class OrderComponent {
 		);
 	}
 
+	get isPaid() {
+		return this.order && this.order.isPaid;
+	}
+
 	constructor(private readonly store: Store) {}
 
 	private _millisToMinutes(ms) {

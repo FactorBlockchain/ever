@@ -8,6 +8,7 @@ import { OrderTakeawayInfoModuleGuard } from './+products/+order/takeaway/+page/
 import { OrderInfoPageModuleGuard } from './+products/+order/+order-info/order-info.module.guard';
 import { OrdersHistoryModuleGuard } from './+orders-history/orders-history.module.guard';
 import { MerchantsPageModuleGuard } from './+merchants/merchants.module.guard';
+import { AuthGuard } from 'app/pages/auth/guards/auth/auth.guard';
 
 const routes: Routes = [
 	{
@@ -75,6 +76,55 @@ const routes: Routes = [
 		path: 'paymentlist',
 		loadChildren:
 			'./+products/+order/common/paymentlist/paymentlist.module#PaymentlistPageModule'
+	},
+	{
+		path: 'auth',
+		loadChildren: () =>
+			import('./auth/auth.module').then((m) => m.AuthModule)
+	},
+	{
+		canActivate: [AuthGuard],
+		path: 'dashboard',
+		loadChildren: () =>
+			import('../pages/dashboard/dashboard.module').then(
+				(m) => m.DashboardModule
+			)
+	},
+	{
+		canActivate: [AuthGuard],
+		path: 'people',
+		loadChildren: () =>
+			import('../pages/people/people.module').then((m) => m.PeopleModule)
+	},
+	{
+		canActivate: [AuthGuard],
+		path: 'feed',
+		loadChildren: () =>
+			import('../pages/feed/feed.module').then((m) => m.FeedModule)
+	},
+	{
+		canActivate: [AuthGuard],
+		path: 'profile',
+		loadChildren: () =>
+			import('../pages/profile/profile.module').then(
+				(m) => m.ProfileModule
+			)
+	},
+	{
+		canActivate: [AuthGuard],
+		path: 'messages',
+		loadChildren: () =>
+			import('../pages/messages/messages.module').then(
+				(m) => m.MessagesModule
+			)
+	},
+	{
+		canActivate: [AuthGuard],
+		path: 'setting',
+		loadChildren: () =>
+			import('../pages/setting/setting.module').then(
+				(m) => m.SettingModule
+			)
 	}
 ];
 
