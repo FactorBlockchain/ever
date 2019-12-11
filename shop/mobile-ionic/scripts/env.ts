@@ -184,15 +184,8 @@ export const env: Env = cleanEnv(
 		}),
 
 		firebaseConfig: json({
-			default: {
-				apiKey: 'AIsdfsadfgasgjGiojJkHGuHgaweFoLy-EFd',
-				authDomain: 'my-first-firebase-app.firebaseapp.com',
-				databaseURL: 'https://my-first-firebase-app.firebaseio.com',
-				projectId: 'my-first-firebase-app',
-				storageBucket: 'my-first-firebase-app.appspot.com',
-				messagingSenderId: '12345678910',
-				appId: '1:12345678910:web:10987654321'
-			}
+			default:
+				'{"apiKey": "AIsdfsadfgasgjGiojJkHGuHgaweFoLy-EFd","authDomain": "my-first-firebase-app.firebaseapp.com","databaseURL": "https://my-first-firebase-app.firebaseio.com","projectId": "my-first-firebase-app","storageBucket": "my-first-firebase-app.appspot.com","messagingSenderId": "12345678910","appId": "1:12345678910:web:10987654321"}'
 		}),
 		hosting: str({
 			default: 'http://localhost:8100'
