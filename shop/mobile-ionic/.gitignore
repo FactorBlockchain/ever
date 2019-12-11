@@ -41,3 +41,7 @@ docs/
 .env.prod
 /src/environments/environment.ts
 /src/environments/environment.prod.ts
+
+# firebase configuration files
+google-services.json
+GoogleService-Info.plist
