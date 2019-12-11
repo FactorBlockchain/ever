@@ -2,7 +2,7 @@
 // We are using dotenv (.env) for consistency with other Platform projects
 // This is Angular app and all settings will be loaded into the client browser!
 
-import { cleanEnv, num, str, bool, makeValidator } from 'envalid';
+import { cleanEnv, num, str, bool, json, makeValidator } from 'envalid';
 import { v4 as uuid } from 'uuid';
 
 export type Env = Readonly<{
@@ -74,6 +74,20 @@ export type Env = Readonly<{
 
 	// For "single" merchant (multiple branches)
 	MERCHANT_IDS?: string[];
+
+	firebaseConfig: {
+		apiKey: string;
+		authDomain: string;
+		databaseURL: string;
+		projectId: string;
+		storageBucket: string;
+		messagingSenderId: string;
+		appId: string;
+		measurementId: string;
+	};
+
+	hosting: string;
+	googleClientId: string;
 }>;
 
 const merchantIDs = makeValidator<string[]>((x) => x, 'merchantIDs');
@@ -167,6 +181,25 @@ export const env: Env = cleanEnv(
 			default: [
 				// Add existing merchant ids
 			]
+		}),
+
+		firebaseConfig: json({
+			default: {
+				apiKey: 'AIsdfsadfgasgjGiojJkHGuHgaweFoLy-EFd',
+				authDomain: 'my-first-firebase-app.firebaseapp.com',
+				databaseURL: 'https://my-first-firebase-app.firebaseio.com',
+				projectId: 'my-first-firebase-app',
+				storageBucket: 'my-first-firebase-app.appspot.com',
+				messagingSenderId: '12345678910',
+				appId: '1:12345678910:web:10987654321'
+			}
+		}),
+		hosting: str({
+			default: 'http://localhost:8100'
+		}),
+		googleClientId: str({
+			default:
+				'346346436-i6u333aesgdsgli32r8v96f9hb.apps.googleusercontent.com'
 		})
 	},
 	{ strict: true, dotEnvPath: __dirname + '/../.env' }

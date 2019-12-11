@@ -104,7 +104,20 @@ export const environment: Environment = {
 		env.MERCHANT_IDS && env.MERCHANT_IDS.length > 0
 			? env.MERCHANT_IDS
 			: JSON.stringify([])
-  }
+  },
+
+  firebaseConfig: {
+    apiKey: "${env.firebaseConfig.apiKey}",
+    authDomain: "${env.firebaseConfig.authDomain}",
+    databaseURL: "${env.firebaseConfig.databaseURL}",
+    projectId: "${env.firebaseConfig.projectId}",
+    storageBucket: "${env.firebaseConfig.storageBucket}",
+    messagingSenderId: "${env.firebaseConfig.messagingSenderId}",
+    appId: "${env.firebaseConfig.appId}",
+    measurementId: "${env.firebaseConfig.measurementId}"
+  },
+  hosting: '${env.hosting}',
+  googleClientId: '${env.googleClientId}'
 };
 
 /*
