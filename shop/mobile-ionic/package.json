@@ -121,7 +121,7 @@
 		"cordova-plugin-customurlscheme": "^4.4.0",
 		"cordova-plugin-device": "^2.0.2",
 		"cordova-plugin-dialogs": "^2.0.1",
-		"cordova-plugin-facebook4": "^6.2.0",
+		"cordova-plugin-facebook4-no-zxing": "^4.2.2",
 		"cordova-plugin-file": "^6.0.2",
 		"cordova-plugin-firebasex": "git+https://github.com/dpa99c/cordova-plugin-firebase.git",
 		"cordova-plugin-geolocation": "^4.0.1",
@@ -309,12 +309,6 @@
 				"PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
 				"PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
 				"ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
-			},
-			"cordova-plugin-facebook4": {
-				"APP_ID": "866050457104922",
-				"APP_NAME": "ezy-apps.uk",
-				"FACEBOOK_HYBRID_APP_EVENTS": "false",
-				"FACEBOOK_ANDROID_SDK_VERSION": "5.5.2"
 			},
 			"cordova-plugin-firebasex": {
 				"FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
