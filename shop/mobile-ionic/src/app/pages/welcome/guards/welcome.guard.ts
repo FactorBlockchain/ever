@@ -42,7 +42,7 @@ export class WelcomeGuard extends Extender implements CanActivate {
 				this.manageRoutesFromFirebaseEmail(next);
 
 				if (!!user) {
-					this.goto(this.routes.dashboard);
+					this.goto(this.routes.invite);
 				}
 				if (
 					this.settingService.setting &&

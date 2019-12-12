@@ -70,7 +70,7 @@ const routes: Routes = [
 	{
 		path: '',
 		pathMatch: 'full',
-		redirectTo: 'invite'
+		redirectTo: 'auth'
 	},
 	{
 		path: 'map2',

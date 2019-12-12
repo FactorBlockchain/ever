@@ -98,7 +98,7 @@ export class LoginComponent extends Extender implements OnInit {
 		this.loading = false;
 		this.fbLoading = false;
 		this.gplusLoading = false;
-		this.goto(this.routes.dashboard);
+		this.goto(this.routes.invite);
 	};
 
 	private failPromise = (err: any) => {

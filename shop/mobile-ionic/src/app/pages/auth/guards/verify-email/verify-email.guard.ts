@@ -35,7 +35,7 @@ export class VerifyEmailGuard extends Extender implements CanActivate {
 			take(1),
 			map((user) => {
 				if (!!user && this.auth.emailVerified) {
-					this.goto(this.routes.dashboard);
+					this.goto(this.routes.invite);
 				}
 				return true;
 			})

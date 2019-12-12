@@ -19,7 +19,8 @@ export class Routes {
 		schedule: '/dashboard/schedule',
 		map: '/dashboard/map',
 		chart: '/dashboard/chart',
-		welcome: '/welcome'
+		welcome: '/welcome',
+		invite: '/invite'
 	};
 }
 
@@ -42,4 +43,5 @@ export interface IRoutes {
 	map: string;
 	chart: string;
 	welcome: string;
+	invite: string;
 }

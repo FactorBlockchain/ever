@@ -55,7 +55,7 @@ export class AuthComponent extends Extender {
 		this.loading = false;
 		this.fbLoading = false;
 		this.gplusLoading = false;
-		this.goto(this.routes.dashboard);
+		this.goto(this.routes.invite);
 	};
 
 	/** common failed promise callback */

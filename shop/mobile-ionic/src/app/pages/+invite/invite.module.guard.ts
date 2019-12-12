@@ -15,7 +15,7 @@ export class InviteModuleGuard implements CanLoad {
 			this.store.userId != null ||
 			this.store.registrationSystem === RegistrationSystem.Disabled
 		) {
-			this.router.navigate(['products']);
+			this.router.navigate(['map2']);
 			return false;
 		}
 		return true;
