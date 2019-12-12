@@ -157,13 +157,13 @@ export class AppComponent extends Extender implements OnInit {
 					this.fcmService.getToken().then(() => {
 						this.listen4Notifications();
 					});
-					this.subscriptions.push(
-						this.settingService
-							.getUserSettings(user.uid)
-							.subscribe((setting) =>
-								this.appService.langConfig(setting.language)
-							)
-					);
+					// this.subscriptions.push(
+					// 	this.settingService
+					// 		.getUserSettings(user.uid)
+					// 		.subscribe((setting) =>
+					// 			this.appService.langConfig(setting.language)
+					// 		)
+					// );
 					this.pages = this.appService.setUpPages(user);
 				}
 			})

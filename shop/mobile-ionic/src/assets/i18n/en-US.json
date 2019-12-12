@@ -437,6 +437,12 @@
 		"options": "Options",
 		"save-to-album": "Save to Photo album"
 	},
+	"profile-component": {
+		"title": "Profile",
+		"post": "Post",
+		"following": "Following",
+		"followers": "followers"
+	},
 	"edit-profile-component": {
 		"title": "Edit Profile",
 		"display-name-label": "Display Name",
