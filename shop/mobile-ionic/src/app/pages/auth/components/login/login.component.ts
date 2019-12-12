@@ -20,8 +20,8 @@ export class LoginComponent extends Extender implements OnInit {
 	public gplusLoading: boolean = false;
 	public emailVerified: string;
 	public model: { email: string; password: string } = {
-		email: 'hello@ezyapps.co.uk',
-		password: 'password123'
+		email: '',
+		password: ''
 	};
 	public rememberMe: boolean = false;
 	@ViewChild('form', null) private form: NgForm;

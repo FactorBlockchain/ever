@@ -1,6 +1,7 @@
 :host {
 	ion-content {
-		--background: var(--ion-color-light);
+		--background: url('../../../../../assets/imgs/login_background.jpg')
+			no-repeat center/cover fixed;
 
 		.content-wrapper {
 			display: flex;
@@ -56,6 +57,18 @@
 				.remember-me-text {
 					margin-left: 10px;
 				}
+			}
+
+			ion-input {
+				color: black;
+			}
+
+			.googlebutton {
+				--background: red;
+			}
+
+			.facebookbutton {
+				--background: blue;
 			}
 		}
 	}

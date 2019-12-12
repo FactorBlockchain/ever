@@ -164,7 +164,7 @@ export class MessageComponent extends Extender
 				.then(() => {
 					this.textMsg = '';
 					this.sendLoading = false;
-					this.autoReply(messages[this.getRandomInt(1, 50)]);
+					//				this.autoReply(messages[this.getRandomInt(1, 50)]);
 				})
 				.catch((err) => this.failPromise(err));
 		}
@@ -216,6 +216,7 @@ export class MessageComponent extends Extender
 	}
 
 	/** auto reply to message */
+	/*
 	public autoReply(text: any, images = null) {
 		if (this.settingService.setting.autoReply === true) {
 			setTimeout(() => {
@@ -234,7 +235,7 @@ export class MessageComponent extends Extender
 			}, 6000);
 		}
 	}
-
+*/
 	/**
 	 * scroll to bottom of chat
 	 */

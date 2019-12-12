@@ -1,29 +1,9 @@
 <ion-header>
-	<ion-toolbar mode="md">
+	<ion-toolbar color="primary">
 		<ion-buttons slot="start">
-			<ion-button
-				size="small"
-				color="dark"
-				(click)="closeModal(null, routes.messages)"
-			>
-				<ion-icon src="assets/icons/arrow-left.svg"></ion-icon>
-			</ion-button>
+			<ion-menu-button autoHide="false"></ion-menu-button>
 		</ion-buttons>
-
-		<ion-buttons slot="end">
-			<ion-button color="dark" (click)="call()">
-				<ion-icon src="assets/icons/phone.svg"></ion-icon>
-			</ion-button>
-		</ion-buttons>
-		<ion-title
-			><span>
-				<div
-					class="title-img"
-					[image-loader]="getSender(message)?.photoURL"
-				></div>
-				{{ getSender(message)?.displayName }}
-			</span></ion-title
-		>
+		<ion-title>Message</ion-title>
 	</ion-toolbar>
 </ion-header>
 

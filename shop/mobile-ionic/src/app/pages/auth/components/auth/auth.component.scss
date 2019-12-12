@@ -1,4 +1,10 @@
+@import '../../../../../modules/client.common.angular2/scss/everbie.common';
 :host {
+	ion-content {
+		--background: url('../../../../../assets/imgs/login_background.jpg')
+			no-repeat center/cover fixed;
+	}
+
 	.content-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -28,6 +34,14 @@
 
 		.terms {
 			font-size: 12px;
+		}
+
+		.googlebutton {
+			--background: red;
+		}
+
+		.facebookbutton {
+			--background: blue;
 		}
 	}
 }
