@@ -47,6 +47,8 @@ import {
 	createTranslateLoader,
 	IonicGestureConfig
 } from 'shared/helpers/config';
+import { DialogflowService } from './services/dialogflow.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -79,7 +81,8 @@ import {
 		AngularFireAuthModule,
 		AngularFireMessagingModule,
 		AngularFirestoreModule,
-		AngularFireStorageModule
+		AngularFireStorageModule,
+		HttpModule
 	],
 	entryComponents: [AppComponent],
 	providers: [
@@ -125,7 +128,8 @@ import {
 		{
 			provide: HAMMER_GESTURE_CONFIG,
 			useClass: IonicGestureConfig
-		}
+		},
+		DialogflowService
 	],
 	bootstrap: [AppComponent]
 })

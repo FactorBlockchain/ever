@@ -84,4 +84,6 @@ export interface Environment {
 
 	hosting: string;
 	googleClientId: string;
+
+	kevin_token: string;
 }

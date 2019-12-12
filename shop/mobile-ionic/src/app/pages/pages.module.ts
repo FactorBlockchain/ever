@@ -12,6 +12,10 @@ import { AuthGuard } from 'app/pages/auth/guards/auth/auth.guard';
 
 const routes: Routes = [
 	{
+		path: 'chatbot',
+		loadChildren: './chatbot/chatbot.module#chatbotPageModule'
+	},
+	{
 		path: 'products',
 		loadChildren: './+products/products.module#ProductsPageModule',
 		canLoad: [ProductsModuleGuard]

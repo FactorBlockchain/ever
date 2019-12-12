@@ -88,6 +88,8 @@ export type Env = Readonly<{
 
 	hosting: string;
 	googleClientId: string;
+
+	kevin_token: string;
 }>;
 
 const merchantIDs = makeValidator<string[]>((x) => x, 'merchantIDs');
@@ -193,6 +195,9 @@ export const env: Env = cleanEnv(
 		googleClientId: str({
 			default:
 				'346346436-i6u333aesgdsgli32r8v96f9hb.apps.googleusercontent.com'
+		}),
+		kevin_token: str({
+			default: 'ca45769858409235203db586666deee3'
 		})
 	},
 	{ strict: true, dotEnvPath: __dirname + '/../.env' }

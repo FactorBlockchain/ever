@@ -117,7 +117,8 @@ export const environment: Environment = {
     measurementId: "${env.firebaseConfig.measurementId}"
   },
   hosting: '${env.hosting}',
-  googleClientId: '${env.googleClientId}'
+  googleClientId: '${env.googleClientId}',
+  kevin_token: '${env.kevin_token}'
 };
 
 /*
