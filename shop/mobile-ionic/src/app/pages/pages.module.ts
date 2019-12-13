@@ -9,6 +9,7 @@ import { OrderInfoPageModuleGuard } from './+products/+order/+order-info/order-i
 import { OrdersHistoryModuleGuard } from './+orders-history/orders-history.module.guard';
 import { MerchantsPageModuleGuard } from './+merchants/merchants.module.guard';
 import { AuthGuard } from 'app/pages/auth/guards/auth/auth.guard';
+import { FirstPageGuard } from 'app/pages/auth/guards/first-page/first-page.guard';
 
 const routes: Routes = [
 	{
@@ -82,6 +83,7 @@ const routes: Routes = [
 			'./+products/+order/common/paymentlist/paymentlist.module#PaymentlistPageModule'
 	},
 	{
+		canActivate: [FirstPageGuard],
 		path: 'auth',
 		loadChildren: () =>
 			import('./auth/auth.module').then((m) => m.AuthModule)
