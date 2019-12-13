@@ -113,8 +113,7 @@ export const environment: Environment = {
     projectId: "${env.firebaseConfig.projectId}",
     storageBucket: "${env.firebaseConfig.storageBucket}",
     messagingSenderId: "${env.firebaseConfig.messagingSenderId}",
-    appId: "${env.firebaseConfig.appId}",
-    measurementId: "${env.firebaseConfig.measurementId}"
+    appId: "${env.firebaseConfig.appId}"
   },
   hosting: '${env.hosting}',
   googleClientId: '${env.googleClientId}',
