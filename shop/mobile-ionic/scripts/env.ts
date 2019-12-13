@@ -110,8 +110,8 @@ export const env: Env = cleanEnv(
 			default: 'https://api.cloudinary.com/v1_1/evereq/upload'
 		}),
 
-		INVITE_BY_CODE_LOGO: str({ default: 'assets/imgs/ever-logo.svg' }),
-		NO_INTERNET_LOGO: str({ default: 'assets/imgs/logo.png' }),
+		INVITE_BY_CODE_LOGO: str({ default: 'assets/imgs/ever-logo.png' }),
+		NO_INTERNET_LOGO: str({ default: 'assets/imgs/ever-logo.png' }),
 
 		COMPANY_NAME: str({ default: 'Ever Co. LTD' }),
 

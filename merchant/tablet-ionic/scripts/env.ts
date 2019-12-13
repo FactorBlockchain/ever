@@ -68,8 +68,8 @@ export const env: Env = cleanEnv(
 		DEFAULT_LOGIN_USERNAME: str({ default: 'hut_pizza' }),
 		DEFAULT_LOGIN_PASSWORD: str({ default: '123456' }),
 
-		LOGIN_LOGO: str({ default: 'assets/imgs/ever-logo.svg' }),
-		NO_INTERNET_LOGO: str({ default: 'assets/imgs/logo.png' }),
+		LOGIN_LOGO: str({ default: 'assets/imgs/icon.png' }),
+		NO_INTERNET_LOGO: str({ default: 'assets/imgs/icon.png' }),
 
 		COMPANY_NAME: str({ default: 'Ever Co. LTD' }),
 		APP_NAME: str({ default: 'Ever Merchant' }),
