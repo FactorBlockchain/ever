@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.ever.merchant" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ever.merchant</name>
+<widget id="co.packmam.merchant" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Packmam Merchant</name>
     <description>Ever Merchant Tablet App</description>
     <author email="ever@ever.co" href="https://ever.co/">Ever Co. LTD</author>
     <content src="index.html" />
