@@ -119,4 +119,10 @@ export class ProfileComponent extends Extender implements OnInit {
 		const modal = await this.openModal(EditProfileComponent, this.user);
 		modal.present();
 	}
+
+	public signout() {
+		this.authService
+			.signOut()
+			.then(() => this.goto(this.routes.auth));
+	}
 }

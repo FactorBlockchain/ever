@@ -10,9 +10,6 @@
 <ion-content scrollX="false" scrollY="false">
 	<div class="content-wrapper">
 		<div class="header no-border has-toolbar">
-			<div class="title">
-				{{ 'profile-component.title' | translate }}
-			</div>
 			<div class="options">
 				<ion-button
 					fill="clear"
@@ -55,7 +52,7 @@
 					<strong>{{ item.value }}</strong>
 					<span>{{ item.name }}</span>
 				</div>
-				<ion-button size="small" shape="round">Logout</ion-button>
+				<ion-button size="small" shape="round" (click)="signout()">Logout</ion-button>
 			</div>
 			<div class="profile-content">
 				<ng-container [ngSwitch]="selectedView">
