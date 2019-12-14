@@ -143,8 +143,7 @@
 					"builder": "@ionic/angular-toolkit:cordova-serve",
 					"options": {
 						"cordovaBuildTarget": "app:ionic-cordova-build",
-						"devServerTarget": "app:serve",
-						"browserTarget": "app:build"
+						"devServerTarget": "app:serve"
 					},
 					"configurations": {
 						"production": {
