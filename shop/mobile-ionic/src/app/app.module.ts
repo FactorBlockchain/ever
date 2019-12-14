@@ -50,6 +50,10 @@ import {
 import { DialogflowService } from './services/dialogflow.service';
 import { HttpModule } from '@angular/http';
 
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VideoRoomPageModule } from './video-room/video-room.module';
+
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
@@ -82,7 +86,9 @@ import { HttpModule } from '@angular/http';
 		AngularFireMessagingModule,
 		AngularFirestoreModule,
 		AngularFireStorageModule,
-		HttpModule
+		HttpModule,
+		ReactiveFormsModule,
+		VideoRoomPageModule
 	],
 	entryComponents: [AppComponent],
 	providers: [
@@ -129,7 +135,8 @@ import { HttpModule } from '@angular/http';
 			provide: HAMMER_GESTURE_CONFIG,
 			useClass: IonicGestureConfig
 		},
-		DialogflowService
+		DialogflowService,
+		AndroidPermissions
 	],
 	bootstrap: [AppComponent]
 })

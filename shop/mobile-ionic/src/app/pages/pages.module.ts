@@ -13,6 +13,10 @@ import { FirstPageGuard } from 'app/pages/auth/guards/first-page/first-page.guar
 
 const routes: Routes = [
 	{
+		path: 'video-room/:roomName',
+		loadChildren: '../video-room/video-room.module#VideoRoomPageModule'
+	},
+	{
 		path: 'chatbot',
 		loadChildren: './chatbot/chatbot.module#chatbotPageModule'
 	},

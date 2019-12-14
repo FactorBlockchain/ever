@@ -186,10 +186,11 @@ export class AppComponent extends Extender implements OnInit {
 	/* Listen to incoming messages */
 	private listen4Notifications() {
 		this.subscriptions.push(
-			this.fcmService.listenToNotifications().subscribe(message => {
-				console.log(message)
+			this.fcmService.listenToNotifications().subscribe((message) => {
+				console.log(message);
 				if (message.messageType === 'data') {
-					alert(message.messageType + ' ' + message.sessionToken)
+					// route to answer call page
+					alert(message.messageType + ' ' + message.sessionToken);
 				}
 			})
 		);

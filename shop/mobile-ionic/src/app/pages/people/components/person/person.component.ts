@@ -46,7 +46,25 @@ export class PersonComponent extends Extender implements OnInit {
 		this.user = await this.peopleService.getPerson(uid);
 	}
 
+	public temptoken: string;
+
+	//** random number generator (toString) for video/voice call chatroom ID */
+	random(): string {
+		//	let rand = Math.floor(Math.random()*20.0)+1.0;
+		//	return rand;
+		return (
+			Math.random()
+				.toString(36)
+				.substring(2, 15) +
+			Math.random()
+				.toString(36)
+				.substring(2, 15)
+		);
+	}
+	//** random number generator for video/voice call chatroom ID */
+
 	/** call user */
+	/*
 	public async call() {
 		// await this.commonService.callUser(
 		// 	this.user.mobile || this.user.phone,
@@ -55,6 +73,17 @@ export class PersonComponent extends Extender implements OnInit {
 		this.callService.startCall(this.user)
 		this.closeModal();
 	}
+
+	*/
+
+	///////////////// obtain the sessionToken and open video chat room
+	public async call() {
+		const sessionToken = this.random();
+		this.callService.startCall(this.user, sessionToken);
+		this.router.navigate(['/video-room/' + sessionToken]);
+		this.closeModal();
+	}
+	///////////////// obtain the sessionToken and open video chat room
 
 	/** chat to user */
 	public async chat() {
