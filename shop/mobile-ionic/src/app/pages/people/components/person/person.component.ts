@@ -12,6 +12,7 @@ import { MessagesService } from 'app/pages/messages/services/messages/messages.s
 import { Extender } from 'shared/helpers/extender';
 import { CommonService } from 'shared/services/common/common.service';
 import { PeopleService } from '../../services/people/people.service';
+import { CallsService } from 'app/pages/messages/services/calls/calls.service';
 
 /**
  * view users profile and call, follow, unfollow share or chat to user
@@ -32,7 +33,8 @@ export class PersonComponent extends Extender implements OnInit {
 		private authService: AuthService,
 		private peopleService: PeopleService,
 		private messageService: MessagesService,
-		private commonService: CommonService
+		private commonService: CommonService,
+		private callService: CallsService
 	) {
 		super(injector);
 	}
@@ -46,10 +48,11 @@ export class PersonComponent extends Extender implements OnInit {
 
 	/** call user */
 	public async call() {
-		await this.commonService.callUser(
-			this.user.mobile || this.user.phone,
-			this.callNumber
-		);
+		// await this.commonService.callUser(
+		// 	this.user.mobile || this.user.phone,
+		// 	this.callNumber
+		// );
+		this.callService.startCall(this.user)
 		this.closeModal();
 	}
 
