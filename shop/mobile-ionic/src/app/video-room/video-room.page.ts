@@ -9,6 +9,7 @@ import {
 	ViewChildren
 } from '@angular/core';
 import { Platform, ModalController, AlertController } from '@ionic/angular';
+import { Location } from '@angular/common';
 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
@@ -185,6 +186,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 	openviduLayoutOptions: OpenViduLayoutOptions;
 	sessionToken: string;
 	myUserName: string;
+	videocall: boolean;
 	localUser: UserModel;
 	remoteUsers: UserModel[];
 	resizeTimeout;
@@ -202,7 +204,8 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		private openViduSrv: OpenViduService,
 		public modalController: ModalController,
 		private androidPermissions: AndroidPermissions,
-		public alertController: AlertController
+		public alertController: AlertController,
+		private location: Location
 	) {}
 
 	@HostListener('window:beforeunload')
@@ -218,6 +221,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 
 	async ngOnInit() {
 		// Open modal to setting up the session
+
 		const modal = await this.modalController.create({
 			component: SettingUpModalComponent,
 			showBackdrop: false,
@@ -246,6 +250,11 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.checkVideoButton();
 		this.remoteUsers = [];
 		this.generateParticipantInfo();
+
+		if ((this.videocall = false)) {
+			this.disablevideo();
+		}
+
 		this.openviduLayout = new OpenViduLayout();
 		this.openviduLayoutOptions = {
 			maxRatio: 3 / 2, // The narrowest ratio that will be used (default 2x3)
@@ -285,6 +294,9 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.subscribedToStreamDestroyed();
 		this.subscribedToChat();
 		this.connectToSession();
+		if ((this.videocall = false)) {
+			this.disablevideo();
+		}
 	}
 
 	exitSession() {
@@ -296,7 +308,8 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.localUser = null;
 		this.OV = null;
 		this.openviduLayout = null;
-		this.router.navigate(['']);
+		this.router.navigate(['people']);
+		//	this.location.back();
 	}
 
 	resetVideoSize() {
@@ -345,6 +358,12 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		(<Publisher>this.localUser.getStreamManager()).publishVideo(
 			this.localUser.isVideoActive()
 		);
+		this.checkVideoButton();
+	}
+
+	disablevideo(): void {
+		this.localUser.setVideoActive(false);
+		(<Publisher>this.localUser.getStreamManager()).publishVideo(false);
 		this.checkVideoButton();
 	}
 
@@ -433,10 +452,21 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		}
 		this.updateLayout();
 	}
-
+	/*
+	private booltostring(): string {
+		let boolval = this.route.params.roomName;
+		return String(boolval);
+	}
+	*/
 	private generateParticipantInfo() {
 		this.route.params.subscribe((params: Params) => {
 			this.sessionToken = params.roomName;
+			this.videocall = !!params.option
+				? params.option == 'video'
+					? true
+					: false
+				: true;
+			//			console.log("${params.option}")
 			this.myUserName =
 				'OpenVidu_User' + Math.floor(Math.random() * 100000);
 		});
@@ -556,13 +586,18 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 				);
 				this.openAlertError(error.message);
 			});
+		if ((this.videocall = false)) {
+			this.disablevideo();
+		}
 	}
 
 	private connect(token: string): void {
 		this.session
 			.connect(token, { clientData: this.myUserName })
 			.then(() => {
-				this.connectWebCam();
+				if ((this.videocall = true)) {
+					this.connectWebCam();
+				}
 			})
 			.catch((error) => {
 				console.error(

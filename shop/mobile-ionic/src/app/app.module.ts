@@ -53,7 +53,7 @@ import { HttpModule } from '@angular/http';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VideoRoomPageModule } from './video-room/video-room.module';
-
+//import { CallRoomPageModule } from './call-room/call-room.module';
 @NgModule({
 	declarations: [AppComponent],
 	imports: [

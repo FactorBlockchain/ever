@@ -190,7 +190,23 @@ export class AppComponent extends Extender implements OnInit {
 				console.log(message);
 				if (message.messageType === 'data') {
 					// route to answer call page
-					alert(message.messageType + ' ' + message.sessionToken);
+					alert(
+						message.messageType +
+							' ' +
+							message.sessionToken +
+							' ' +
+							message.video
+					);
+					const videocall: boolean = message.video;
+					if (videocall) {
+						this.router.navigateByUrl(
+							'/video-room/' + message.sessionToken + '/video'
+						);
+					} else {
+						this.router.navigateByUrl(
+							'/video-room/' + message.sessionToken + '/audio'
+						);
+					}
 				}
 			})
 		);

@@ -25,6 +25,7 @@
 <ion-content id="video-room-content" [scrollY]="false" [scrollX]="false">
 	<div id="layout" class="bounds">
 		<!-- Main video -->
+
 		<div
 			*ngIf="localUser && localUser.getStreamManager()"
 			#mainStream
@@ -37,6 +38,7 @@
 				[user]="localUser"
 			></stream-component>
 		</div>
+
 		<!-- Remotes -->
 		<div
 			*ngFor="let user of this.remoteUsers"
@@ -85,7 +87,7 @@
 		>
 			<ion-icon name="{{micBtnIcon}}"></ion-icon>
 		</ion-fab-button>
-
+		<!--
 		<ion-fab-button
 			[@slideLeftRight]="buttonsVisibility"
 			size="small"
@@ -94,6 +96,7 @@
 		>
 			<ion-icon name="apps"></ion-icon>
 		</ion-fab-button>
+	-->
 		<!--
 		<ion-fab-button
 			[@slideLeftRightChat]="chatNotification"
@@ -103,7 +106,6 @@
 		>
 			<ion-icon name="chatbubbles"></ion-icon>
 		</ion-fab-button>
-
 	-->
 	</ion-fab>
 
