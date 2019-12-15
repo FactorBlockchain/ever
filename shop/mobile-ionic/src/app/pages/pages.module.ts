@@ -17,6 +17,10 @@ const routes: Routes = [
 		loadChildren: '../video-room/video-room.module#VideoRoomPageModule'
 	},
 	{
+		path: 'video-room/:roomName/:option',
+		loadChildren: '../video-room/video-room.module#VideoRoomPageModule'
+	},
+	{
 		path: 'chatbot',
 		loadChildren: './chatbot/chatbot.module#chatbotPageModule'
 	},

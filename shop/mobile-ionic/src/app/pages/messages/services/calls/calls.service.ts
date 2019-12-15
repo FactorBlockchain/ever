@@ -17,16 +17,24 @@ export class CallsService extends Extender {
 		super(injector);
 	}
 
-	public async startCall(user: IUser, sessionToken: string) {
-		return this.createCall(user, sessionToken);
+	public async startCall(
+		user: IUser,
+		sessionToken: string,
+		videocall: boolean
+	) {
+		return this.createCall(user, sessionToken, videocall);
 	}
 
-	private async createCall(user: IUser, sessionToken: string) {
+	private async createCall(
+		user: IUser,
+		sessionToken: string,
+		videocall: boolean
+	) {
 		const { uid } = await this.authService.getUser();
 		this.firestoreService.add<ICall>('calls', {
 			participantsId: [user.uid, uid],
 			sessionToken: sessionToken,
-			video: 'true'
+			videocall: videocall
 		});
 	}
 }

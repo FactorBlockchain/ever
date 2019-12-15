@@ -12,10 +12,18 @@
 						<ion-fab-list side="bottom">
 							<ion-fab-button>
 								<ion-icon
-									(click)="call()"
-									src="assets/icons/phone-call.svg"
+									name="call"
+									(click)="voicecall()"
 								></ion-icon>
 							</ion-fab-button>
+
+							<ion-fab-button>
+								<ion-icon
+									name="videocam"
+									(click)="call()"
+								></ion-icon>
+							</ion-fab-button>
+
 							<ion-fab-button>
 								<ion-icon
 									(click)="chat()"

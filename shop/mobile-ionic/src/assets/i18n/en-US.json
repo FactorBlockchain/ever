@@ -229,10 +229,10 @@
 	"CANCELED": "취소됨",
 	"IN_DELIVERY": "배송중",
 	"COMPLETED": "완료됨",
-    "app-component": {
+	"app-component": {
 		"menu": "메뉴"
-	  },
-	  "page-title": {
+	},
+	"page-title": {
 		"profile": "프로필",
 		"dashboard": "대시보드",
 		"news": "새소식",
@@ -241,8 +241,8 @@
 		"shop": "샵",
 		"setting": "설정",
 		"logout": "로그아웃"
-	  },
-	  "welcome-component": {
+	},
+	"welcome-component": {
 		"slide-1-title": "SNS 스타터",
 		"slide-1-paragraph": "디자인에 충실한 쇼핑 경험",
 		"slide-2-title": "프로필",
@@ -259,8 +259,8 @@
 		"english": "English",
 		"french": "Francias",
 		"spanish": "Espanyol"
-	  },
-	  "auth-component": {
+	},
+	"auth-component": {
 		"alt-login": "아니면 로그인 ",
 		"login-button": "로그인",
 		"signup-button": "회원가입",
@@ -274,8 +274,8 @@
 		"facebook": "페이스북",
 		"i-read": "확인 하였습니다 ",
 		"tandc": "정보처리안을 "
-	  },
-	  "login-component": {
+	},
+	"login-component": {
 		"title": "로그인",
 		"email-label": "Email",
 		"password-label": "Password",
@@ -284,16 +284,16 @@
 		"dont-have-account": "계정이 없다 ",
 		"register": "회원가입",
 		"email-verified": " 이메일 확인이 되었습니다. 로그인 하여주십시오"
-	  },
-	  "signup-component": {
+	},
+	"signup-component": {
 		"title": "앱을 사용하기 위해 계정을 만드십시오",
 		"fullname-label": "이름",
 		"email-label": "이메일",
 		"password-label": "비밀번호",
 		"retype-password-label": "다시 입력",
 		"signup-button": "등록"
-	  },
-	  "forgot-component": {
+	},
+	"forgot-component": {
 		"title": "폐정 잃어버림",
 		"subtitle-email": "비밀번호를 받으실 이메일 입력",
 		"subtitle-password": "비밀번호를 입력",
@@ -309,42 +309,42 @@
 		"email-sent-to": "이메일이 여기로 가실겁니다 ",
 		"supply-pin": "핀 코드를 입력하십시오",
 		"reset-success": "비밀번호가 정상적으로 초기화 되었습니다"
-	  },
-	  "deactivated-account-component": {
+	},
+	"deactivated-account-component": {
 		"title": "저기로 ....",
 		"subtitle": "다시 오신걸 환영합니다, ",
 		"info": "회원탈퇴 하셔서 앱에 접근 하실수 없습니다. 좋은소식! 언제든지 다시 계정 활성화 할수 있습니다",
 		"reactivate-button": "계정 재활성화",
 		"reactivated-success-message": "계정 재활성화 확인"
-	  },
-	  "verify-email-component": {
+	},
+	"verify-email-component": {
 		"title": "이메일 확인",
 		"subtitle": "안녕하세요, {{name}}",
 		"info": "이메일을 확입하십시오 <a href=\"{{email}}\">{{email}}</a>. 이 이메일로 절차 따르십시오",
 		"login-button": "뒤로가기",
 		"resend-button": "이메일 인증 다시 보내기",
 		"verification-email-sent": "이메일 인증 보내기 확인"
-	  },
-	  "dashboard-component": {
+	},
+	"dashboard-component": {
 		"title": "대시보드",
 		"charts-tab": "차트",
 		"schedule-tab": "스케쥴",
 		"maps-tab": "지도"
-	  },
-	  "maps-component": {
+	},
+	"maps-component": {
 		"open": "Opened",
 		"close": "Closed",
 		"locate-me": "Locate Me"
-	  },
-	  "map-filter-component": {
+	},
+	"map-filter-component": {
 		"title": "Map Filters",
 		"save-button": "Save",
 		"zoom-label": "Zoom",
 		"radius-label": "Radius",
 		"open-label": "Open Now?",
 		"establishment-label": "Type of Establishment"
-	  },
-	  "feed-component": {
+	},
+	"feed-component": {
 		"title": "타임라인",
 		"search-placeholder": "검색...",
 		"share-button": "공유",
@@ -364,8 +364,8 @@
 		"more-header": "피드설정",
 		"more-option-open": "열기",
 		"more-option-delete": "삭제"
-	  },
-	  "feed-detail-component": {
+	},
+	"feed-detail-component": {
 		"delete-alert-title": "Delete Post",
 		"delete-alert-message": "Are you sure you want to delete this post?",
 		"confirm-delete": "Post has been successfully deleted!",
@@ -374,8 +374,8 @@
 		"open-comments": "Open Comments",
 		"like": "Like",
 		"share-button": "Share"
-	  },
-	  "feed-add-component": {
+	},
+	"feed-add-component": {
 		"title-label": "Title",
 		"subtitle-label": "Subtitle",
 		"content-label": "Content",
@@ -384,13 +384,13 @@
 		"image-option-library": "Library",
 		"image-option-camera": "Camera",
 		"image-option-multi": "Multiple Photo Library"
-	  },
-	  "feed-comment-component": {
+	},
+	"feed-comment-component": {
 		"title": "Comments",
 		"no-comment": "No comment has been written",
 		"placeholder": "Type message here..."
-	  },
-	  "people-component": {
+	},
+	"people-component": {
 		"title": "People",
 		"title-friends": "Friends",
 		"no-phone-number": "Contact does not have a phone number",
@@ -403,14 +403,14 @@
 		"no-friend": " is no longer your friend",
 		"no-people": "No one Found",
 		"no-people-subtitle": "Perhaps you should widen your search"
-	  },
-	  "chart-component": {
+	},
+	"chart-component": {
 		"line": "Line Chart",
 		"bar": "Bar Chart",
 		"doughnut": "Doughnut Chart",
 		"pie": "Pie Chart"
-	  },
-	  "misc": {
+	},
+	"misc": {
 		"no-data": "데이터가 없음",
 		"no-events": "No Events Upcoming",
 		"no-images": "No Images Data",
@@ -418,8 +418,8 @@
 		"no-friends": "No Friends Yet",
 		"no-feed-add-friends": "No feed Data, add friends to see their feed",
 		"find-people": "Find People"
-	  },
-	  "other": {
+	},
+	"other": {
 		"search-placeholder": "검색...",
 		"close": "닫기",
 		"yes": "네",
@@ -436,14 +436,14 @@
 		"delete-label": "삭제",
 		"options": "옵션",
 		"save-to-album": "포토 앨범에 저장"
-	  },
-	  "profile-component": {
+	},
+	"profile-component": {
 		"title": "프로필",
 		"post": "포스트",
 		"following": "팔로잉",
 		"followers": "팔로워들"
-	  },
-	  "edit-profile-component": {
+	},
+	"edit-profile-component": {
 		"title": "프로필 수정",
 		"display-name-label": "이름",
 		"status-message-label": "메시지",
@@ -455,22 +455,22 @@
 		"select-country": "나라 선택",
 		"change-profile-image": "프로필 사진 바꾸기",
 		"update-button": "디테일 수정"
-	  },
-	  "change-password-component": {
+	},
+	"change-password-component": {
 		"title": "비밀번호 바꾸기",
 		"old-password-label": "전 비밀번호",
 		"new-password-label": "새 비밀번호",
 		"retype-password-label": "비밀번호 재입력",
 		"change-password": "배밀번호 바꾸기"
-	  },
-	  "form-validation-messages": {
+	},
+	"form-validation-messages": {
 		"required": "이 필드는 필요합니다",
 		"email": "이메일을 입력하십시오",
 		"password-no-match": "비밀번호가 일치하지 않습니다",
 		"password-no-secure": "비밀번호 강도가 너무 약합니다",
 		"form-incomplete": "입력하신 정보가 잘못 되었습니다 재입력 하십시오"
-	  },
-	  "setting-component": {
+	},
+	"setting-component": {
 		"title": "설정",
 		"save-button": "설정 저장",
 		"logout-button": "로그아웃",
@@ -503,30 +503,30 @@
 		"option-more-2-description": "앱 리뷰 해주세요",
 		"option-more-3-text": "개인정보처리방안",
 		"option-more-3-description": "Review our policies"
-	  },
-	  "feedback-component": {
+	},
+	"feedback-component": {
 		"title": "Feedback",
 		"info": "Tell us what you think about the app",
 		"feedback-label": "Feedback",
 		"feedback-placeholder": "How are we doing?",
 		"send-button": "Submit",
 		"success-message": "Your feedback has been sent. Thank you"
-	  },
-	  "review-component": {
+	},
+	"review-component": {
 		"title": "Rate our App",
 		"info": "Rate us and tell us what you think? Are we doing a good job",
 		"comment-label": "Comments",
 		"comment-placeholder": "How are we doing?",
 		"send-button": "Submit",
 		"success-message": "Your feedback has been sent. Thank you"
-	  },
-	  "privacy-component": {
+	},
+	"privacy-component": {
 		"title": "개인정보처리방안"
-	  },
-	  "terms-and-conditions-component": {
+	},
+	"terms-and-conditions-component": {
 		"title": "개인정보처리방안"
-	  },
-	  "notification-setting-component": {
+	},
+	"notification-setting-component": {
 		"title": "알람 설정",
 		"info": " 알람 설정 방식",
 		"app-notifications": "앱 알람",
@@ -538,8 +538,8 @@
 		"in-app-vibration-description": "진동 설정 방식",
 		"app-banner-title": "앱 배너",
 		"app-banner-description": "앱 배너 설정 방식"
-	  },
-	  "messages-component": {
+	},
+	"messages-component": {
 		"title": "메시지",
 		"tab-all": "전체",
 		"tab-archived": "보관함",
@@ -556,19 +556,19 @@
 		"select": "선택",
 		"select-all": "전체 선택",
 		"delete-all": "전체 삭제"
-	  },
-	  "message-component": {
+	},
+	"message-component": {
 		"placeholder": "메시지를 입력하세요...",
 		"read-more": "더 보기",
 		"no-images-selected": "선택된 이미지가 없습니다"
-	  },
-	  "person-component": {
+	},
+	"person-component": {
 		"follow": "팔로우"
-	  },
-	  "calendar-event-list-component": {
+	},
+	"calendar-event-list-component": {
 		"title": "이벤트"
-	  },
-	  "calendar-event-manage-component": {
+	},
+	"calendar-event-manage-component": {
 		"add-title": "Add Event",
 		"edit-title": "Edit Event",
 		"title-label": "Title",
@@ -579,12 +579,12 @@
 		"end-time-label": "End Time",
 		"remind-me-label": "Remind Me",
 		"add-notes-label": "Add Notes"
-	  },
-	  "social-share-component": {
+	},
+	"social-share-component": {
 		"title": "SNS 공유"
-	  },
-	  "lang-select-component": {
+	},
+	"lang-select-component": {
 		"title": "언어",
 		"select": "선택"
-	  }
+	}
 }
