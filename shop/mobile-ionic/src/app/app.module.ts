@@ -53,7 +53,12 @@ import { HttpModule } from '@angular/http';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VideoRoomPageModule } from './video-room/video-room.module';
+<<<<<<< HEAD
 //import { CallRoomPageModule } from './call-room/call-room.module';
+=======
+import { Toast } from '@ionic-native/toast/ngx';
+
+>>>>>>> 7d1b361bfb9c525bed623bb6e82bb0c4fa6deb08
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
@@ -136,7 +141,8 @@ import { VideoRoomPageModule } from './video-room/video-room.module';
 			useClass: IonicGestureConfig
 		},
 		DialogflowService,
-		AndroidPermissions
+		AndroidPermissions,
+		Toast
 	],
 	bootstrap: [AppComponent]
 })

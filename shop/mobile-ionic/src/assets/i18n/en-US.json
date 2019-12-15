@@ -1,255 +1,255 @@
 {
 	"LANGUAGE": {
 		"ID": "en-US",
-		"NAME": "English"
+		"NAME": "한국어"
 	},
 	"CURRENT_DIRECTION": "ltr",
-	"SIDEBAR_SIDE": "left",
+	"SIDEBAR_SIDE": "왼쪽",
 	"INVITE_VIEW": {
-		"WELCOME_TO": "Welcome to",
-		"EVER": "Packmam",
-		"INFO_MISSING": "Some of the information missing!",
-		"YOUR_INVITE_CODE": "Your invite code",
+		"WELCOME_TO": "환영합니다",
+		"EVER": "팩맘",
+		"INFO_MISSING": "일부정보 유실!",
+		"YOUR_INVITE_CODE": "당신의 초대 코드",
 		"INVITED_TEXT": {
-			"TITLE": "Thank you for sign up!",
-			"DETAILS": "We will send you a notification with an invite code when we launch at:"
+			"TITLE": "서명해주셔서 감사합니다!",
+			"DETAILS": "초대장이 발송되면 초대 코드를 알려드리겠습니다:"
 		},
 		"NOT_INVITED_BY_CODE": {
-			"TITLE": "Wrong code!",
-			"DETAILS": "Please make sure you at the place that came with your code."
+			"TITLE": "잘못된 코드!",
+			"DETAILS": "당신의 코드에 나와있는 장소를 확인해주세요."
 		},
-		"CANT_ACCESS_LOCATION": "Can't access your location.",
-		"CANT_ACCESS_LOCATION_GET_IN_BY_ADDRESS": "Can't access your location, please try to get in by address.",
-		"GET_IN_BY_ADDRESS": "Sign up by Address",
-		"GET_IN": "Get inside!",
-		"YOUR_ADDRESS": "Let us know your Address",
-		"LAUNCH_NOTIFICATION": "We promise to show only relevant products according to your address",
+		"CANT_ACCESS_LOCATION": "당신의 위치에 접근할 수 없습니다.",
+		"CANT_ACCESS_LOCATION_GET_IN_BY_ADDRESS": "당신의 위치에 접근할 수 없습니다, 주소로 접근을 시도해주세요.",
+		"GET_IN_BY_ADDRESS": "주소로 서명",
+		"GET_IN": "내부 진입!",
+		"YOUR_ADDRESS": "당신의 주소를 알려주세요",
+		"LAUNCH_NOTIFICATION": "당신의 주소에 따라 적합한 제품만을 보여드리도록 하겠습니다",
 		"BY_CODE": {
-			"OR_WHAT": "sign up by Invite",
-			"INVITED": "Sign in with Invite Code",
+			"OR_WHAT": "초대에 서명",
+			"INVITED": "초대 코드에 서명",
 			"LOGO": {
-				"DETAILS": "Food Delivery & Takeout"
+				"DETAILS": "음식 배달 & 테이크아웃"
 			},
-			"INVITE_CODE": "Invite Code"
+			"INVITE_CODE": "초대 코드"
 		},
-		"DETECTING_LOCATION": "Please wait, we attempting to detect your current address..."
+		"DETECTING_LOCATION": "잠시만 기다려주세요, 귀하의 현주소를 찾아내고 있습니다..."
 	},
 	"PRODUCTS_VIEW": {
-		"TITLE": "Products",
+		"TITLE": "제품",
 		"BUY_BUTTON": {
-			"PRE": "Buy for ",
+			"PRE": "구매",
 			"SUF": ""
 		},
-		"NOT_AVAILABLE": "Product not available",
-		"MINUTES": "min",
-		"DELIVERY": "Delivery",
-		"TAKEAWAY": "Takeout",
-		"READYFOR": "Ready for",
+		"NOT_AVAILABLE": "제품 없음",
+		"MINUTES": "분",
+		"DELIVERY": "배송",
+		"TAKEAWAY": "테이크아웃",
+		"READYFOR": "준비완료",
 		"DETAILS": {
-			"DETAILS": "Details",
-			"BACK": "Back",
-			"INCLUDES": "Includes",
-			"BUY_FOR": "Buy for"
+			"DETAILS": "세부사항",
+			"BACK": "뒤로",
+			"INCLUDES": "포함시키다",
+			"BUY_FOR": "구매"
 		}
 	},
 	"HELP_VIEW": {
-		"TITLE": "Help"
+		"TITLE": "도움"
 	},
 	"ORDER_HISTORY_VIEW": {
-		"TITLE": "Order history",
-		"DETAILS": "Details"
+		"TITLE": "주문내역",
+		"DETAILS": "세부사항"
 	},
 	"LAST_PURCHASES_VIEW": {
-		"TITLE": "Last Purchases",
-		"NOTHING_ORDERED": "No orders yet",
-		"TO_PRODUCTS": "To Products"
+		"TITLE": "지난 구매",
+		"NOTHING_ORDERED": "아직 주문 없음",
+		"TO_PRODUCTS": "제품에"
 	},
 	"ABOUT_VIEW": {
 		"TITLE": "About Us"
 	},
 	"TERMS_OF_USE_VIEW": {
-		"TITLE": "Terms of Use"
+		"TITLE": "사용 조건"
 	},
 	"PRIVACY_VIEW": {
-		"TITLE": "Privacy"
+		"TITLE": "개인정보"
 	},
 	"LANGUAGE_VIEW": {
-		"TITLE": "Select Language"
+		"TITLE": "언어선택"
 	},
 	"BUY_POPUP": {
-		"ORDER_PAID": "The order is paid $",
+		"ORDER_PAID": "주문이 $로 결제됩니다",
 		"STATUSES": [
 			{
-				"TITLE": "We're preparing the order!",
-				"DETAILS": "You will get it in %t minutes.",
-				"NOT_PAID_NOTE": "Prepare your wallet (%s in cash)."
+				"TITLE": "주문사항을 준비 중 입니다!",
+				"DETAILS": "%t 분 내에 주문제품을 받으실 수 있습니다.",
+				"NOT_PAID_NOTE": "지갑을 준비해주세요 (%s 현금으로)."
 			},
 			{
-				"TITLE": "Carrier on the way!",
-				"DETAILS": "You will get the order in %t min.",
-				"NOT_PAID_NOTE": "Prepare your wallet (%s in cash)."
+				"TITLE": "배달원이 배송중 입니다!",
+				"DETAILS": "%t 분 내에 주문제품을 받으실 수 있습니다.",
+				"NOT_PAID_NOTE": "지갑을 준비해주세요 (%s 현금으로)."
 			},
 			{
-				"TITLE": "Check your door!",
-				"DETAILS": "You will get the order in seconds.",
-				"NOT_PAID_NOTE": "Prepare your wallet (%s in cash)."
+				"TITLE": "문앞을 확인해주세요!",
+				"DETAILS": "주문하신 제품을 곧 받으실 수 있습니다.",
+				"NOT_PAID_NOTE": "지갑을 준비해주세요 (%s 현금으로)."
 			},
 			{
-				"TITLE": "Order Completed!",
-				"DETAILS": "Thanks for using Packmam",
+				"TITLE": "주문 완료!",
+				"DETAILS": "팩맘을 이용해주셔서 감사합니다",
 				"NOT_PAID_NOTE": ""
 			}
 		],
 		"STATUSES_TAKEAWAY": {
-			"TITLE": "We're preparing the order!",
-			"DETAILS": "You can get it in %t minutes.",
-			"NOT_PAID_NOTE": "Prepare your wallet (%s in cash)."
+			"TITLE": "주문사항을 준비 중 입니다!",
+			"DETAILS": "%t 분 내에 주문제품을 받으실 수 있습니다.",
+			"NOT_PAID_NOTE": "지갑을 준비해주세요 (%s 현금으로)."
 		},
 		"DELIVERY_STATUS": {
-			"WE": "We",
-			"CARRIER": "Carrier",
-			"YOU": "You"
+			"WE": "우리는",
+			"CARRIER": "배달원",
+			"YOU": "당신"
 		},
 		"DELIVERY_WRONG": {
-			"DELIVERY_WRONG": "The Delivery Went Wrong!",
-			"PROCESSING_WRONG": "Processing Went Wrong!",
-			"TRY_AGAIN": "Please try again.",
-			"CALL_FOR_DETAILS": "Call for details"
+			"DELIVERY_WRONG": "배송이 잘못 되었습니다!",
+			"PROCESSING_WRONG": "처리가 잘못 되었습니다!",
+			"TRY_AGAIN": "다시 시도해 주세요.",
+			"CALL_FOR_DETAILS": "자세한 내용은 전화문의 주세요"
 		},
 		"ELAPSED_TIME": {
-			"TITLE": "Elapsed time"
+			"TITLE": "경과 시간"
 		},
 		"BUTTONS": {
-			"UNDO": "Undo",
-			"PAY_NOW": "Pay with Card",
-			"PAY_X": "Pay {{amount}}",
-			"PAY_WITH_FIXED_CARD": "Pay with",
-			"PAID": "Paid",
-			"END": "Bon appetit!",
-			"CANCEL": "Cancel",
+			"UNDO": "되돌리기",
+			"PAY_NOW": "카드로 결제",
+			"PAY_X": "결제 {{amount}}",
+			"PAY_WITH_FIXED_CARD": "로 결제",
+			"PAID": "결제됨",
+			"END": "맛있게 드세요!",
+			"CANCEL": "취소",
 			"GOT_IT": "Got It!",
-			"IM_HERE": "I'm here",
-			"SHOW_QR_CODE": "Show QR Code",
-			"SHOW_PRODUCTS": "Show Products"
+			"IM_HERE": "여기 입니다",
+			"SHOW_QR_CODE": "QR 코드를 보여주세요",
+			"SHOW_PRODUCTS": "제품을 보여주세요"
 		},
 		"UNDO_POPUP": {
-			"TITLE": "Are you sure?",
+			"TITLE": "확실한가요?",
 			"DETAILS": [
-				"Undo will return you the money, but you will",
-				"lose",
-				"the order!"
+				"되돌리기 하면 당신에게 환불됩니다, 그러나 당신은",
+				"잃게 됩니다",
+				"주문을!"
 			]
 		}
 	},
 	"SIDE_MENU": {
-		"TITLE": "Packmam",
+		"TITLE": "팩맘",
 		"GROUPS": {
 			"NO_TITLE": {
 				"DIVER_TITLE": "",
 				"ITEMS": {
-					"PRODUCTS": "Products",
-					"LAST_PURCHASES": "Last Purchases",
-					"CALL_US": "Call Us",
-					"ORDER_HISTORY": "Order history"
+					"PRODUCTS": "제품",
+					"LAST_PURCHASES": "지난 구매",
+					"CALL_US": "전화해주세요",
+					"ORDER_HISTORY": "주문 내역"
 				}
 			},
 			"STORE": {
-				"STORE_TITLE": "Store",
+				"STORE_TITLE": "매장",
 				"ITEMS": {
-					"CALL_WAITER": "Call Waiter",
-					"ABOUT": "About"
+					"CALL_WAITER": "웨이터를 부르세요",
+					"ABOUT": "관하여"
 				}
 			},
 			"SETTINGS": {
-				"DIVER_TITLE": "Settings",
+				"DIVER_TITLE": "설정",
 				"ITEMS": {
-					"LANGUAGE": "Language"
+					"LANGUAGE": "언어"
 				}
 			},
 			"INFO": {
-				"DIVER_TITLE": "Information",
+				"DIVER_TITLE": "정보",
 				"ITEMS": {
-					"FAQ": "Help",
-					"ABOUT_US": "About Us",
-					"TERMS_OF_USE": "Terms of Use",
-					"PRIVACY": "Privacy"
+					"FAQ": "도움",
+					"ABOUT_US": "우리에 관해",
+					"TERMS_OF_USE": "사용조건",
+					"PRIVACY": "개인정보"
 				}
 			},
 			"LEGALS": {
-				"DIVER_TITLE": "LEGAL",
+				"DIVER_TITLE": "법적인",
 				"ITEMS": {
-					"TERMS_OF_USE": "Terms of Use",
-					"PRIVACY": "Privacy"
+					"TERMS_OF_USE": "사용조건",
+					"PRIVACY": "개인정보"
 				}
 			}
 		}
 	},
 	"TIMER": {
-		"MINUTES": "Minutes",
-		"SECONDS": "Seconds"
+		"MINUTES": "분",
+		"SECONDS": "초"
 	},
 	"CONNECTION_ERROR_VIEW": {
-		"TITLE": "No connection to Packmam",
+		"TITLE": "팩맘과 연결이 되어있지 않습니다",
 		"DESCRIPTION": [
-			"Please make sure you are",
-			"connected to the internet",
-			"or try Packmam app later."
+			"확인해주세요 당신이",
+			"인터넷에 연결되어 있는지",
+			"팩맘앱에 나중에 시도해보세요."
 		]
 	},
 	"MERCHANTS_VIEW": {
-		"CLOSE_TO_YOU": "MERCHANTS CLOSE TO YOU",
-		"NAME": "Merchant name",
-		"WITH_NAME": "Merchants with name"
+		"CLOSE_TO_YOU": "당신 가까이에 있는 판매자",
+		"NAME": "판매자 이름",
+		"WITH_NAME": "판매자의 이름"
 	},
 	"NO_SERVER_VIEW": {
-		"NO_SERVER": "Packmam is loading now"
+		"NO_SERVER": "서버와의 연결이 끊어졌습니다"
 	},
-	"OR": "Or",
-	"OR_LOWERCASE": "or",
-	"YES": "Yes",
-	"NO": "No",
-	"OK": "Ok",
-	"CITY": "City",
-	"STREET": "Street",
-	"HOUSE": "House",
-	"APARTMENT": "Apartment",
-	"BACK": "Back",
-	"MORE": "more",
-	"TO": "To",
-	"STORE_INFO": "Store Info",
-	"MAP": "Map",
-	"ORDER_INFO": "Order Info",
-	"CLOSE": "Close",
-	"SCAN": "Scan",
-	"MERCHANTS": "Merchants",
-	"NOT_FOUND": "Not Found!",
-	"IN_STORE": "In Store",
-	"EXIT_STORE": "Exit Store",
-	"FAILED": "Failed",
-	"CANCELED": "Canceled",
-	"IN_DELIVERY": "In Delivery",
-	"COMPLETED": "Completed",
+	"OR": "또는",
+	"OR_LOWERCASE": "또는",
+	"YES": "네",
+	"NO": "아니오",
+	"OK": "좋습니다",
+	"CITY": "도시",
+	"STREET": "도로",
+	"HOUSE": "자택",
+	"APARTMENT": "아파트",
+	"BACK": "뒤로",
+	"MORE": "더",
+	"TO": "에게",
+	"STORE_INFO": "매장 정보",
+	"MAP": "지도",
+	"ORDER_INFO": "주문 정보",
+	"CLOSE": "닫기",
+	"SCAN": "스캔",
+	"MERCHANTS": "판매자",
+	"NOT_FOUND": "찾을 수 없습니다!",
+	"IN_STORE": "매장내에",
+	"EXIT_STORE": "매장을 나가세요",
+	"FAILED": "실패함",
+	"CANCELED": "취소됨",
+	"IN_DELIVERY": "배송중",
+	"COMPLETED": "완료됨",
 	"app-component": {
-		"menu": "Menu"
+		"menu": "메뉴"
 	},
 	"page-title": {
-		"profile": "Profile",
-		"dashboard": "Dashboard",
-		"news": "News",
-		"people": "People",
-		"chat": "Chat",
-		"shop": "Shop",
-		"setting": "Setting",
-		"logout": "Logout"
+		"profile": "프로필",
+		"dashboard": "대시보드",
+		"news": "새소식",
+		"people": "사람",
+		"chat": "채팅",
+		"shop": "샵",
+		"setting": "설정",
+		"logout": "로그아웃"
 	},
 	"welcome-component": {
-		"slide-1-title": "Social Starter",
-		"slide-1-paragraph": "Nicely designed views and intuitive social and online shopping experience",
-		"slide-2-title": "Profiles",
-		"slide-2-paragraph": "Check out your profile, uploaded feed/images, events and followers",
-		"slide-3-title": "News & Feed",
-		"slide-3-paragraph": "Upload news and feed to your friends and see your friends posts",
-		"slide-4-title": "Social & People",
+		"slide-1-title": "SNS 스타터",
+		"slide-1-paragraph": "디자인에 충실한 쇼핑 경험",
+		"slide-2-title": "프로필",
+		"slide-2-paragraph": "프로필확인, 사진 올리기, 소식및 팔로워들 확인",
+		"slide-3-title": "새소식",
+		"slide-3-paragraph": "소식들을 친구들한테 포스팅하기",
+		"slide-4-title": "SNS & 사람",
 		"slide-4-paragraph": "Find people on the platform and follow, chat and check out their profile and feed",
 		"slide-5-title": "Real Time Chat",
 		"slide-5-paragraph": "Real time two way chat with friends on the platform",
@@ -261,75 +261,75 @@
 		"spanish": "Espanyol"
 	},
 	"auth-component": {
-		"alt-login": "or login with ",
-		"login-button": "Login",
-		"signup-button": "Sign Up",
-		"signup-text-1": "Don't have an account?",
-		"signup-text-2": "Sign up",
-		"login-text-1": "Already have an account?",
-		"login-text-2": "Login",
-		"forgot-text-1": "Don't remember your login details? ",
-		"forgot-text-2": "Reset here",
-		"google": "google",
-		"facebook": "facebook",
-		"i-read": "I read and accept the ",
-		"tandc": "Terms and Conditions"
+		"alt-login": "아니면 로그인 ",
+		"login-button": "로그인",
+		"signup-button": "회원가입",
+		"signup-text-1": "계정이 없으십니까?",
+		"signup-text-2": "회원가입 하기",
+		"login-text-1": "계정이 있으십니까?",
+		"login-text-2": "로그인",
+		"forgot-text-1": "로그인 정보가 기억 안나십니까? ",
+		"forgot-text-2": "초기화",
+		"google": "구글",
+		"facebook": "페이스북",
+		"i-read": "확인 하였습니다 ",
+		"tandc": "정보처리안을 "
 	},
 	"login-component": {
-		"title": "Login",
+		"title": "로그인",
 		"email-label": "Email",
 		"password-label": "Password",
 		"remember-label": "Remember Me?",
-		"login-button": "Login",
-		"dont-have-account": "Don't have an account, ",
-		"register": "Sign Up",
-		"email-verified": " Your email has been successfully verified. Continue to login and use this amazing app!!"
+		"login-button": "로그인",
+		"dont-have-account": "계정이 없다 ",
+		"register": "회원가입",
+		"email-verified": " 이메일 확인이 되었습니다. 로그인 하여주십시오"
 	},
 	"signup-component": {
-		"title": "Create an account to start using this app",
-		"fullname-label": "Display Name",
-		"email-label": "Email",
-		"password-label": "Password",
-		"retype-password-label": "Retype",
-		"signup-button": "Register"
+		"title": "앱을 사용하기 위해 계정을 만드십시오",
+		"fullname-label": "이름",
+		"email-label": "이메일",
+		"password-label": "비밀번호",
+		"retype-password-label": "다시 입력",
+		"signup-button": "등록"
 	},
 	"forgot-component": {
-		"title": "Forgot Password",
-		"subtitle-email": "Enter your user email to get your password sent to it",
-		"subtitle-password": "Enter your new password",
-		"password-reset-info": "A pin will be sent to you email. Enter this pin and a new password to reset",
-		"email-label": "Email",
-		"pin-label": "Pin",
-		"password-label": "Password",
-		"retype-password-label": "Retype",
-		"request-button": "Send Reset Email",
-		"already-have-pin-1": "Already have a pin code?",
-		"already-have-pin-2": "Reset password",
-		"reset-button": "Reset Password",
-		"email-sent-to": "An email will be sent to ",
-		"supply-pin": "Supply pin code",
-		"reset-success": "Your Password has been successfully changed"
+		"title": "폐정 잃어버림",
+		"subtitle-email": "비밀번호를 받으실 이메일 입력",
+		"subtitle-password": "비밀번호를 입력",
+		"password-reset-info": "이메일로 보내드린 일회용 코드로 비밀번호 초기화 하십시오",
+		"email-label": "이메일",
+		"pin-label": "핀코드",
+		"password-label": "비밀번호",
+		"retype-password-label": "재입력",
+		"request-button": "이메일 초기화 보내기",
+		"already-have-pin-1": "핀코드가 있으십니까?",
+		"already-have-pin-2": "비밀번호 다시설정 하십시오",
+		"reset-button": "비밀번호 다시설정 하십시오",
+		"email-sent-to": "이메일이 여기로 가실겁니다 ",
+		"supply-pin": "핀 코드를 입력하십시오",
+		"reset-success": "비밀번호가 정상적으로 초기화 되었습니다"
 	},
 	"deactivated-account-component": {
-		"title": "Hey There... ",
-		"subtitle": "Welcome back, ",
-		"info": "You deactivated your account so you cannot access the app, good news though, you can always reactivate your account by clicking the button below",
-		"reactivate-button": "Reactivate Account",
-		"reactivated-success-message": "Account Reactivated"
+		"title": "저기로 ....",
+		"subtitle": "다시 오신걸 환영합니다, ",
+		"info": "회원탈퇴 하셔서 앱에 접근 하실수 없습니다. 좋은소식! 언제든지 다시 계정 활성화 할수 있습니다",
+		"reactivate-button": "계정 재활성화",
+		"reactivated-success-message": "계정 재활성화 확인"
 	},
 	"verify-email-component": {
-		"title": "Verify Email",
-		"subtitle": "Hello, {{name}}",
-		"info": "You must verify your email address. A verification email has been sent to your email account <a href=\"{{email}}\">{{email}}</a>. Please follow instructions to complete verification process",
-		"login-button": "Back",
-		"resend-button": "Resend Verification Email",
-		"verification-email-sent": "Verification Email Sent"
+		"title": "이메일 확인",
+		"subtitle": "안녕하세요, {{name}}",
+		"info": "이메일을 확입하십시오 <a href=\"{{email}}\">{{email}}</a>. 이 이메일로 절차 따르십시오",
+		"login-button": "뒤로가기",
+		"resend-button": "이메일 인증 다시 보내기",
+		"verification-email-sent": "이메일 인증 보내기 확인"
 	},
 	"dashboard-component": {
-		"title": "Dashboard",
-		"charts-tab": "Charts",
-		"schedule-tab": "Schedule",
-		"maps-tab": "Maps"
+		"title": "대시보드",
+		"charts-tab": "차트",
+		"schedule-tab": "스케쥴",
+		"maps-tab": "지도"
 	},
 	"maps-component": {
 		"open": "Opened",
@@ -345,25 +345,25 @@
 		"establishment-label": "Type of Establishment"
 	},
 	"feed-component": {
-		"title": "Timeline",
-		"search-placeholder": "Search...",
-		"share-button": "Share",
-		"edit-button": "Edit",
-		"send-button": "Send",
-		"comments-title": "Comments",
-		"add-title": "Add Post",
-		"no-post-title": "This post has no title set",
-		"no-post-subtitle": "This post has no subtitle set",
-		"no-post-content": "This post has no content set",
-		"no-post-image": "This post has no image set",
-		"minimal": "Minimal",
-		"timeline": "Timeline",
-		"showcase": "Showcase",
-		"modern": "Modern",
-		"share-confirm": "Post has been shared",
-		"more-header": "Feed options",
-		"more-option-open": "Open",
-		"more-option-delete": "Delete"
+		"title": "타임라인",
+		"search-placeholder": "검색...",
+		"share-button": "공유",
+		"edit-button": "수정",
+		"send-button": "보내기",
+		"comments-title": "코멘트",
+		"add-title": "포스트 등록",
+		"no-post-title": "포스트에 제목이 없습니다",
+		"no-post-subtitle": "포스트에 제목이 없습니다",
+		"no-post-content": "포스트에 내용이 없습니다",
+		"no-post-image": "포스트에 이미지가 없습니다",
+		"minimal": "최소화",
+		"timeline": "타임라인",
+		"showcase": "쇼케이스",
+		"modern": "최신",
+		"share-confirm": "포스트가 공유 되었습니다",
+		"more-header": "피드설정",
+		"more-option-open": "열기",
+		"more-option-delete": "삭제"
 	},
 	"feed-detail-component": {
 		"delete-alert-title": "Delete Post",
@@ -411,7 +411,7 @@
 		"pie": "Pie Chart"
 	},
 	"misc": {
-		"no-data": "No Data Found",
+		"no-data": "데이터가 없음",
 		"no-events": "No Events Upcoming",
 		"no-images": "No Images Data",
 		"no-feed": "No Feed Data",
@@ -420,88 +420,88 @@
 		"find-people": "Find People"
 	},
 	"other": {
-		"search-placeholder": "Search...",
-		"close": "Close",
-		"yes": "Yes",
-		"no": "No",
-		"cancel": "Cancel",
-		"agree": "Agree",
-		"something-went-wrong": "Something went wrong",
-		"something-is-missing": "Something is missing",
-		"camera": "Camera",
-		"photo-library": "Library",
-		"library": "Library",
-		"edit-label": "Edit",
-		"open-label": "Open",
-		"delete-label": "Delete",
-		"options": "Options",
-		"save-to-album": "Save to Photo album"
+		"search-placeholder": "검색...",
+		"close": "닫기",
+		"yes": "네",
+		"no": "아니오",
+		"cancel": "취소",
+		"agree": "동의",
+		"something-went-wrong": "어디선가 잘못 되었습니다",
+		"something-is-missing": "무언가가 없습니다",
+		"camera": "카메라",
+		"photo-library": "라이브러리",
+		"library": "라이브러리",
+		"edit-label": "설정",
+		"open-label": "열기",
+		"delete-label": "삭제",
+		"options": "옵션",
+		"save-to-album": "포토 앨범에 저장"
 	},
 	"profile-component": {
-		"title": "Profile",
-		"post": "Post",
-		"following": "Following",
-		"followers": "followers"
+		"title": "프로필",
+		"post": "포스트",
+		"following": "팔로잉",
+		"followers": "팔로워들"
 	},
 	"edit-profile-component": {
-		"title": "Edit Profile",
-		"display-name-label": "Display Name",
-		"status-message-label": "Status Message",
-		"email-label": "Email",
-		"mobile-label": "Mobile",
-		"country-label": "Country",
-		"password-label": "Password",
-		"retype-password-label": "Retype Password",
-		"select-country": "Select Country",
-		"change-profile-image": "Change Profile Image",
-		"update-button": "Update Details"
+		"title": "프로필 수정",
+		"display-name-label": "이름",
+		"status-message-label": "메시지",
+		"email-label": "이메일",
+		"mobile-label": "휴대폰",
+		"country-label": "나라",
+		"password-label": "비밀번호",
+		"retype-password-label": "비밀번호 재입력",
+		"select-country": "나라 선택",
+		"change-profile-image": "프로필 사진 바꾸기",
+		"update-button": "디테일 수정"
 	},
 	"change-password-component": {
-		"title": "Change Password",
-		"old-password-label": "Old Password",
-		"new-password-label": "New Password",
-		"retype-password-label": "Retype Password",
-		"change-password": "Change Password"
+		"title": "비밀번호 바꾸기",
+		"old-password-label": "전 비밀번호",
+		"new-password-label": "새 비밀번호",
+		"retype-password-label": "비밀번호 재입력",
+		"change-password": "배밀번호 바꾸기"
 	},
 	"form-validation-messages": {
-		"required": "this field is required",
-		"email": "enter a valid email",
-		"password-no-match": "passwords do not match",
-		"password-no-secure": "password is not secure",
-		"form-incomplete": "This data provided is invalid, please check your information and try again"
+		"required": "이 필드는 필요합니다",
+		"email": "이메일을 입력하십시오",
+		"password-no-match": "비밀번호가 일치하지 않습니다",
+		"password-no-secure": "비밀번호 강도가 너무 약합니다",
+		"form-incomplete": "입력하신 정보가 잘못 되었습니다 재입력 하십시오"
 	},
 	"setting-component": {
-		"title": "Settings",
-		"save-button": "Save Settings",
-		"logout-button": "Logout",
-		"edit-account": "Edit Account",
-		"delete-account": "Delete Account",
-		"deactivated-account-alert-title": "Deactivate account",
-		"deactivated-account-alert-message": "Are you sure you want to deactivate your account?",
-		"deactivate-account-success-message": "Account Deactivated",
-		"option-general-title": "General",
-		"option-general-1-text": "Hide Welcome",
+		"title": "설정",
+		"save-button": "설정 저장",
+		"logout-button": "로그아웃",
+		"edit-account": "계정 설정",
+		"delete-account": "계정 삭제",
+		"deactivated-account-alert-title": "계정 비활성화",
+		"deactivated-account-alert-message": "계정 비활성화 하시겠습니까?",
+		"deactivate-account-success-message": "계정 비활성화 확인",
+		"option-general-title": "일반",
+		"option-general-1-text": "환영 숨기기",
 		"option-general-1-description": "Tick to hide welcome screen",
 		"option-general-2-text": "Chat Auto Reply",
 		"option-general-2-description": "Stop auto reply on chat",
-		"option-general-3-text": "Language",
+		"option-general-3-text": "언어",
 		"option-general-3-description": "Set language used in app",
-		"option-account-title": "Manage Account",
-		"option-account-1-text": "Edit Profile",
-		"option-account-1-description": "Name, Email, Security",
-		"option-account-2-text": "Change Password",
-		"option-account-2-description": "Set new password",
-		"option-account-3-text": "Deactivate Account",
-		"option-account-3-description": "Selecting this will deactivate your account",
-		"option-notification-title": "Notifications",
-		"option-notification-1-text": "Push Notifications",
-		"option-notification-1-description": "Change app notification settings",
-		"option-more-title": "More",
-		"option-more-1-text": "Rate the app",
-		"option-more-1-description": "rate and review us",
-		"option-more-2-text": "Feedback",
-		"option-more-2-description": "Share your thoughts",
-		"option-more-3-text": "Privacy Policy",
+		"option-account-title": "계정 관리",
+		"option-account-1-text": "프로필 수정",
+		"option-account-1-description": "이름, 이메일, 보안",
+		"option-account-2-text": "비밀번호 바꾸기",
+		"option-account-2-description": "재 비밀번호",
+		"option-account-3-text": "계정 비활성화",
+		"option-account-3-description": "누르시면 계정이 비활성화 됩니다",
+		"option-notification-title": "알림",
+		"option-notification-1-text": "푸시 알림",
+		"option-notification-1-description": "앱 알림 설정 바꾸기",
+		"option-more-title": "더 보기",
+		"option-more-1-text": "앱 평가",
+		"option-more-1-description": "앱 평가 하고 리뷰",
+		"option-more-2-text": "피드백",
+		"option-more-2-description": "앱 리뷰 해주세요",
+		"option-more-3-text": "개인정보처리방안",
 		"option-more-3-description": "Review our policies"
 	},
 	"feedback-component": {
@@ -521,52 +521,52 @@
 		"success-message": "Your feedback has been sent. Thank you"
 	},
 	"privacy-component": {
-		"title": "Privacy Policy"
+		"title": "개인정보처리방안"
 	},
 	"terms-and-conditions-component": {
-		"title": "Terms and Conditions"
+		"title": "개인정보처리방안"
 	},
 	"notification-setting-component": {
-		"title": "Notification Setting",
-		"info": " Toggle app notifications, restrict views and improve privacy",
-		"app-notifications": "App Notifications",
-		"msg-preview-title": "Show Message Preview",
-		"msg-preview-description": "Some description here",
-		"in-app-notifications-title": "In-app Notifications",
-		"in-app-notifications-description": "Some description here",
-		"in-app-vibration-title": "In-app Vibration",
-		"in-app-vibration-description": "Some description here",
-		"app-banner-title": "Show app banner",
-		"app-banner-description": "Some description here"
+		"title": "알람 설정",
+		"info": " 알람 설정 방식",
+		"app-notifications": "앱 알람",
+		"msg-preview-title": "메시지 미리보기 설정",
+		"msg-preview-description": "설정 방식 입력",
+		"in-app-notifications-title": "앱안에서의 알람 설정",
+		"in-app-notifications-description": "알람 설정 방식",
+		"in-app-vibration-title": "앱안에서의 진동 설정",
+		"in-app-vibration-description": "진동 설정 방식",
+		"app-banner-title": "앱 배너",
+		"app-banner-description": "앱 배너 설정 방식"
 	},
 	"messages-component": {
-		"title": "Messages",
-		"tab-all": "All",
-		"tab-archived": "Archived",
-		"start-chatting": "Start chatting",
-		"delete": "Chat Deleted",
-		"option-header": "Manage Conversation",
-		"show-profile": "Show Profile",
-		"failed-to-send": "Message failed to send",
-		"send-image": "Send Image from",
-		"manage-chat": "Manage Chat",
-		"mark-as-read": "Mark as Read",
-		"archieved": "Archived",
-		"manage-messages": "Manage Messages",
-		"select": "Select",
-		"select-all": "Select All",
-		"delete-all": "Delete All"
+		"title": "메시지",
+		"tab-all": "전체",
+		"tab-archived": "보관함",
+		"start-chatting": "채팅 시작하기",
+		"delete": "채팅 삭제",
+		"option-header": "채팅 관리",
+		"show-profile": "프로필 보기",
+		"failed-to-send": "메시지가 안보내졌습니다",
+		"send-image": "이미지를 보내기",
+		"manage-chat": "채팅 관리",
+		"mark-as-read": "읽음으로 바꾸기",
+		"archieved": "보관함",
+		"manage-messages": "메시지 관리",
+		"select": "선택",
+		"select-all": "전체 선택",
+		"delete-all": "전체 삭제"
 	},
 	"message-component": {
-		"placeholder": "Type message here...",
-		"read-more": "Read More",
-		"no-images-selected": "No Images Selected"
+		"placeholder": "메시지를 입력하세요...",
+		"read-more": "더 보기",
+		"no-images-selected": "선택된 이미지가 없습니다"
 	},
 	"person-component": {
-		"follow": "Follow"
+		"follow": "팔로우"
 	},
 	"calendar-event-list-component": {
-		"title": "Events"
+		"title": "이벤트"
 	},
 	"calendar-event-manage-component": {
 		"add-title": "Add Event",
@@ -581,10 +581,10 @@
 		"add-notes-label": "Add Notes"
 	},
 	"social-share-component": {
-		"title": "Social Share"
+		"title": "SNS 공유"
 	},
 	"lang-select-component": {
-		"title": "Languages",
-		"select": "Select"
+		"title": "언어",
+		"select": "선택"
 	}
 }
