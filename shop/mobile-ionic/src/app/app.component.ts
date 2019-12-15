@@ -20,6 +20,7 @@ import { AuthService } from 'app/pages/auth/services/auth/auth.service';
 import { SettingService } from 'app/pages/setting/services/setting/setting.service';
 import { FcmService } from 'shared/services/fcm/fcm.service';
 import { AppService, IAppPages } from 'app/services/app/app.service';
+import { Toast } from '@ionic-native/toast/ngx';
 
 @Component({
 	selector: 'e-cu-root',
@@ -28,6 +29,7 @@ import { AppService, IAppPages } from 'app/services/app/app.service';
 export class AppComponent extends Extender implements OnInit {
 	public pages = [];
 	public color: string = '#009688';
+	public count: number = 0;
 
 	constructor(
 		public readonly platform: Platform,
@@ -46,7 +48,8 @@ export class AppComponent extends Extender implements OnInit {
 		private authService: AuthService,
 		private fcmService: FcmService,
 		private settingService: SettingService,
-		private storage: Storage
+		private storage: Storage,
+		private nativeToast: Toast
 	) {
 		super(injector);
 		this._initializeApp();
@@ -108,7 +111,31 @@ export class AppComponent extends Extender implements OnInit {
 	}
 
 	private async _initializeApp() {
-		await this.platform.ready();
+		await this.platform.ready().then(() => {
+			this.platform.backButton.subscribe((backbuttonEventDetail) => {
+				console.log(backbuttonEventDetail);
+				this.count++;
+				if (this.count === 2) {
+					this.nativeToast
+						.show(
+							'뒤로 가기 버튼을 한번 더 누르면 종료됩니다',
+							'5000',
+							'bottom'
+						)
+						.subscribe((toast) => {
+							console.log(toast);
+						});
+					setTimeout(function() {
+						this.count = 0;
+					}, 800);
+				} else if (this.count === 3) {
+					navigator['app'].exitApp();
+					setTimeout(function() {
+						this.count = 0;
+					}, 800);
+				}
+			});
+		});
 
 		this._watchNetworkConnection();
 
