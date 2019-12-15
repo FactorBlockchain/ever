@@ -1,83 +1,83 @@
 {
 	"LANGUAGE": {
 		"ID": "en-US",
-		"NAME": "English"
+		"NAME": "한국어"
 	},
-	"CURRENT_DIRECTION": "ltr",
-	"SIDEBAR_SIDE": "left",
+	"CURRENT_DIRECTION": "Itr",
+	"SIDEBAR_SIDE": "왼쪽",
 	"MAIN_VIEW": {
-		"EVERCO_DRIVER": "Carrier"
+		"EVERCO_DRIVER": "배달원"
 	},
 	"MENU": {
-		"MAIN": "Main",
-		"DELIVERIES": "Deliveries",
-		"SETTINGS": "Settings",
-		"LANGUAGE": "Language",
+		"MAIN": "메인",
+		"DELIVERIES": "배송",
+		"SETTINGS": "설정",
+		"LANGUAGE": "언어",
 		"ABOUT_US": "About Us",
-		"TERMS_OF_USE": "Terms of Use"
+		"TERMS_OF_USE": "사용조건"
 	},
 	"DELIVERY_VIEW": {
-		"THE_CUSTOMER_HAS_TO_PAY": "The Customer has to pay",
-		"CUSTOMER_ALREADY_PAID_WITH_CARD": "Customer already paid with card!",
-		"DELIVERED": "Delivered",
-		"CANCEL": "Cancel",
-		"DELIVERIES_HISTORY": "Deliveries History",
-		"TO": "To",
-		"FROM": "From",
-		"ID": "ID",
-		"IS_PAID": "Is Paid",
-		"CANCELED": "Canceled",
-		"CONFIRMED": "Confirmed",
-		"DETAILS": "Details"
+		"THE_CUSTOMER_HAS_TO_PAY": "고객이 결제해야 합니다",
+		"CUSTOMER_ALREADY_PAID_WITH_CARD": "고객이 카드로 이미 결제하였습니다",
+		"DELIVERED": "배송됨",
+		"CANCEL": "취소",
+		"DELIVERIES_HISTORY": "배송 내역",
+		"TO": "에게",
+		"FROM": "로부터",
+		"ID": "아이디",
+		"IS_PAID": "결제됨",
+		"CANCELED": "취소됨",
+		"CONFIRMED": "확인됨",
+		"DETAILS": "세부사항"
 	},
 	"DRIVE_TO_WAREHOUSE_VIEW": {
-		"TAKE_WORK": "Take work",
-		"SKIP_WORK": "Skip Work",
-		"I'M_THERE": "I'm there",
-		"CANCEL": "Cancel"
+		"TAKE_WORK": "작업 가져오기",
+		"SKIP_WORK": "작업 건너뛰기",
+		"I'M_THERE": "거기에 있습니다",
+		"CANCEL": "취소"
 	},
 	"HOME_VIEW": {
-		"DELIVERIES": "Deliveries",
-		"WORKING": "Working",
-		"NOT_WORKING": "Not Working",
-		"START_WORKING": "Start Working",
-		"STOP_WORKING": "Stop Working"
+		"DELIVERIES": "배송",
+		"WORKING": "배송중",
+		"NOT_WORKING": "배송중이 아님",
+		"START_WORKING": "배송 시작",
+		"STOP_WORKING": "배송 중지"
 	},
 	"STARTING_DELIVERY_VIEW": {
-		"START": "Start",
-		"CANCEL": "Cancel"
+		"START": "시작",
+		"CANCEL": "취소"
 	},
 	"NO_INTERNET_VIEW": {
-		"NETWORK_WAS_DISCONNECTED": "Packmam is now loading"
+		"NETWORK_WAS_DISCONNECTED": "네트워크가 해제되었습니다"
 	},
 	"NO_SERVER_VIEW": {
-		"NO_SERVER": "Packmam is now loading"
+		"NO_SERVER": "서버와의 연결이 끊어졌습니다"
 	},
 	"GET_PRODUCT_VIEW": {
-		"GOT_IT": "Got It",
-		"CANCEL": "Cancel"
+		"GOT_IT": "제품 수령",
+		"CANCEL": "취소"
 	},
 	"RETURN_PRODUCT_VIEW": {
-		"RETURN_PRODUCT": "Return Product",
-		"CANCEL": "Cancel"
+		"RETURN_PRODUCT": "제품 반환",
+		"CANCEL": "취소"
 	},
 	"LOGIN_VIEW": {
-		"LOGIN": "Login"
+		"LOGIN": "로그인"
 	},
 	"ABOUT_VIEW": {
 		"TITLE": "About Us"
 	},
 	"TERMS_OF_USE_VIEW": {
-		"TITLE": "Terms of Use"
+		"TITLE": "사용 조건"
 	},
 	"LANGUAGE_VIEW": {
-		"TITLE": "Select language",
-		"ENGLISH": "English",
-		"BULGARIAN": "Bulgarian",
-		"HEBREW": "Hebrew",
-		"RUSSIAN": "Rusian"
+		"TITLE": "언어 선택",
+		"ENGLISH": "영어",
+		"BULGARIAN": "불가리아어",
+		"HEBREW": "히브루어",
+		"RUSSIAN": "러시아어"
 	},
 	"LIST_VIEW": {
-		"YOU_NAVIGATED_HERE_FROM": "You navigated here from"
+		"YOU_NAVIGATED_HERE_FROM": "여기서 방향을 찾았습니다"
 	}
 }
