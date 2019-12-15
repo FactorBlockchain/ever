@@ -135,7 +135,11 @@ const routes: Routes = [
 			import('../pages/setting/setting.module').then(
 				(m) => m.SettingModule
 			)
-	}
+	},
+	{
+		path: 'page1',
+		loadChildren: '../pages/page1/page1.module#Page1PageModule '
+	},
 ];
 
 @NgModule({

@@ -125,6 +125,21 @@
 
 			<ion-item-group>
 				<ion-item-divider>
+					<ion-label>
+						쇼핑몰
+					</ion-label>
+				</ion-item-divider>
+				<ion-menu-toggle [autoHide]="true">
+					<ion-item routerLink="/page1" routerDirection="root" routerLinkActive="activated">
+						<ion-icon name="basket"></ion-icon>
+						<ion-label>
+							Mi shop
+						</ion-label>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-item-group>
+			<ion-item-group>
+				<ion-item-divider>
 					<ion-label>{{
 						'SIDE_MENU.GROUPS.SETTINGS.DIVER_TITLE' | translate
 					}}</ion-label>
