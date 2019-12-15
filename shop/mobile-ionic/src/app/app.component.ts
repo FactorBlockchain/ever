@@ -125,7 +125,7 @@ export class AppComponent extends Extender implements OnInit {
 						.subscribe((toast) => {
 							console.log(toast);
 						});
-					setTimeout(function() {
+					setTimeout(() => {
 						this.count = 0;
 					}, 800);
 				} else if (this.count === 3) {
@@ -217,7 +217,9 @@ export class AppComponent extends Extender implements OnInit {
 				console.log(message);
 				if (message.messageType === 'data') {
 					// route to answer call page
-					alert(message.messageType + ' ' + message.sessionToken);
+					this.router.navigateByUrl(
+						'/video-room/' + message.sessionToken
+					);
 				}
 			})
 		);

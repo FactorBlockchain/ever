@@ -25,7 +25,8 @@ export class CallsService extends Extender {
 		const { uid } = await this.authService.getUser();
 		this.firestoreService.add<ICall>('calls', {
 			participantsId: [user.uid, uid],
-			sessionToken: sessionToken
+			sessionToken: sessionToken,
+			video: 'true'
 		});
 	}
 }
