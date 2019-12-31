@@ -217,14 +217,15 @@ export class AppComponent extends Extender implements OnInit {
 				console.log(message);
 				if (message.messageType === 'data') {
 					// route to answer call page
-					alert(
-						message.messageType +
-							' ' +
-							message.sessionToken +
-							' ' +
-							message.video
-					);
-					const videocall: boolean = message.video == "true"? true : false;
+					// alert(
+					// 	message.messageType +
+					// 		' ' +
+					// 		message.sessionToken +
+					// 		' ' +
+					// 		message.video
+					// );
+					const videocall: boolean =
+						message.video == 'true' ? true : false;
 					if (videocall) {
 						this.router.navigateByUrl(
 							'/video-room/' + message.sessionToken + '/video'
