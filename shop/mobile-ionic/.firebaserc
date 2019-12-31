@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "packmam-messenger",
-    "staging": "packmam-messenger"
+    "default": "com-factor-messanger",
+    "staging": "com-factor-messanger"
   }
 }
