@@ -30,7 +30,7 @@ const envFileContent = `// NOTE: Auto-generated file
 import { Environment } from './model';
 
 export const environment: Environment = {
-  production: ${isProd},
+  production: true,
 
   VERSION: '${env.VERSION}',
 
