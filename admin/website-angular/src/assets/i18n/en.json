@@ -125,7 +125,7 @@
 		"LOG_OUT": "로그아웃"
 	},
 	"FOOTER_VIEW": {
-		"COPY_RIGHT": "저작권 © 2016-현재",
+		"COPY_RIGHT": "저작권 © 2019-현재",
 		"ALL_RIGHTS_RESERVED": "무단 전제와 복제를 금함"
 	},
 	"PROFILE_VIEW": {
@@ -964,7 +964,7 @@
 	},
 	"MENU_VIEW": {
 		"DASHBOARD": "대시보드",
-		"STORES": "매장",
+		"STORES": "판매자",
 		"PRODUCTS": {
 			"PRODUCTS": "제품",
 			"MANAGEMENT": "관리",

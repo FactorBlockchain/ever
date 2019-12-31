@@ -323,4 +323,8 @@ export class MessageComponent extends Extender
 		this.sendLoading = false;
 		this.toast(err);
 	};
+
+	goBack(){
+		this.closeModal();
+	}
 }

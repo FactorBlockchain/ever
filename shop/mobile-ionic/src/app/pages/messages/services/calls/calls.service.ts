@@ -34,7 +34,7 @@ export class CallsService extends Extender {
 		this.firestoreService.add<ICall>('calls', {
 			participantsId: [user.uid, uid],
 			sessionToken: sessionToken,
-			videocall: videocall
+			video: videocall? "true": "false"
 		});
 	}
 }

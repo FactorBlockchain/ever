@@ -202,7 +202,7 @@
 		"WITH_NAME": "판매자의 이름"
 	},
 	"NO_SERVER_VIEW": {
-		"NO_SERVER": "서버와의 연결이 끊어졌습니다"
+		"NO_SERVER": "팩맘에 접속중입니다"
 	},
 	"OR": "또는",
 	"OR_LOWERCASE": "또는",
