@@ -32,6 +32,8 @@ export class HomePage {
 	marker;
 	map: any;
 
+	carrierMarker: google.maps.Marker;
+
 	constructor(
 		private carrierRouter: CarrierRouter,
 		private localNotifications: LocalNotifications,
@@ -104,13 +106,21 @@ export class HomePage {
 						]
 					}
 				} as IGeoLocation;
-
-				this.carrierMap.addMarker(
-					new google.maps.LatLng(
-						position.coords.latitude,
-						position.coords.longitude
-					)
-				);
+				if (!!this.carrierMarker) {
+					this.carrierMarker.setPosition(
+						new google.maps.LatLng(
+							position.coords.latitude,
+							position.coords.longitude
+						)
+					);
+				} else {
+					this.carrierMarker = this.carrierMap.addMarker(
+						new google.maps.LatLng(
+							position.coords.latitude,
+							position.coords.longitude
+						)
+					);
+				}
 
 				if (this.order$) {
 					await this.order$.unsubscribe();
