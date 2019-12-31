@@ -75,7 +75,7 @@ We follow [Gitflow Workflow](https://nvie.com/posts/a-successful-git-branching-m
 Clone the Ever Platform Git repo:
 
 ```
-git clone -c core.symlinks=true --recursive https://github.com/ever-co/ever.git
+git clone -c core.symlinks=true --recursive https://github.com/FactorBlockchain/ever.git
 ```
 
 Notes:
