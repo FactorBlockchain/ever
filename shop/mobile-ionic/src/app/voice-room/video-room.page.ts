@@ -46,9 +46,9 @@ import IUser from '@modules/server.common/interfaces/IUser';
 declare var cordova;
 
 @Component({
-	selector: 'app-voice-room',
-	templateUrl: './voice-room.page.html',
-	styleUrls: ['./voice-room.page.scss'],
+	selector: 'app-video-room',
+	templateUrl: './video-room.page.html',
+	styleUrls: ['./video-room.page.scss'],
 	animations: [
 		trigger('slideLeftRight', [
 			state(
@@ -151,7 +151,7 @@ declare var cordova;
 		])
 	]
 })
-export class VoiceRoomPage implements OnInit, OnDestroy {
+export class VideoRoomPage implements OnInit, OnDestroy {
 	// Constants
 	ANDROID_PERMISSIONS = [
 		'android.permission.CAMERA',
@@ -236,7 +236,7 @@ export class VoiceRoomPage implements OnInit, OnDestroy {
 				this.initApp();
 			} else {
 				// Go back
-				this.router.navigate(['/people']);
+				this.router.navigate(['/']);
 			}
 		});
 		return await modal.present().then(() => {
@@ -290,6 +290,9 @@ export class VoiceRoomPage implements OnInit, OnDestroy {
 		this.subscribedToStreamDestroyed();
 		this.subscribedToChat();
 		this.connectToSession();
+		if ((this.videocall = false)) {
+			this.disablevideo();
+		}
 	}
 
 	exitSession() {
@@ -579,6 +582,9 @@ export class VoiceRoomPage implements OnInit, OnDestroy {
 				);
 				this.openAlertError(error.message);
 			});
+		if ((this.videocall = false)) {
+			this.disablevideo();
+		}
 	}
 
 	private connect(token: string): void {

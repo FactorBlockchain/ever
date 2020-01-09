@@ -3,8 +3,6 @@ import { ModalController, Platform } from '@ionic/angular';
 import { OpenVidu, Publisher } from 'openvidu-browser';
 import { VoiceUserModel } from '../../models/user-model';
 import { VoiceOpenViduService } from '../../services/openvidu.service';
-import { Router, ActivatedRoute, Params } from '@angular/router';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 declare var cordova;
 
@@ -21,48 +19,16 @@ export class VoiceSettingUpModalComponent implements OnInit {
 	videoDevices: any[] = [];
 	speakerphone = false;
 
-	sessionToken: string;
-	myUserName: string;
-	videocall: boolean;
-	videocallstring: string;
-
 	constructor(
 		public modalController: ModalController,
 		public platform: Platform,
-		private openViduSrv: VoiceOpenViduService,
-		private route: ActivatedRoute
+		private openViduSrv: VoiceOpenViduService
 	) {}
 
 	ngOnInit() {
-		/*
-		this.OV.getDevices().then((devices: any) => {
-			this.audioDevices = devices.filter(
-				(device) => device.kind === 'audioinput'
-			);
-			this.videoDevices = devices.filter(
-				(device) => device.kind === 'videoinput'
-			);
-			if (this.platform.is('cordova')) {
-				if (this.platform.is('ios')) {
-					console.log('iOS platform');
-					setTimeout(() => {
-						this.refreshVideos();
-					}, 1100);
-				} else if (this.platform.is('android')) {
-					console.log('Android platform');
-				}
-				this.localUser.setVideoSource(
-					this.videoDevices.filter((device: any) =>
-						device.label.includes('Front')
-					)[0].deviceId
-				);
-			}
-		}
-		*/
-		/*
 		this.platform.ready().then(() => {
 			this.OV = new OpenVidu();
-			this.localUser = new UserModel();
+			this.localUser = new VoiceUserModel();
 			if (this.platform.is('cordova') && this.platform.is('android')) {
 				this.openViduSrv
 					.checkAndroidPermissions()
@@ -84,7 +50,6 @@ export class VoiceSettingUpModalComponent implements OnInit {
 					.catch((error) => console.log(error));
 			}
 		});
-		*/
 	}
 
 	initDevices() {
@@ -117,38 +82,6 @@ export class VoiceSettingUpModalComponent implements OnInit {
 		this.modalController.dismiss();
 		this.destroyPublisher();
 		this.localUser = null;
-	}
-
-	private generateParticipantInfo() {
-		this.route.params.subscribe((params: Params) => {
-			console.log(params.option);
-		});
-
-		/*
-		this.route.params.subscribe((params: Params) => {
-
-			if (params.option == 'video'){
-				console.log('WE ARE NOW AT THE VIDEO');
-			}
-			if (params.option == 'voice'){
-				console.log('WE ARE NOW AT THE VOICE');
-			}
-			/*
-			this.videocall = !!params.option
-				? params.option == 'video'
-					? true
-					: false
-				: true;
-			*/
-		/*
-			this.myUserName =
-				'OpenVidu_User' + Math.floor(Math.random() * 100000);
-		});
-		*/
-
-		this.videocallstring = String(this.videocall);
-		console.log('WE ARE NOW AT THE VIDEO SETTING MODAL ');
-		console.log(this.videocallstring);
 	}
 
 	setAudioDevice(event) {

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VoiceRoomPage } from './voice-room.page';
+import { VideoRoomPage } from './video-room.page';
 import { VoiceStreamComponent } from '../voiceshared/components/stream/stream.component';
 import { VoiceOpenViduVideoComponent } from '../voiceshared/components/stream/ov-video.component';
 import { VoiceChatComponent } from '../voiceshared/components/chat/chat.component';
@@ -14,7 +14,7 @@ import { VoiceSettingUpModalComponent } from '../voiceshared/components/setting-
 const routes: Routes = [
 	{
 		path: '',
-		component: VoiceRoomPage
+		component: VideoRoomPage
 	}
 ];
 
@@ -26,7 +26,7 @@ const routes: Routes = [
 		RouterModule.forChild(routes)
 	],
 	declarations: [
-		VoiceRoomPage,
+		VideoRoomPage,
 		VoiceStreamComponent,
 		VoiceChatComponent,
 		VoiceSettingUpModalComponent,
@@ -35,4 +35,4 @@ const routes: Routes = [
 	exports: [],
 	entryComponents: [VoiceChatComponent, VoiceSettingUpModalComponent]
 })
-export class VoiceRoomPageModule {}
+export class VideoRoomPageModule {}

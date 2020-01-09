@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VoiceChatComponent } from './chat.component';
 
-describe('ChatComponent', () => {
+describe('VoiceChatComponent', () => {
 	let component: VoiceChatComponent;
 	let fixture: ComponentFixture<VoiceChatComponent>;
 

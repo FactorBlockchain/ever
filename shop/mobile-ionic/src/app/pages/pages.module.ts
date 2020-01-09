@@ -18,7 +18,7 @@ const routes: Routes = [
 	},
 	{
 		path: 'voice-room/:roomName/voice',
-		loadChildren: '../voice-room/voice-room.module#VoiceRoomPageModule'
+		loadChildren: '../voice-room/video-room.module#VideoRoomPageModule'
 	},
 	{
 		path: 'chatbot',
