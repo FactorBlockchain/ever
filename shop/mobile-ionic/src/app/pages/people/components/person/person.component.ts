@@ -87,13 +87,15 @@ export class PersonComponent extends Extender implements OnInit {
 	}
 	///////////////// obtain the sessionToken and open video chat room
 	*/
+
 	public async voicecall() {
-		await this.commonService.callUser(
-			this.user.mobile || this.user.phone,
-			this.callNumber
-		);
+		const sessionToken = this.random();
+		let videocall = false;
+		this.callService.startCall(this.user, sessionToken, videocall);
+		this.router.navigate(['/voice-room/' + sessionToken + '/voice']);
 		this.closeModal();
 	}
+
 	///////////////// obtain the sessionToken and open video chat room
 	public async call() {
 		const sessionToken = this.random();

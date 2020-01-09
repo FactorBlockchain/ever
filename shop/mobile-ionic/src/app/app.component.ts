@@ -232,7 +232,7 @@ export class AppComponent extends Extender implements OnInit {
 						);
 					} else {
 						this.router.navigateByUrl(
-							'/video-room/' + message.sessionToken + '/audio'
+							'/voice-room/' + message.sessionToken + '/voice'
 						);
 					}
 				}
