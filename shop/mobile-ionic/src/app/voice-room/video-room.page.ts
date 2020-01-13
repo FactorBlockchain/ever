@@ -354,7 +354,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		(<Publisher>this.localUser.getStreamManager()).publishVideo(
 			this.localUser.isVideoActive()
 		);
-		this.checkVideoButton();
+		//		this.checkVideoButton();
 	}
 
 	disablevideo(): void {
