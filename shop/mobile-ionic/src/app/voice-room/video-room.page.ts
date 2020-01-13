@@ -290,7 +290,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.subscribedToStreamDestroyed();
 		this.subscribedToChat();
 		this.connectToSession();
-		if ((this.videocall = false)) {
+		if (this.videocall === false) {
 			this.disablevideo();
 		}
 	}
@@ -457,12 +457,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 	private generateParticipantInfo() {
 		this.route.params.subscribe((params: Params) => {
 			this.sessionToken = params.roomName;
-			this.videocall = !!params.option
-				? params.option == 'video'
-					? true
-					: false
-				: true;
-			//			console.log("${params.option}")
+			this.videocall = false;
 			this.myUserName =
 				'OpenVidu_User' + Math.floor(Math.random() * 100000);
 		});
@@ -582,7 +577,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 				);
 				this.openAlertError(error.message);
 			});
-		if ((this.videocall = false)) {
+		if (this.videocall === false) {
 			this.disablevideo();
 		}
 	}

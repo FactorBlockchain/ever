@@ -461,12 +461,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 	private generateParticipantInfo() {
 		this.route.params.subscribe((params: Params) => {
 			this.sessionToken = params.roomName;
-			this.videocall = !!params.option
-				? params.option == 'video'
-					? true
-					: false
-				: true;
-			//			console.log("${params.option}")
+			this.videocall = true;
 			this.myUserName =
 				'OpenVidu_User' + Math.floor(Math.random() * 100000);
 		});
