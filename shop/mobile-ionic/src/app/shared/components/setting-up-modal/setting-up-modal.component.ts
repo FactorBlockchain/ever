@@ -25,6 +25,10 @@ export class SettingUpModalComponent implements OnInit {
 		private openViduSrv: OpenViduService
 	) {}
 
+	tempfunc() {
+		this.initDevices();
+		this.join();
+	}
 	ngOnInit() {
 		this.platform.ready().then(() => {
 			this.OV = new OpenVidu();
@@ -46,7 +50,7 @@ export class SettingUpModalComponent implements OnInit {
 					});
 			} else {
 				this.initPublisher()
-					.then(() => this.initDevices())
+					.then(() => this.tempfunc())
 					.catch((error) => console.log(error));
 			}
 		});
