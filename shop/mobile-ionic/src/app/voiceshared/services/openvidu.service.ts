@@ -7,7 +7,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 @Injectable({
 	providedIn: 'root'
 })
-export class OpenViduService {
+export class VoiceOpenViduService {
 	OPENVIDU_SERVER_URL = 'https://demos.openvidu.io' + ':4443';
 	MY_SECRET = 'MY_SECRET';
 	ANDROID_PERMISSIONS = [
@@ -17,7 +17,6 @@ export class OpenViduService {
 		'android.permission.BLUETOOTH',
 		'android.permission.BLUETOOTH_ADMIN'
 	];
-	TESTING_ANDROID_PERMISSIONS = ['android.permission.CAMERA'];
 
 	constructor(
 		private http: HttpClient,
@@ -121,11 +120,11 @@ export class OpenViduService {
 							this.androidPermissions.checkPermission(permission)
 						);
 					});
-					Promise.all(promisesArray).then((responses) => {
-						let allHasPermissions = true;
-						responses.forEach((response, i) => {
-							allHasPermissions = response.hasPermission;
-							/*
+					Promise.all(promisesArray)
+						.then((responses) => {
+							let allHasPermissions = true;
+							responses.forEach((response, i) => {
+								allHasPermissions = response.hasPermission;
 								if (!allHasPermissions) {
 									reject(
 										new Error(
@@ -134,21 +133,16 @@ export class OpenViduService {
 										)
 									);
 								}
-								*/
-						});
-						resolve();
-					});
-					/*
+							});
+							resolve();
+						})
 						.catch((err) => {
 							console.log(err);
 						});
-						*/
-				});
-			/*
+				})
 				.catch((err) =>
 					console.error('Error requesting permissions: ', err)
 				);
-				*/
 		});
 	}
 }

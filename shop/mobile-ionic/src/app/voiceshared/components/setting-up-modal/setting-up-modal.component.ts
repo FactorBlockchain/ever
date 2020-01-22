@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, Platform } from '@ionic/angular';
 import { OpenVidu, Publisher } from 'openvidu-browser';
-import { UserModel } from '../../models/user-model';
-import { OpenViduService } from '../../services/openvidu.service';
+import { VoiceUserModel } from '../../models/user-model';
+import { VoiceOpenViduService } from '../../services/openvidu.service';
 
 declare var cordova;
 
@@ -11,9 +11,9 @@ declare var cordova;
 	templateUrl: './setting-up-modal.component.html',
 	styleUrls: ['./setting-up-modal.component.scss']
 })
-export class SettingUpModalComponent implements OnInit {
+export class VoiceSettingUpModalComponent implements OnInit {
 	OV: OpenVidu;
-	localUser: UserModel;
+	localUser: VoiceUserModel;
 	audioDevice: any;
 	audioDevices: any[] = [];
 	videoDevices: any[] = [];
@@ -22,17 +22,18 @@ export class SettingUpModalComponent implements OnInit {
 	constructor(
 		public modalController: ModalController,
 		public platform: Platform,
-		private openViduSrv: OpenViduService
+		private openViduSrv: VoiceOpenViduService
 	) {}
 
 	tempfunc() {
 		this.initDevices();
 		this.join();
 	}
+
 	ngOnInit() {
 		this.platform.ready().then(() => {
 			this.OV = new OpenVidu();
-			this.localUser = new UserModel();
+			this.localUser = new VoiceUserModel();
 			if (this.platform.is('cordova') && this.platform.is('android')) {
 				this.openViduSrv
 					.checkAndroidPermissions()

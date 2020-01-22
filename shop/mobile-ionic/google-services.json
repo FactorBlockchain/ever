@@ -1,49 +1,49 @@
 {
 	"project_info": {
-		"project_number": "3203137459",
-		"firebase_url": "https://complete-fire-starter.firebaseio.com",
-		"project_id": "complete-fire-starter",
-		"storage_bucket": "complete-fire-starter.appspot.com"
+		"project_number": "260548356737",
+		"firebase_url": "https://com-factor-messanger.firebaseio.com",
+		"project_id": "com-factor-messanger",
+		"storage_bucket": "com-factor-messanger.appspot.com"
 	},
 	"client": [
 		{
 			"client_info": {
-				"mobilesdk_app_id": "1:3203137459:android:49b796762ea62a812915c6",
+				"mobilesdk_app_id": "1:260548356737:android:55a1d3d585e1f18710bb80",
 				"android_client_info": {
-					"package_name": "com.ezyapps.fullstarter"
+					"package_name": "com.factor.messenger"
 				}
 			},
 			"oauth_client": [
 				{
-					"client_id": "3203137459-i4hvllep5brlt0rj3h2jfoblm2j0oud3.apps.googleusercontent.com",
+					"client_id": "260548356737-ajqvb92rpujdubcn83r1tg5u6kgjesgb.apps.googleusercontent.com",
 					"client_type": 1,
 					"android_info": {
-						"package_name": "com.ezyapps.fullstarter",
-						"certificate_hash": "8e456670e7b7a89e88ef758a6d094e8ac295c300"
+						"package_name": "com.factor.messenger",
+						"certificate_hash": "c96411f9592d21d4af6f4375936dd26c6ae49cf0"
 					}
 				},
 				{
-					"client_id": "3203137459-i6u333ae7efjdfrurebli32r8v96f9hb.apps.googleusercontent.com",
+					"client_id": "260548356737-k62utlc9k2i2j97e8varfgk14k3r0ud5.apps.googleusercontent.com",
 					"client_type": 3
 				}
 			],
 			"api_key": [
 				{
-					"current_key": "AIzaSyCV2iELmB70tiFuQSm0SuFHEHF-CyUQ1SA"
+					"current_key": "AIzaSyCM-dm2MBL5xp7h2Ooptuf9ES4xl4mGXlI"
 				}
 			],
 			"services": {
 				"appinvite_service": {
 					"other_platform_oauth_client": [
 						{
-							"client_id": "3203137459-i6u333ae7efjdfrurebli32r8v96f9hb.apps.googleusercontent.com",
+							"client_id": "260548356737-k62utlc9k2i2j97e8varfgk14k3r0ud5.apps.googleusercontent.com",
 							"client_type": 3
 						},
 						{
-							"client_id": "3203137459-924q72f95925fu87ac638024kgns4d32.apps.googleusercontent.com",
+							"client_id": "260548356737-s9dso7e08o7g1aqi7jebfs8ps9i7n39s.apps.googleusercontent.com",
 							"client_type": 2,
 							"ios_info": {
-								"bundle_id": "com.ezyapps.fullstarter"
+								"bundle_id": "com.factor.messenger"
 							}
 						}
 					]

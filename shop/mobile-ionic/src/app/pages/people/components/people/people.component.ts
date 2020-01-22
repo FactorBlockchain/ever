@@ -14,6 +14,9 @@ import { CommonService } from 'shared/services/common/common.service';
 import { isArray } from 'util';
 import { PeopleService } from '../../services/people/people.service';
 import { PersonComponent } from '../person/person.component';
+import { CallsService } from 'app/pages/messages/services/calls/calls.service';
+
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 /**
  * get list of people fro users collection, group them by first letter of their display names.
@@ -56,7 +59,9 @@ export class PeopleComponent extends Extender implements OnInit {
 		private authService: AuthService,
 		private messageService: MessagesService,
 		private peopleService: PeopleService,
-		private commonService: CommonService
+		private commonService: CommonService,
+		private callService: CallsService,
+		private androidPermissions: AndroidPermissions
 	) {
 		super(injector);
 		this.alpha = this.peopleService.alpha;
@@ -154,6 +159,20 @@ export class PeopleComponent extends Extender implements OnInit {
 		modal.present();
 	}
 
+	//** random number generator (toString) for video/voice call chatroom ID */
+	random(): string {
+		//	let rand = Math.floor(Math.random()*20.0)+1.0;
+		//	return rand;
+		return (
+			Math.random()
+				.toString(36)
+				.substring(2, 15) +
+			Math.random()
+				.toString(36)
+				.substring(2, 15)
+		);
+	}
+
 	/** open action sheet with options for a person selection */
 	public async openMore(contact: IUser): Promise<any> {
 		const actionSheetCtrl = await this.actionSheetCtrl.create({
@@ -174,10 +193,31 @@ export class PeopleComponent extends Extender implements OnInit {
 				{
 					text: this.translate.instant('people-component.call'),
 					handler: () => {
-						this.commonService.callUser(
-							contact.mobile || contact.phone,
-							this.callNumber
+						const sessionToken = this.random();
+						let videocall = false;
+						this.callService.startCall(
+							contact,
+							sessionToken,
+							videocall
 						);
+						this.router.navigate([
+							'/voice-room/' + sessionToken + '/voice'
+						]);
+					}
+				},
+				{
+					text: this.translate.instant('people-component.videocall'),
+					handler: () => {
+						const sessionToken = this.random();
+						let videocall = true;
+						this.callService.startCall(
+							contact,
+							sessionToken,
+							videocall
+						);
+						this.router.navigate([
+							'/video-room/' + sessionToken + '/video'
+						]);
 					}
 				},
 				{

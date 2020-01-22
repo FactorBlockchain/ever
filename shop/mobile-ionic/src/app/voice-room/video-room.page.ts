@@ -13,11 +13,11 @@ import { Location } from '@angular/common';
 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-import { UserModel } from '../shared/models/user-model';
+import { VoiceUserModel } from '../voiceshared/models/user-model';
 import {
-	OpenViduLayout,
-	OpenViduLayoutOptions
-} from '../shared/layout/openvidu-layout';
+	VoiceOpenViduLayout,
+	VoiceOpenViduLayoutOptions
+} from '../voiceshared/layout/openvidu-layout';
 import {
 	OpenVidu,
 	Session,
@@ -27,7 +27,7 @@ import {
 	SignalOptions,
 	StreamManagerEvent
 } from 'openvidu-browser';
-import { OpenViduService } from '../shared/services/openvidu.service';
+import { VoiceOpenViduService } from '../voiceshared/services/openvidu.service';
 
 import {
 	trigger,
@@ -37,11 +37,11 @@ import {
 	transition,
 	animate
 } from '@angular/animations';
-import { ChatComponent } from '../shared/components/chat/chat.component';
+import { VoiceChatComponent } from '../voiceshared/components/chat/chat.component';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
-import { StreamComponent } from '../shared/components/stream/stream.component';
-import { SettingUpModalComponent } from '../shared/components/setting-up-modal/setting-up-modal.component';
+import { VoiceStreamComponent } from '../voiceshared/components/stream/stream.component';
+import { VoiceSettingUpModalComponent } from '../voiceshared/components/setting-up-modal/setting-up-modal.component';
 import IUser from '@modules/server.common/interfaces/IUser';
 declare var cordova;
 
@@ -182,26 +182,26 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 	OV: OpenVidu;
 	@ViewChild('mainStream', { static: false }) mainStream: ElementRef;
 	session: Session;
-	openviduLayout: OpenViduLayout;
-	openviduLayoutOptions: OpenViduLayoutOptions;
+	openviduLayout: VoiceOpenViduLayout;
+	openviduLayoutOptions: VoiceOpenViduLayoutOptions;
 	sessionToken: string;
 	myUserName: string;
 	videocall: boolean;
-	localUser: UserModel;
-	remoteUsers: UserModel[];
+	localUser: VoiceUserModel;
+	remoteUsers: VoiceUserModel[];
 	resizeTimeout;
 
 	@ViewChildren('streamComponentRemotes') streamComponentRemotes: QueryList<
-		StreamComponent
+		VoiceStreamComponent
 	>;
 	@ViewChild('streamComponentLocal', { static: false })
-	streamComponentLocal: StreamComponent;
+	streamComponentLocal: VoiceStreamComponent;
 
 	constructor(
 		public platform: Platform,
 		private router: Router,
 		private route: ActivatedRoute,
-		private openViduSrv: OpenViduService,
+		private openViduSrv: VoiceOpenViduService,
 		public modalController: ModalController,
 		private androidPermissions: AndroidPermissions,
 		public alertController: AlertController,
@@ -223,7 +223,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		// Open modal to setting up the session
 
 		const modal = await this.modalController.create({
-			component: SettingUpModalComponent,
+			component: VoiceSettingUpModalComponent,
 			showBackdrop: false,
 			componentProps: {}
 		});
@@ -251,11 +251,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.remoteUsers = [];
 		this.generateParticipantInfo();
 
-		if (this.videocall == false) {
-			this.disablevideo();
-		}
-
-		this.openviduLayout = new OpenViduLayout();
+		this.openviduLayout = new VoiceOpenViduLayout();
 		this.openviduLayoutOptions = {
 			maxRatio: 3 / 2, // The narrowest ratio that will be used (default 2x3)
 			minRatio: 9 / 16, // The widest ratio that will be used (default 16x9)
@@ -294,7 +290,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.subscribedToStreamDestroyed();
 		this.subscribedToChat();
 		this.connectToSession();
-		if (this.videocall == false) {
+		if (this.videocall === false) {
 			this.disablevideo();
 		}
 	}
@@ -358,7 +354,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		(<Publisher>this.localUser.getStreamManager()).publishVideo(
 			this.localUser.isVideoActive()
 		);
-		this.checkVideoButton();
+		//		this.checkVideoButton();
 	}
 
 	disablevideo(): void {
@@ -407,7 +403,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.buttonsVisibility = 'out';
 		this.chatNotification = 'out';
 		const modal = await this.modalController.create({
-			component: ChatComponent,
+			component: VoiceChatComponent,
 			componentProps: {
 				user: this.localUser,
 				messageList: this.messageList
@@ -461,7 +457,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 	private generateParticipantInfo() {
 		this.route.params.subscribe((params: Params) => {
 			this.sessionToken = params.roomName;
-			this.videocall = true;
+			this.videocall = false;
 			this.myUserName =
 				'OpenVidu_User' + Math.floor(Math.random() * 100000);
 		});
@@ -469,7 +465,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 
 	private deleteRemoteStream(stream: Stream): void {
 		const userStream = this.remoteUsers.filter(
-			(user: UserModel) => user.getStreamManager().stream === stream
+			(user: VoiceUserModel) => user.getStreamManager().stream === stream
 		)[0];
 		const index = this.remoteUsers.indexOf(userStream, 0);
 		if (index > -1) {
@@ -480,7 +476,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 	private subscribeToUserChanged() {
 		this.session.on('signal:userChanged', (event: any) => {
 			const data = JSON.parse(event.data);
-			this.remoteUsers.forEach((user: UserModel) => {
+			this.remoteUsers.forEach((user: VoiceUserModel) => {
 				if (user.getConnectionId() === event.from.connectionId) {
 					if (data.avatar !== undefined) {
 						user.setUserAvatar(data.avatar);
@@ -499,7 +495,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 					subscriber.videos[0].video
 				)).parentElement.classList.remove('custom-class');
 			});
-			const newUser = new UserModel();
+			const newUser = new VoiceUserModel();
 			newUser.setStreamManager(subscriber);
 			newUser.setConnectionId(event.stream.connection.connectionId);
 			const nickname = event.stream.connection.data.split('%')[0];
@@ -546,7 +542,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 				message: data.message,
 				userAvatar: messageOwner.getAvatar()
 			});
-			ChatComponent.prototype.scrollToBottom();
+			VoiceChatComponent.prototype.scrollToBottom();
 
 			if (!this.modalIsPresented) {
 				this.chatBtnColor = 'secondary';
@@ -556,7 +552,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		});
 	}
 
-	private sendSignalUserAvatar(user: UserModel): void {
+	private sendSignalUserAvatar(user: VoiceUserModel): void {
 		const data = {
 			avatar: user.getAvatar()
 		};
@@ -581,7 +577,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 				);
 				this.openAlertError(error.message);
 			});
-		if (this.videocall == false) {
+		if (this.videocall === false) {
 			this.disablevideo();
 		}
 	}
@@ -590,7 +586,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 		this.session
 			.connect(token, { clientData: this.myUserName })
 			.then(() => {
-				if (this.videocall == true) {
+				if ((this.videocall = true)) {
 					this.connectWebCam();
 				}
 			})
@@ -632,7 +628,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
 						}
 						if (this.streamComponentRemotes.length > 0) {
 							this.streamComponentRemotes.forEach(
-								(stream: StreamComponent) => {
+								(stream: VoiceStreamComponent) => {
 									stream.videoComponent.applyIosIonicVideoAttributes();
 								}
 							);
