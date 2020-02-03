@@ -43,7 +43,7 @@ body {
 }
 
 .ion-page {
-	background-color: $brand-darken;
+	background-color: white;
 }
 
 // This is for remove bad popup background
@@ -67,7 +67,7 @@ ion-backdrop {
 	display: block;
 
 	.modal-wrapper {
-		background: rgba(255, 255, 255, 0);
+		background: rgba(0, 0, 0, 0);
 	}
 
 	.ion-page {
@@ -88,15 +88,15 @@ ion-backdrop {
 }
 
 ion-menu-button {
-	color: white !important;
+	color: black !important;
 }
 
 .brand-dark {
-	background: #1f212a;
+	background: #8E8E93;
 }
 
 .brand-light {
-	background: #353748;
+	background: #D1D1D6;
 }
 
 .blur-filter {

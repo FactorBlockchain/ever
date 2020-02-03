@@ -25,6 +25,7 @@ const routes: Routes = [
 		pathMatch: 'full',
 		redirectTo: ''
 	}
+	//{ path: 'order-empty', loadChildren: './order-empty/order-empty.module#OrderEmptyPageModule' }
 ];
 
 @NgModule({

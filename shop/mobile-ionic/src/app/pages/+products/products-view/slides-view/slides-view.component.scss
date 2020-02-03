@@ -1,12 +1,12 @@
 @import '../../../../../modules/client.common.angular2/scss/everbie.common';
 
 ng-progress /deep/ .ng-bar-placeholder {
-	background-color: #3c4160;
+	background-color: #ffffff;
 	height: 5px;
 }
 
 ng-progress /deep/ .ng-bar {
-	background-color: #505785;
+	background-color: #ffffff;
 }
 
 ion-menu-button {
@@ -44,7 +44,7 @@ ion-slide {
 
 .product-card .bottom {
 	height: 100%;
-	background-color: $brand-darken;
+	background-color: white;
 	width: 100%;
 	text-align: left;
 
@@ -59,14 +59,14 @@ ion-slide {
 	}
 
 	.title {
-		color: #fff;
+		color: black;
 		font-family: Roboto, 'Helvetica Neue', sans-serif;
 		font-weight: 400;
 		font-size: 20px;
 	}
 
 	.description {
-		color: #fff;
+		color: black;
 		font-family: Roboto, 'Helvetica Neue', sans-serif;
 		font-weight: 400;
 		font-size: 13px;
@@ -113,9 +113,9 @@ ion-slide {
 	}
 
 	.disabled {
-		background: #cccccc !important;
+		background: #fff !important;
 		border: 1px solid #999999 !important;
-		color: #666666 !important;
+		color: #fff !important;
 	}
 }
 

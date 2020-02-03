@@ -1,5 +1,5 @@
-<e-cu-order-info-header (back)="undo()"></e-cu-order-info-header>
-
+<!--<e-cu-order-info-header (back)="undo()"></e-cu-order-info-header>
+-->
 <ion-content
 	class="info-container brand-dark"
 	[ngClass]="{ 'blur-filter': modalOpen }"
@@ -9,7 +9,7 @@
 	<div dir="{{ 'CURRENT_DIRECTION' | translate }}" class="all">
 		<div class="title">
 			<div
-				class="box box-brand text-align-center"
+				class="box white text-align-center"
 				style="padding: 30px 20px;"
 			>
 				<h4 class="main-title">{{ byPopupStatuses.TITLE }}</h4>
@@ -34,7 +34,7 @@
 			></e-cu-user-warehouse-location>
 		</div>
 		<div class="actions">
-			<div class="box box-brand-light box-small-padding actions-content">
+			<div class="box white box-small-padding actions-content">
 				<e-cu-elapsed-time #elapsedTime></e-cu-elapsed-time>
 
 				<div
@@ -92,7 +92,7 @@
 				</div>
 
 				<div
-					class="box box-brand-light buttons-bottom"
+					class="box white buttons-bottom"
 					dir="{{ 'CURRENT_DIRECTION' | translate }}"
 				>
 					<div class="row" *ngIf="!order?.isCompleted">
@@ -101,10 +101,7 @@
 								paymentsEnabled ? 'col-3' : 'col-12'
 							}}"
 						>
-							<button
-								class="button button-brand col-100"
-								(click)="undo()"
-							>
+							<button class="button brand-dark" (click)="undo()">
 								<span
 									>{{ 'BUY_POPUP.BUTTONS.UNDO' | translate
 									}}</span
@@ -124,7 +121,7 @@
 							class="waves-effect waves-classic col no-padding-bottom"
 						>
 							<button
-								class="button button-assertive col-100"
+								class="button brand-dark col-100"
 								(click)="closePopup()"
 								dir="{{ 'CURRENT_DIRECTION' | translate }}"
 							>

@@ -54,7 +54,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VideoRoomPageModule } from './video-room/video-room.module';
 import { Toast } from '@ionic-native/toast/ngx';
-
+import { OrderEmptyPageModule } from './pages/order-empty/order-empty.module';
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
@@ -89,7 +89,8 @@ import { Toast } from '@ionic-native/toast/ngx';
 		AngularFireStorageModule,
 		HttpModule,
 		ReactiveFormsModule,
-		VideoRoomPageModule
+		VideoRoomPageModule,
+		OrderEmptyPageModule
 	],
 	entryComponents: [AppComponent],
 	providers: [

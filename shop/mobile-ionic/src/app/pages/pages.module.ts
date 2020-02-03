@@ -143,6 +143,11 @@ const routes: Routes = [
 	{
 		path: 'page1',
 		loadChildren: '../pages/page1/page1.module#Page1PageModule'
+	},
+	{
+		path: 'order-empty',
+		loadChildren:
+			'../pages/order-empty/order-empty.module#OrderEmptyPageModule'
 	}
 ];
 

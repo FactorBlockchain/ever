@@ -294,7 +294,7 @@
 		"signup-button": "등록"
 	},
 	"forgot-component": {
-		"title": "폐정 잃어버림",
+		"title": "계정 잃어버림",
 		"subtitle-email": "비밀번호를 받으실 이메일 입력",
 		"subtitle-password": "비밀번호를 입력",
 		"password-reset-info": "이메일로 보내드린 일회용 코드로 비밀번호 초기화 하십시오",

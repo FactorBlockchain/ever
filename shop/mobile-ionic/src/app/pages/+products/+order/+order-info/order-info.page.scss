@@ -1,1 +1,6 @@
 @import '../order-info-page';
+:host {
+	ion-content {
+		--background: #ffffff;
+	}
+}

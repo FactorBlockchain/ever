@@ -145,7 +145,6 @@ export class AppComponent extends Extender implements OnInit {
 		if (!this.store.deviceId) {
 			await this._registerDeviceDevMode();
 		}
-
 		await this._watchDeviceUpdates();
 	}
 

@@ -1,5 +1,5 @@
 <ion-content scrollX="false" scrollY="false" class="ion-padding">
-	<div class="content-wrapper center">
+	<div class="content-wrapper">
 		<!-- info section when user has verified their account -->
 		<div class="info" *ngIf="emailVerified">
 			<ion-icon src="assets/icons/info.svg"></ion-icon
@@ -10,8 +10,8 @@
 
 		<!-- start form -->
 		<form class="form" #form="ngForm">
-			<form-field fill="true" color="medium">
-				<ion-icon prefix src="assets/icons/user.svg"></ion-icon>
+			<form-field fill="true" color="#FFFFFF">
+				<!--<ion-icon prefix src="assets/icons/user.svg"></ion-icon>-->
 				<ion-input
 					class="input-font"
 					inputRef
@@ -23,8 +23,8 @@
 				></ion-input>
 			</form-field>
 
-			<form-field fill="true" color="medium">
-				<ion-icon prefix src="assets/icons/lock.svg"></ion-icon>
+			<form-field fill="true" color="#FFFFFF">
+				<!--<ion-icon prefix src="assets/icons/lock.svg"></ion-icon>-->
 				<ion-input
 					class="input-font"
 					type="password"
@@ -47,7 +47,6 @@
 			</div>
 		</div>
 		<!-- end form -->
-
 		<!-- signin button -->
 		<ion-button
 			class="no-shrink"
@@ -71,9 +70,10 @@
 		</div>
 		<!-- end forgot password -->
 
-		<p class="terms"><span>or</span></p>
+		<p class="terms"><span> </span></p>
 
 		<!-- start social buttons -->
+		<!--소설로그인
 		<div class="social-buttons">
 			<ion-button
 				class="googlebutton"
@@ -92,6 +92,7 @@
 				{{ 'auth-component.facebook' | translate }}</ion-button
 			>
 		</div>
+	-->
 		<!-- end social buttons -->
 
 		<!-- start get an account -->

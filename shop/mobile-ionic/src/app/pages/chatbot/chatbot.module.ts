@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { chatbot } from './chatbot.page';
+import { ChatheaderComponentModule } from '../../components/chatheader/chatheader.component.module';
 
 const routes: Routes = [
 	{
@@ -18,6 +19,7 @@ const routes: Routes = [
 		CommonModule,
 		FormsModule,
 		IonicModule,
+		ChatheaderComponentModule,
 		RouterModule.forChild(routes)
 	],
 	declarations: [chatbot]

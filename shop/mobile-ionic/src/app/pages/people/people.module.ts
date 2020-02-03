@@ -5,11 +5,13 @@ import { SharedModule } from 'shared/shared.module';
 import { PeopleComponent } from './components/people/people.component';
 import { PersonComponent } from './components/person/person.component';
 
+import { ChatheaderComponentModule } from '../../components/chatheader/chatheader.component.module';
 @NgModule({
 	declarations: [PeopleComponent, PersonComponent],
 	imports: [
 		CommonModule,
 		SharedModule,
+		ChatheaderComponentModule,
 		RouterModule.forChild([
 			{
 				path: '',

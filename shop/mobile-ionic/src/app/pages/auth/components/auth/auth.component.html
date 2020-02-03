@@ -1,45 +1,56 @@
 <ion-content class="ion-padding" scrollX="false" scrollY="false">
 	<div class="content-wrapper">
+		<div class="mainlogo">
+			<img src="assets/imgs/mainlogo.png" />
+		</div>
 		<ion-button class="mb15" shape="round" (click)="goto(routes.login)">
 			{{ 'auth-component.login-button' | translate }}</ion-button
 		>
-		<ion-button class="mb15" shape="round" (click)="goto(routes.register)">
-			{{ 'auth-component.signup-button' | translate }}</ion-button
+
+		<ion-button
+			class="googlebutton"
+			shape="round"
+			(click)="socialLogin(provider.google)"
+		>
+			{{ 'auth-component.google' | translate }}</ion-button
 		>
 
-		<p class="forgot mt15">
+		<ion-button
+			class="facebookbutton"
+			shape="round"
+			(click)="socialLogin(provider.facebook)"
+		>
+			{{ 'auth-component.facebook' | translate }}
+		</ion-button>
+	</div>
+
+	<!--	<ion-button class="mb15" shape="round" (click)="goto(routes.register)">
+			{{ 'auth-component.signup-button' | translate }}</ion-button>
+	-->
+	<!-- <p class="forgot mt15">
 			<span>{{ 'auth-component.alt-login' | translate }}</span>
-		</p>
-		<div class="social">
-			<ion-button
-				class="googlebutton"
-				shape="round"
-				[btnStatus]="gplusLoading"
-				(click)="socialLogin(provider.google)"
-			>
+		</p> 
+	
+		<div class="social"> 
+			<ion-button class="googlebutton" shape="round" (click)="socialLogin(provider.google)">
 				{{ 'auth-component.google' | translate }}
 			</ion-button>
-			<ion-button
-				class="facebookbutton"
-				shape="round"
-				[btnStatus]="fbLoading"
-				(click)="socialLogin(provider.facebook)"
-			>
+			<ion-button class="facebookbutton" shape="round" (click)="socialLogin(provider.facebook)">
 				{{ 'auth-component.facebook' | translate }}
 			</ion-button>
 		</div>
 		<div class="forgot mt15" (click)="goto(routes.forgot)">
 			{{ 'auth-component.forgot-text-1' | translate }}
-			<a class="reset"
-				>{{ 'auth-component.forgot-text-2' | translate }}
+			<a class="reset">{{ 'auth-component.forgot-text-2' | translate }}
 			</a>
 		</div>
+	
 
-		<!-- <div class="terms">
+		 <div class="terms">
 			{{ 'auth-component.i-read' | translate
 			}}<a (click)="openTermsAndConditions()" class="strong">{{
 				'auth-component.tandc' | translate
 			}}</a>
-		</div> -->
-	</div>
+		</div> 
+	-->
 </ion-content>

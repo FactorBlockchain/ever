@@ -16,7 +16,7 @@ const defaultDeliveryTimeMax = environment.DELIVERY_TIME_MAX;
 		<div
 			class="delivery-info"
 			[ngClass]="{
-				'over-image brand-light': overImage,
+				'over-image brand-dark': overImage,
 				'show-top': !hasDiscount
 			}"
 		>

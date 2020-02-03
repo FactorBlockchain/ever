@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { Page1Page } from './page1.page';
-
+import { ChatheaderComponentModule } from '../../components/chatheader/chatheader.component.module';
 const routes: Routes = [
 	{
 		path: '',
@@ -19,6 +19,7 @@ const routes: Routes = [
 		CommonModule,
 		FormsModule,
 		IonicModule,
+		ChatheaderComponentModule,
 		RouterModule.forChild(routes)
 	],
 	declarations: [Page1Page]

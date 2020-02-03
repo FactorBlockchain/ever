@@ -1,18 +1,39 @@
 @import '../../../../../modules/client.common.angular2/scss/everbie.common';
 :host {
 	ion-content {
-		--background: url('../../../../../assets/imgs/login_background.jpg')
-			no-repeat center/cover fixed;
+		--background: url('../../../../../assets/imgs/loginback.png') no-repeat
+			center/cover fixed;
+		.mainlogo {
+			display: flex;
+			flex-direction: column;
+			width: 70%;
+			height: 70%;
+			margin: 0px 0px 0px 50px;
+			padding: 0px 0px 0px 10px;
+			justify-content: center;
+		}
+		.content-wrapper {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+
+			.mb15 {
+				--background: #ff8c00;
+			}
+			.googlebutton {
+				--background: #ff3b30;
+			}
+
+			.facebookbutton {
+				--background: #007aff;
+			}
+		}
 	}
+}
 
-	.content-wrapper {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: 100%;
-		justify-content: center;
-
-		.social {
+/*		.social {
 			justify-content: center;
 			display: flex;
 
@@ -42,6 +63,6 @@
 
 		.facebookbutton {
 			--background: blue;
-		}
+		} 
 	}
-}
+}*/

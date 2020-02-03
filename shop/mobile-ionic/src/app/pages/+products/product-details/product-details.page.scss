@@ -2,7 +2,9 @@
 	background: #cccccc !important;
 	color: #666666 !important;
 }
-
+.title {
+	margin-left: 90px;
+}
 .product-card {
 	border-radius: 0px;
 	margin: 0px;
@@ -105,7 +107,7 @@ ion-slides.hydrated {
 }
 
 .title-text {
-	color: white;
+	color: black;
 }
 
 .description-text {
@@ -120,7 +122,7 @@ ion-slides.hydrated {
 	text-align: center;
 	line-height: 1;
 	padding-right: 5px;
-	color: white;
+	color: black;
 	.delivery-lines {
 		font-size: 80%;
 		small {
@@ -151,6 +153,8 @@ ion-slides.hydrated {
 
 .images {
 	position: relative;
+	height: 100%;
+	width: 100%;
 }
 
 .details-buttons {
@@ -158,9 +162,11 @@ ion-slides.hydrated {
 	padding-right: 5px;
 	padding-left: 5px;
 	bottom: 5px;
+
 	button {
 		padding: 15px;
 		border-radius: 5px;
+		background-color: #ff8c00;
 		display: flex !important;
 		align-content: center !important;
 		align-items: center !important;
@@ -199,7 +205,7 @@ ion-slides.hydrated {
 }
 
 .productDescription {
-	color: #d0d0d0;
+	color: black;
 	margin: 0 !important;
 }
 

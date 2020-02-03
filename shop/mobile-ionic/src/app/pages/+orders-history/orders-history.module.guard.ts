@@ -13,7 +13,7 @@ export class OrdersHistoryModuleGuard implements CanLoad {
 		const isLogged = await this.store.isLogged();
 
 		if (!isLogged) {
-			this.router.navigate(['invite']);
+			this.router.navigate(['order-empty']);
 			return false;
 		}
 

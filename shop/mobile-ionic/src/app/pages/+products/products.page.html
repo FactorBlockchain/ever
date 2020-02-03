@@ -1,7 +1,12 @@
-<ion-header>
-	<ion-toolbar color="primary">
+<ion-header no-border>
+	<ion-toolbar>
 		<ion-buttons slot="start">
-			<ion-menu-button autoHide="false"></ion-menu-button>
+			<ion-menu-button>
+				<ion-img
+					[src]="'./assets/imgs/logo.png'"
+					class="chatheader-logo"
+				></ion-img>
+			</ion-menu-button>
 		</ion-buttons>
 		<ion-row nowrap>
 			<ion-col *ngIf="inStore" class="col-9 p-1 header-title">
@@ -61,7 +66,7 @@
 
 <ion-content
 	*ngIf="!changePage"
-	color="black"
+	color="white"
 	[ngClass]="{ 'blur-filter': modalOpen }"
 >
 	<ion-spinner

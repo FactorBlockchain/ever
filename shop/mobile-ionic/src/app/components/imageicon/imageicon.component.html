@@ -1,0 +1,28 @@
+<div class="image-component">
+	<ion-img
+		*ngIf="icon == 'Friends'"
+		[src]="'./assets/imgs/friends.png'"
+		class="image-icon"
+	></ion-img>
+	<ion-img
+		*ngIf="icon == 'Chat'"
+		[src]="'./assets/imgs/chat.png'"
+		class="image-icon"
+	></ion-img>
+	<ion-img
+		*ngIf="icon == 'Translator'"
+		[src]="'./assets/imgs/translator.png'"
+		class="image-icon"
+	></ion-img>
+	<ion-img
+		*ngIf="icon == 'Pay'"
+		[src]="'./assets/imgs/pay.png'"
+		class="image-icon"
+	></ion-img>
+	<ion-img
+		*ngIf="icon == 'Set'"
+		[src]="'./assets/imgs/setting.png'"
+		class="image-icon"
+	></ion-img>
+	<ion-label class="image-text">{{ text }}</ion-label>
+</div>

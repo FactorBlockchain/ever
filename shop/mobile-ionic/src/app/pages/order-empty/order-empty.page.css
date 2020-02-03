@@ -1,0 +1,19 @@
+.ion-content {
+	background-color: beige;
+}
+.back-btn {
+	font-size: 30px;
+	margin-right: 10px;
+	margin-bottom: 4px;
+	color: black;
+}
+.myorder {
+	margin-left: 85px;
+}
+.emptylogo {
+	width: 80%;
+	height: 80%;
+	margin-left: 35px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}

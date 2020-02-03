@@ -5,6 +5,10 @@ import { map, takeUntil } from 'rxjs/operators';
 import { Store } from '../../services/store.service';
 import { Apollo } from 'apollo-angular';
 import { OrdersHistoryQuery } from './orders-history.model';
+import {
+	ActivatedRoute,
+	Router
+} from '../../../../node_modules/@angular/router';
 
 @Component({
 	selector: 'e-cu-orders-history',
@@ -13,7 +17,7 @@ import { OrdersHistoryQuery } from './orders-history.model';
 })
 export class OrdersHistoryPage implements OnDestroy {
 	private _ngDestroy$ = new Subject<void>();
-
+	public prevUrl: string;
 	readonly orders$ = this._apollo
 		.watchQuery<{ getOrders: Order[] }>({
 			query: OrdersHistoryQuery,
@@ -25,6 +29,7 @@ export class OrdersHistoryPage implements OnDestroy {
 		);
 
 	constructor(
+		private router: Router,
 		private readonly _store: Store,
 		private readonly _apollo: Apollo
 	) {}
@@ -33,7 +38,9 @@ export class OrdersHistoryPage implements OnDestroy {
 		this._ngDestroy$.next();
 		this._ngDestroy$.complete();
 	}
-
+	goToProductPage() {
+		this.router.navigateByUrl(this.prevUrl);
+	}
 	getStatusText(order: Order) {
 		return order.getStatusText(this._store.language);
 	}

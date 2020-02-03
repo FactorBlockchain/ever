@@ -1,6 +1,6 @@
 :host {
 	ion-content {
-		--background: url('../../../../../assets/imgs/login_background.jpg')
+		--background: url('../../../../../assets/imgs/login_background.png')
 			no-repeat center/cover fixed;
 
 		.content-wrapper {
@@ -11,15 +11,16 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: 0 -40px;
+			text-align: center;
 
-			&.center {
+			/*	&.center {
 				justify-content: center;
 				align-self: center;
-			}
+			}*/
 
 			.title {
 				font-size: 24px;
-				margin-bottom: 10px;
+				margin-top: 270px;
 			}
 
 			.info {
@@ -35,13 +36,13 @@
 				}
 			}
 
-			.social-buttons {
+			/*.social-buttons {
 				display: flex;
 
 				ion-button {
 					width: 100%;
 				}
-			}
+			}*/
 
 			.terms {
 				text-align: center;
@@ -58,8 +59,10 @@
 					margin-left: 10px;
 				}
 			}
-
-			ion-input {
+			.no-shrink {
+				--background: #ff8c00;
+			}
+			/*	ion-input {
 				color: black;
 			}
 
@@ -69,7 +72,7 @@
 
 			.facebookbutton {
 				--background: blue;
-			}
+			}*/
 		}
 	}
 }

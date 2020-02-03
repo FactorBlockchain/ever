@@ -3,7 +3,11 @@ $app-direction: multi;
 
 /** Ionic CSS Variables **/
 :root {
-	/** primary **/
+	/* primary*/
+	--ion-placeholder-color: #BEC2CE;
+	--ion-color-brownTextColor: #8B572A;
+	--ion-inputbox-color: #1E2432;
+
 	--ion-color-primary: #2a2c39;
 	--ion-color-primary-rgb: 42, 44, 57;
 	--ion-color-primary-contrast: #ffffff;
@@ -60,7 +64,7 @@ $app-direction: multi;
 	--ion-color-dark-tint: #383a3e;
 
 	/** medium **/
-	--ion-color-medium: #989aa2;
+	--ion-color-medium: #D1D1D6;
 	--ion-color-medium-rgb: 152, 154, 162;
 	--ion-color-medium-contrast: #ffffff;
 	--ion-color-medium-contrast-rgb: 255, 255, 255;
@@ -104,6 +108,23 @@ $app-direction: multi;
 	--ion-color-whatsapp-contrast-rgb: 255, 255, 255;
 	--ion-color-whatsapp-shade: #06534a;
 	--ion-color-whatsapp-tint: #206e65;
+
+
+	--ion-color-packmam: #ff8c00;
+	--ion-color-packmam-rgb: 255, 140, 0;
+	--ion-color-packmam-contrast: #000000;
+	--ion-color-packmam-contrast-rgb: 0, 0, 0;
+	--ion-color-packmam-shade: #e07b00;
+	--ion-color-packmam-tint: #ff981a;
+
+	.ion-color-packmam {
+		--ion-color-base: var(--ion-color-packmam);
+		--ion-color-base-rgb: var(--ion-color-packmam-rgb);
+		--ion-color-contrast: var(--ion-color-packmam-contrast);
+		--ion-color-contrast-rgb: var(--ion-color-packmam-contrast-rgb);
+		--ion-color-shade: var(--ion-color-packmam-shade);
+		--ion-color-tint: var(--ion-color-packmam-tint);
+	}
 
 	/** gradient **/
 	--ion-color-gradient: linear-gradient(

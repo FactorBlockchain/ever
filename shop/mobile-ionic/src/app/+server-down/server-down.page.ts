@@ -25,6 +25,10 @@ export class ServerDownPage implements OnDestroy {
 	}
 
 	private async testConnection() {
+		if (Number(this.store.serverConnection) !== 0) {
+			this.router.navigateByUrl('');
+		}
+		/*
 		this.interval = setInterval(async () => {
 			await this.serverConnectionService.checkServerConnection(
 				environment.SERVICES_ENDPOINT,
@@ -36,6 +40,7 @@ export class ServerDownPage implements OnDestroy {
 				this.router.navigateByUrl('');
 			}
 		}, 5000);
+		*/
 	}
 
 	ngOnDestroy(): void {

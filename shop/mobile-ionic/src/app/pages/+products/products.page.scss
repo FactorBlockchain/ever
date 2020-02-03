@@ -1,13 +1,15 @@
 @import '../../../modules/client.common.angular2/scss/everbie.common';
 
 ion-content {
-	background-color: $brand-darken;
+	background-color: #ffffff;
 
 	.products-view {
 		height: 100%;
 	}
 }
-
+.chatheader-logo {
+	margin-top: -10px;
+}
 .float-right {
 	float: right;
 }
@@ -43,7 +45,7 @@ ion-content {
 	zoom: 0.6;
 }
 .no-select {
-	color: #d0d0d0;
+	color: #d1d1d6;
 }
 
 .products-title {

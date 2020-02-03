@@ -1,5 +1,8 @@
 <ion-content scrollX="false" scrollY="false" class="ion-padding">
-	<div class="content-wrapper center">
+	<div class="packmamlogo">
+		<img src="assets/imgs/packmamlogo.png" />
+	</div>
+	<div class="content-wrapper">
 		<div class="title">{{ 'forgot-component.title' | translate }}</div>
 
 		<!-- start email form -->
@@ -9,8 +12,8 @@
 					{{ 'forgot-component.subtitle-email' | translate }}
 				</div>
 
-				<form-field fill="true" color="medium">
-					<ion-icon prefix src="assets/icons/mail.svg"></ion-icon>
+				<form-field class="fill" fill="true" color="#FFFFFF">
+					<!--<ion-icon prefix src="assets/icons/mail.svg"></ion-icon>-->
 					<ion-input
 						inputRef
 						email
@@ -128,7 +131,7 @@
 		<!-- end password form -->
 
 		<!-- start login option -->
-		<div class="terms">
+		<div class="term_1">
 			{{ 'auth-component.login-text-1' | translate }}
 			<a (click)="goto(routes.login)" class="strong">
 				{{ 'auth-component.login-text-2' | translate }}
@@ -136,10 +139,8 @@
 		</div>
 		<!-- end login option -->
 
-		<p class="text-line-through-background"><span>or</span></p>
-
 		<!-- start get an account -->
-		<div class="terms">
+		<div class="terms_2">
 			{{ 'login-component.dont-have-account' | translate }}
 			<a (click)="goto(routes.register)" class="strong">{{
 				'login-component.register' | translate

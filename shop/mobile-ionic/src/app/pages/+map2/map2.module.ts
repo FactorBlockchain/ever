@@ -11,7 +11,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { GeoLocationsMerchantsService } from 'app/services/geo-location-merchants.service';
 import { GeoLocationService } from 'app/services/geo-location';
 import { MapModule } from './map/map.module';
-
+import { ChatheaderComponentModule } from '../../components/chatheader/chatheader.component.module';
 const routes: Routes = [
 	{
 		path: '',
@@ -24,6 +24,7 @@ const routes: Routes = [
 		CommonModule,
 		FormsModule,
 		IonicModule,
+		ChatheaderComponentModule,
 		RouterModule.forChild(routes),
 		TranslateModule.forChild(),
 		MapModule
