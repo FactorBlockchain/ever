@@ -6,6 +6,13 @@ import { PeopleComponent } from './components/people/people.component';
 import { PersonComponent } from './components/person/person.component';
 
 import { ChatheaderComponentModule } from '../../components/chatheader/chatheader.component.module';
+
+import {
+	Contacts,
+	ContactFieldType,
+	ContactFindOptions
+} from '@ionic-native/contacts';
+
 @NgModule({
 	declarations: [PeopleComponent, PersonComponent],
 	imports: [

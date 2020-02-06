@@ -18,6 +18,13 @@ import { CallsService } from 'app/pages/messages/services/calls/calls.service';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
+import {
+	Contacts,
+	Contact,
+	ContactFieldType,
+	ContactName,
+	ContactFindOptions
+} from '@ionic-native/contacts';
 /**
  * get list of people fro users collection, group them by first letter of their display names.
  * using a href to scroll to category by letter in the user list.
@@ -26,7 +33,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 @Component({
 	selector: 'app-people',
 	templateUrl: './people.component.html',
-	styleUrls: ['./people.component.scss']
+	styleUrls: ['./people.component.scss'],
+	providers: [Contacts]
 })
 export class PeopleComponent extends Extender implements OnInit {
 	/** get people using the app */
@@ -49,6 +57,8 @@ export class PeopleComponent extends Extender implements OnInit {
 
 	public selectedIndex: number = 0;
 	public friends: any;
+	public allContacts: any;
+	private contactlist: any[];
 
 	/** references content area of content page */
 	@ViewChild('content', null) public content: ElementRef;
@@ -61,11 +71,27 @@ export class PeopleComponent extends Extender implements OnInit {
 		private peopleService: PeopleService,
 		private commonService: CommonService,
 		private callService: CallsService,
-		private androidPermissions: AndroidPermissions
+		private androidPermissions: AndroidPermissions,
+		private contacts: Contacts
 	) {
 		super(injector);
 		this.alpha = this.peopleService.alpha;
 		this.views = this.peopleService.views;
+		//		this.fetchDeviceContact();
+
+		this.contacts
+			.find(['displayName', 'name', 'phoneNumbers', 'emails'], {
+				filter: '',
+				multiple: true
+			})
+			.then((data) => {
+				this.allContacts = data;
+			});
+		/*
+		this.contacts.find(['displayName', 'phoneNumbers'], {multiple: true}).then((contac) => {
+			this.contactlist = contac;
+		}).catch(error => console.log(error));
+		*/
 	}
 
 	/** get currentUser, get users friends ids and get all users from user collection */
@@ -92,6 +118,51 @@ export class PeopleComponent extends Extender implements OnInit {
 			)
 		);
 	}
+
+	/*
+	fetchDeviceContact(){
+		const options = {
+			filter : '',
+			multiple: true,
+			hasPhoneNumber: true
+		};
+		this.contacts.find(["*"], options).then((res) => {
+
+			for (var i = 0; i < res.length; i++) {
+				const contact = res[i];
+				const no = res[i].name.formatted;
+				const phonenumber = res[i].phoneNumbers;
+				if (phonenumber != null) {
+					for (var n = 0; n < phonenumber.length; n++) {
+						var type = phonenumber[n].type;
+						if (type == 'mobile') {
+							var phone = phonenumber[n].value;
+							var mobile;
+							if (phone.slice(0, 1) === '+' || phone.slice(0, 1) == '0'){
+								mobile = phone.replace(/[^a-zA-Z0-9+]/g, '');
+							}
+							else {
+								var mobile_no = phone.replace(/[^a-zA-Z0-9]/g, '');
+								mobile = mobile_no;
+							}
+
+							var contactData = {
+								'displayName': no,
+								'phoneNumbers': mobile,
+							};
+							this.contactlist.push(contactData);
+						}
+					}
+				}
+			}
+
+			console.log('contactlist >>>', this.contactlist);
+
+		}).catch((err) => {
+				console.log('err', err);
+		});
+	}
+	*/
 
 	/** if you navigate to this page with query params, open person modal and use id in query param to find user details */
 	public openProfileFromUrl() {

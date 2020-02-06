@@ -55,6 +55,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { VideoRoomPageModule } from './video-room/video-room.module';
 import { Toast } from '@ionic-native/toast/ngx';
 import { OrderEmptyPageModule } from './pages/order-empty/order-empty.module';
+import {
+	Contacts,
+	Contact,
+	ContactFieldType,
+	ContactFindOptions
+} from '@ionic-native/contacts';
+
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
@@ -139,7 +146,9 @@ import { OrderEmptyPageModule } from './pages/order-empty/order-empty.module';
 		},
 		DialogflowService,
 		AndroidPermissions,
-		Toast
+		Toast,
+		Contacts,
+		Contact
 	],
 	bootstrap: [AppComponent]
 })
