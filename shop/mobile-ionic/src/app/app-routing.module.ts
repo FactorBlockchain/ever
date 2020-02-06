@@ -76,6 +76,10 @@ const routes: Routes = [
 		path: 'restaurantdetail',
 		loadChildren:
 			'./restaurantdetail/restaurantdetail.module#RestaurantdetailPageModule'
+	},
+	{
+		path: 'translator',
+		loadChildren: './translator/translator.module#TranslatorPageModule'
 	}
 	//{ path: 'search', loadChildren: './search/search.module#SearchPageModule' }
 	//{ path: 'order-empty', loadChildren: './order-empty/order-empty.module#OrderEmptyPageModule' }

@@ -234,6 +234,10 @@ const routes: Routes = [
 	{
 		path: 'pathtraking',
 		loadChildren: '../pathtraking/pathtraking.module#PathtrakingPageModule'
+	},
+	{
+		path: 'translator',
+		loadChildren: '../translator/translator.module#TranslatorPageModule'
 	}
 ];
 
