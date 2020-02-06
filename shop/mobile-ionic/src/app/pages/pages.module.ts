@@ -148,6 +148,92 @@ const routes: Routes = [
 		path: 'order-empty',
 		loadChildren:
 			'../pages/order-empty/order-empty.module#OrderEmptyPageModule'
+	},
+	{
+		path: 'mall',
+		loadChildren: '../mall/mall.module#MallPageModule'
+	},
+	{
+		path: 'painting',
+		loadChildren: '../painting/painting.module#PaintingPageModule'
+	},
+	{
+		path: 'promotion',
+		loadChildren: '../promotion/promotion.module#PromotionPageModule'
+	},
+	{
+		path: 'memedia',
+		loadChildren: '../memedia/memedia.module#MemediaPageModule'
+	},
+	{
+		path: 'bestmenu',
+		loadChildren: '../bestmenu/bestmenu.module#BestmenuPageModule'
+	},
+	{
+		path: 'localmom',
+		loadChildren: '../localmom/localmom.module#LocalmomPageModule'
+	},
+	{
+		path: 'myhomepage',
+		loadChildren: '../myhomepage/myhomepage.module#MyhomepagePageModule'
+	},
+	{
+		path: 'testcomplete',
+		loadChildren:
+			'../testcomplete/testcomplete.module#TestcompletePageModule'
+	},
+	{
+		path: 'howmuch',
+		loadChildren: '../howmuch/howmuch.module#HowmuchPageModule'
+	},
+	{
+		path: 'peoplebar',
+		loadChildren: '../peoplebar/peoplebar.module#PeoplebarPageModule'
+	},
+	{
+		path: 'myfavourite',
+		loadChildren: '../myfavourite/myfavourite.module#MyfavouritePageModule'
+	},
+	{
+		path: 'yourlocation',
+		loadChildren:
+			'../yourlocation/yourlocation.module#YourlocationPageModule'
+	},
+	{
+		path: 'restaurantdetail',
+		loadChildren:
+			'../restaurantdetail/restaurantdetail.module#RestaurantdetailPageModule'
+	},
+	{
+		path: 'search',
+		loadChildren: '../search/search.module#SearchPageModule'
+	},
+	{
+		path: 'placedetails',
+		loadChildren:
+			'../placedetails/placedetails.module#PlacedetailsPageModule'
+	},
+	{
+		path: 'filtersfull',
+		loadChildren: '../filtersfull/filtersfull.module#FiltersfullPageModule'
+	},
+	{
+		path: 'collectionsby',
+		loadChildren:
+			'../collectionsby/collectionsby.module#CollectionsbyPageModule'
+	},
+	{
+		path: 'phoneverification',
+		loadChildren:
+			'../phoneverification/phoneverification.module#PhoneverificationPageModule'
+	},
+	{
+		path: 'verifyphone',
+		loadChildren: '../verifyphone/verifyphone.module#VerifyphonePageModule'
+	},
+	{
+		path: 'pathtraking',
+		loadChildren: '../pathtraking/pathtraking.module#PathtrakingPageModule'
 	}
 ];
 

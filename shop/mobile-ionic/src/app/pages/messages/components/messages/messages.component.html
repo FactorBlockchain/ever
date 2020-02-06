@@ -1,10 +1,5 @@
-<ion-header>
-	<ion-toolbar color="primary">
-		<ion-buttons slot="start">
-			<ion-menu-button autoHide="false"></ion-menu-button>
-		</ion-buttons>
-		<ion-title>Message</ion-title>
-	</ion-toolbar>
+<ion-header no-border>
+	<app-chatheader></app-chatheader>
 </ion-header>
 
 <ion-content scrollX="false" scrollY="false">
@@ -12,31 +7,27 @@
 		<!-- start header -->
 		<div class="header no-border has-toolbar">
 			<div class="options">
-				<ion-button
-					fill="clear"
-					size="small"
-					color="medium"
-					(click)="openSearch = !openSearch"
-				>
-					<ion-icon mode="md" name="search"></ion-icon>
-				</ion-button>
-				<ion-button
-					fill="clear"
-					size="small"
-					color="medium"
-					(click)="messagesOptions()"
-				>
-					<ion-icon mode="md" name="more"></ion-icon>
-				</ion-button>
+				<div class="msearchbar">
+					<ion-input
+						type="text"
+						style="margin-left:  20px; width: 291px;"
+						placeholder="search for message"
+					>
+						<ion-button
+							style="float: right; margin-right: 10px;"
+							fill="clear"
+							size="small"
+							color="medium"
+							(click)="openSearch = !openSearch"
+						>
+							<ion-icon mode="md" name="search"></ion-icon>
+						</ion-button>
+					</ion-input>
+				</div>
+				<!--msearchbar-->
 			</div>
+			<!--options-->
 		</div>
-		<!-- end header -->
-
-		<app-tab-menu [tabs]="views"></app-tab-menu>
-		<app-search-bar
-			*ngIf="openSearch"
-			(event)="onSearch($event)"
-		></app-search-bar>
 
 		<!-- show messages -->
 		<div class="content-scroll" *ngIf="messages.length > 0">

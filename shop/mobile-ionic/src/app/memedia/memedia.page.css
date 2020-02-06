@@ -1,0 +1,37 @@
+.name {
+	position: relative;
+	width: 134px;
+	height: 35px;
+	font-size: 26px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.35;
+	letter-spacing: 0.21px;
+	text-align: left;
+	color: #0a1f44;
+	margin-left: 130px;
+	top: 25px;
+}
+.crown {
+	width: 80px;
+	height: 20px;
+	margin-left: 260px;
+}
+.person {
+	width: 90px;
+	height: 120px;
+	object-fit: contain;
+	margin-left: 19px;
+	margin-top: -30px;
+}
+.all {
+	margin-top: -40px;
+	margin-left: 120px;
+}
+.main {
+	width: 354px;
+	height: 371px;
+	object-fit: contain;
+	margin-top: 20px;
+}

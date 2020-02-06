@@ -1,0 +1,203 @@
+.name {
+	position: relative;
+	width: 134px;
+	height: 35px;
+	font-size: 26px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.35;
+	letter-spacing: 0.21px;
+	text-align: left;
+	color: #0a1f44;
+	margin-left: 130px;
+	top: 25px;
+}
+.crown {
+	width: 80px;
+	height: 20px;
+	margin-left: 260px;
+}
+.person {
+	width: 90px;
+	height: 120px;
+	object-fit: contain;
+	margin-left: 19px;
+	margin-top: -30px;
+}
+.all {
+	margin-top: -40px;
+	margin-left: 120px;
+}
+.title {
+	width: 97px;
+	height: 27px;
+	font-family: Avenir;
+	font-size: 20px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.25;
+	letter-spacing: 0.38px;
+	text-align: left;
+	color: #000000;
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+.star {
+	width: 19.6px;
+	height: 19.1px;
+	margin-left: 135px;
+	position: relative;
+	top: -3px;
+}
+.show {
+	width: 60px;
+	height: 20px;
+	font-family: Avenir;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: -0.24px;
+	text-align: right;
+	color: #000000;
+	--box-shadow: none;
+	position: relative;
+	top: -25px;
+	left: 280px;
+}
+
+.card1 {
+	width: 165px;
+	height: 190px;
+	box-shadow: none;
+	position: relative;
+	top: -30px;
+}
+.store {
+	width: 142px;
+	height: 20px;
+	font-family: Avenir;
+	font-size: 14px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: normal;
+	text-align: left;
+	color: #1e2432;
+}
+
+.card2 {
+	width: 165px;
+	height: 190px;
+	margin-left: 185px;
+	position: relative;
+	top: -230px;
+	box-shadow: none;
+}
+.loca {
+	position: absolute;
+	margin-top: 22px;
+	font-size: 12px;
+}
+.store {
+	position: absolute;
+	height: 20px;
+	font-family: Avenir;
+	font-size: 13px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: normal;
+	text-align: left;
+	color: #1e2432;
+	margin-top: 5px;
+}
+.review {
+	width: 70px;
+	height: 27px;
+	font-family: Avenir;
+	font-size: 20px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.25;
+	letter-spacing: 0.38px;
+	text-align: left;
+	color: #000000;
+	position: relative;
+	top: -260px;
+	margin-left: 20px;
+}
+.show2 {
+	width: 60px;
+	height: 20px;
+	font-family: Avenir;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: -0.24px;
+	text-align: right;
+	color: #000000;
+	--box-shadow: none;
+	position: relative;
+	top: -290px;
+	margin-left: 280px;
+}
+.card3 {
+	position: relative;
+	top: -285px;
+	height: 88px;
+}
+.card4 {
+	position: relative;
+	top: -285px;
+	height: 88px;
+}
+.img {
+	width: 88px;
+	height: 88px;
+}
+.store2 {
+	width: 197px;
+	height: 23px;
+	font-family: Avenir;
+	font-size: 17px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.29;
+	letter-spacing: -0.41px;
+	text-align: left;
+	color: #000000;
+	position: relative;
+	left: 100px;
+	top: -80px;
+}
+.store2 {
+	position: relative;
+	top: -70px;
+}
+.loca2 {
+	width: 200px;
+	height: 18px;
+	font-family: Avenir-Roman;
+	font-size: 13px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.38;
+	letter-spacing: -0.08px;
+	text-align: left;
+	color: #b8bbc6;
+	margin-left: 100px;
+	position: relative;
+	top: -70px;
+}

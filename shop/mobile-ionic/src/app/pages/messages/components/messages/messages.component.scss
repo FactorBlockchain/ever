@@ -1,4 +1,18 @@
 :host {
+	background: white;
+	ion-header {
+		background: white;
+
+		.bar {
+			background: white;
+			.searchButton {
+				background: white;
+			}
+			.allButton {
+				background: white;
+			}
+		}
+	}
 	ion-content {
 		.content-wrapper {
 			.content-scroll {
@@ -10,10 +24,9 @@
 					margin: 20px 0;
 
 					.image {
-						height: 60px;
-						width: 60px;
-						border-radius: 3px;
-						box-shadow: 1px 1px 12px var(--ion-color-light-shade);
+						height: 50px;
+						width: 50px;
+						border-radius: 50%;
 					}
 
 					.detail {

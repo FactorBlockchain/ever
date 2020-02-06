@@ -1,0 +1,45 @@
+.title {
+	width: 334px;
+	height: 41px;
+	font-family: Avenir;
+	font-size: 20px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.32;
+	letter-spacing: 0.2px;
+	text-align: left;
+	color: #0a1f44;
+	position: relative;
+	top: -50px;
+	left: 20px;
+}
+.localmam {
+	margin-left: 10px;
+	margin-top: 10px;
+	position: relative;
+	top: -80px;
+	height: 330px;
+}
+.img {
+	height: 250px;
+}
+.menu {
+	margin-left: 10px;
+	position: relative;
+	top: -150px;
+}
+.store {
+	height: 22px;
+	font-family: Avenir;
+	font-size: 17px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.29;
+	letter-spacing: -0.41px;
+	text-align: left;
+	color: #000000;
+	position: relative;
+	top: 0px;
+}

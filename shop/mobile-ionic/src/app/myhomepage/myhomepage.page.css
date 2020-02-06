@@ -1,0 +1,35 @@
+.header {
+	width: 66px;
+	height: 71px;
+	object-fit: contain;
+	border-radius: 35px;
+	margin-left: 144.5px;
+}
+.home {
+	width: 215px;
+	height: 40px;
+	font-family: AppleSDGothicNeo;
+	font-size: 30px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: normal;
+	text-align: left;
+	color: #707070;
+	margin-left: 77.5px;
+}
+.top {
+	width: 355px;
+	height: 245px;
+	object-fit: contain;
+	margin-top: 41px;
+	margin-left: 5px;
+}
+.bottom {
+	width: 340px;
+	height: 184px;
+	object-fit: contain;
+	margin-top: 16px;
+	margin-left: 8px;
+}

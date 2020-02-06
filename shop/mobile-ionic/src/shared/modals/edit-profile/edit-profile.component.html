@@ -1,23 +1,47 @@
 <ion-toolbar>
-	<ion-buttons slot="start">
+	<ion-buttons>
 		<ion-button
 			fill="clear"
 			size="small"
 			color="medium"
 			(click)="closeModal()"
+			style="float: left;"
 		>
-			<ion-icon mode="md" src="assets/icons/x.svg"></ion-icon>
+			<ion-icon
+				mode="md"
+				src="assets/icons/arrow-round-back.svg"
+				style="color: black;"
+			></ion-icon>
 		</ion-button>
+		<div class="title">
+			{{ 'edit-profile-component.title' | translate }}
+		</div>
+		<ion-button
+			fill="clear"
+			size="small"
+			style=" color: #ff8c00;
+					background: white;
+					
+					font-size: 17px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.35;
+					letter-spacing: -0.27px;
+					float: right;
+					text-align: right;
+					
+					font-weight: normal;
+				font-stretch: normal;
+				font-style: normal;"
+			>Done</ion-button
+		>
 	</ion-buttons>
 </ion-toolbar>
 
-<ion-content scrollX="false" scrollY="false">
+<ion-content scrollX="false" scrollY="true">
 	<div class="content-wrapper">
-		<div class="header no-border has-toolbar">
-			<div class="title">
-				{{ 'edit-profile-component.title' | translate }}
-			</div>
-		</div>
+		<div class="header no-border has-toolbar"></div>
 
 		<div class="wrapper">
 			<div class="content-scroll" *ngIf="currentUser">
@@ -25,115 +49,108 @@
 				<div
 					class="profile-image"
 					[image-loader]="currentUser.photoURL"
+					style="position: relative; top: 60px; left: 90px;"
 				>
 					<ion-icon
 						size="large"
-						color="light"
+						color="danger"
 						prefix
-						src="assets/icons/camera.svg"
+						src="assets/icons/cameraIcon.svg"
 						(click)="changePhoto()"
 					></ion-icon>
 				</div>
+
 				<div class="profile-detail">
-					<!-- display name -->
-					<div class="form-label">
+					<!--name-->
+					<ion-input
+						type="text"
+						[ngModel]="currentUser.displayName"
+						style="text-align: right;
+								margin: 0 0 10px 10px; 
+								color: black;
+								font-size: 17px;
+								border-bottom: solid 1px  #b8bbc6;
+								width: 313px;
+								height: 60;
+								
+								"
+					>
 						{{
 							'edit-profile-component.display-name-label'
 								| translate
 						}}
-					</div>
-					<form-field fill="true" color="medium">
-						<ion-icon prefix src="assets/icons/user.svg"></ion-icon>
-						<ion-input
-							inputRef
-							required
-							[(ngModel)]="currentUser.displayName"
-						></ion-input>
-					</form-field>
+					</ion-input>
 
 					<!-- email -->
-					<div class="form-label">
-						{{ 'edit-profile-component.email-label' | translate }}
-					</div>
-					<form-field fill="true" color="medium">
-						<ion-icon prefix src="assets/icons/mail.svg"></ion-icon>
-						<ion-input
-							inputRef
-							email
-							required
-							[(ngModel)]="currentUser.email"
-						></ion-input>
-					</form-field>
-
-					<!-- status message -->
-					<div class="form-label">
-						{{
-							'edit-profile-component.status-message-label'
-								| translate
-						}}
-					</div>
-					<form-field fill="true" color="medium" class="textarea">
-						<ion-icon prefix src="assets/icons/copy.svg"></ion-icon>
-						<textarea
-							inputRef
-							autosize
-							maxRows="3"
-							placeholder="Status Message"
-							[(ngModel)]="currentUser.statusMessage"
-						></textarea>
-					</form-field>
-
-					<!-- country selection -->
-					<div class="form-label">
-						{{ 'edit-profile-component.country-label' | translate }}
-					</div>
-					<form-field fill="true" color="medium">
-						<ion-icon
-							prefix
-							src="assets/icons/map-pin.svg"
-						></ion-icon>
-						<ion-select
-							inputRef
-							required
-							[(ngModel)]="currentUser.country"
-							[interfaceOptions]="countrySelectOptions"
-						>
-							<ion-select-option
-								[value]="item.alpha2Code"
-								*ngFor="
-									let item of countrySelectOptions.data
-										| async
+					<ion-input
+						type="text"
+						[ngModel]="currentUser.email"
+						style="text-align: right;
+								margin: 0 0 10px 10px; 
+								color: black;
+								font-size: 17px;
+								border-bottom: solid 1px  #b8bbc6;
+								width: 313px;
+								height: 60;
 								"
-							>
-								{{ item.name }}
-							</ion-select-option>
-						</ion-select>
-					</form-field>
+					>
+						{{ 'edit-profile-component.email-label' | translate }}
+					</ion-input>
 
 					<!-- phone -->
-					<div class="form-label">
+					<ion-input
+						type="text"
+						[ngModel]="currentUser.mobile"
+						required
+						style="color:#000;"
+						style="text-align: right;
+								margin: 0 0 10px 10px; 
+								color: black;
+								font-size: 17px;
+								border-bottom: solid 1px  #b8bbc6;
+								width: 313px;
+								height: 60;
+								"
+					>
 						{{ 'edit-profile-component.mobile-label' | translate }}
-					</div>
-					<form-field fill="true" color="medium">
-						<ion-icon
-							prefix
-							src="assets/icons/phone-call.svg"
-						></ion-icon>
-						<ion-input
-							inputRef
-							[phone]="currentUser.country"
-							[disabled]="!currentUser.country"
-							[(ngModel)]="currentUser.mobile"
-						></ion-input>
-						<div
-							*ngIf="currentUser.country"
-							class="flag-img"
-							suffix
-							image-loader="assets/images/flags/{{
-								currentUser.country.toLowerCase()
-							}}.svg"
-						></div>
-					</form-field>
+					</ion-input>
+
+					<!-- gender -->
+					<ion-input
+						type="text"
+						[ngModel]="currentUser.gender"
+						required
+						style="color:#000;"
+						style="text-align: right;
+								margin: 0 0 10px 10px; 
+								color: black;
+								font-size: 17px;
+								border-bottom: solid 1px  #b8bbc6;
+								width: 313px;
+								height: 60;
+								"
+					>
+						{{ 'edit-profile-component.gender-label' | translate }}
+					</ion-input>
+
+					<!-- Date of birth -->
+					<ion-input
+						type="text"
+						[ngModel]="currentUser.gender"
+						required
+						style="color:#000;"
+						style="text-align: right;
+								margin: 0 0 10px 10px; 
+								color: black;
+								font-size: 17px;								
+								width: 313px;
+								height: 60;
+								"
+					>
+						{{
+							'edit-profile-component.birthday-label' | translate
+						}}
+					</ion-input>
 				</div>
 
 				<ion-button expand="full" (click)="save()">{{

@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'shared/shared.module';
 import { MessageComponent } from './components/message/message.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { ChatheaderComponentModule } from '../../components/chatheader/chatheader.component.module';
 
 @NgModule({
 	declarations: [MessagesComponent, MessageComponent],
@@ -11,6 +12,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 	imports: [
 		CommonModule,
 		SharedModule,
+		ChatheaderComponentModule,
 		RouterModule.forChild([
 			{
 				path: '',

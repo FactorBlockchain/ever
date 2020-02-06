@@ -5,7 +5,7 @@
 				<!-- profile image -->
 				<div class="profile-image" [image-loader]="user.photoURL">
 					<!-- show if following -->
-					<ion-fab slot="fixed" *ngIf="isFriend">
+					<!--<ion-fab slot="fixed" *ngIf="isFriend">
 						<ion-fab-button>
 							<ion-icon name="add"></ion-icon>
 						</ion-fab-button>
@@ -37,22 +37,48 @@
 								></ion-icon>
 							</ion-fab-button>
 						</ion-fab-list>
-					</ion-fab>
+					</ion-fab>-->
 
 					<!-- show if not following -->
 					<ion-button
+						*ngIf="isFriend"
+						class="chat"
+						color="primary"
+						(click)="chat()"
+					>
+						<ion-icon name="chatboxes" color="dark"></ion-icon>
+					</ion-button>
+					<ion-label *ngIf="isFriend" class="chatinfo"
+						>CHAT</ion-label
+					>
+
+					<ion-button *ngIf="isFriend" class="gift" color="primary">
+						<ion-icon name="gift" color="dark"></ion-icon>
+					</ion-button>
+					<ion-label *ngIf="isFriend" class="giftinfo"
+						>GIFT</ion-label
+					>
+
+					<ion-button
 						*ngIf="!isFriend"
 						class="follow"
+						color="primary"
 						(click)="manage()"
-						>{{ 'person-component.follow' | translate }}</ion-button
+					>
+						<ion-label color="dark">{{
+							'person-component.follow' | translate
+						}}</ion-label></ion-button
 					>
 				</div>
 
 				<!-- profile details -->
 				<div class="profile-detail">
-					<div class="name">{{ user.displayName }}</div>
-
-					<div class="country">{{ user.country }}</div>
+					<div class="name" text-center>{{ user.displayName }}</div>
+					<div class="phone" text-center>
+						<!--<ion-icon src="assets/icons/phone.svg"></ion-icon
+						>-->{{ user.mobile || user.phone || 'misc.no-data' | translate }}
+					</div>
+					<!--<div class="country">{{ user.country }}</div>
 
 					<div class="status">
 						{{
@@ -64,17 +90,11 @@
 						<ion-icon src="assets/icons/mail.svg"></ion-icon
 						>{{ user.email }}
 					</div>
-					<div class="phone">
-						<ion-icon src="assets/icons/phone.svg"></ion-icon
-						>{{
-							user.mobile || user.phone || 'misc.no-data'
-								| translate
-						}}
-					</div>
+
 					<div class="town">
 						<ion-icon src="assets/icons/map-pin.svg"></ion-icon
 						>{{ user.town || 'misc.no-data' | translate }}
-					</div>
+					</div>-->
 				</div>
 
 				<!-- call user with hidden a tag -->

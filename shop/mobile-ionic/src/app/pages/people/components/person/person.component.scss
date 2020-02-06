@@ -3,12 +3,13 @@
 		--background: transparent;
 
 		.content-wrapper {
-			width: 80%;
-			height: 80%;
+			width: 70%;
+			height: 60%;
 			margin: 20% auto;
-			background: var(--ion-color-light);
+			margin-top: 150px;
+			background: transparent;
 			border-radius: 12px;
-			box-shadow: 1px 2px 12px var(--ion-color-dark);
+			box-shadow: 1px 2px 12px var(--ion-color-medium);
 			overflow: hidden;
 			.wrapper {
 				height: 100%;
@@ -16,26 +17,63 @@
 					height: calc(100% - 45px);
 
 					.profile-image {
-						height: 260px;
-						width: 100%;
-						margin: auto;
-						position: relative;
+						height: 100px;
+						width: 100px;
+						margin: 50px auto 0px;
+						border-radius: 50%;
 						ion-fab {
 							position: absolute;
 							right: 10px;
 							bottom: -28px;
 						}
+						.chat {
+							position: relative;
+							--box-shadow: none;
+							--border-radius: 50% !important;
+
+							width: 57px;
+							height: 57px;
+							bottom: -220px;
+							right: 30px;
+						}
+						.chatinfo {
+							position: relative;
+							bottom: -270px;
+							right: 75px;
+							font-size: 12px;
+						}
+						.gift {
+							position: relative;
+							--box-shadow: none;
+							--border-radius: 50% !important;
+							bottom: -155px;
+							left: 70px;
+							width: 57px;
+							height: 57px;
+						}
+						.giftinfo {
+							position: relative;
+							bottom: -205px;
+							left: 25px;
+							font-size: 12px;
+						}
 						.follow {
-							position: absolute;
-							right: 10px;
-							bottom: -20px;
+							position: relative;
+							--box-shadow: none;
+							--border-radius: 50% !important;
+
+							width: 57px;
+							height: 57px;
+							bottom: -220px;
+							left: 15px;
+							font: black;
 						}
 					}
 
 					.profile-detail {
 						display: flex;
 						flex-direction: column;
-						background: var(--ion-color-light);
+						background: #fff;
 						padding: 20px;
 						.name {
 							font-size: 20px;
@@ -53,7 +91,8 @@
 						.phone,
 						.town {
 							font-size: 13px;
-							margin: 2px 0;
+							color: var(--ion-color-dark);
+							margin: 5px 0;
 							ion-icon {
 								margin-right: 10px;
 							}

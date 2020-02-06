@@ -445,11 +445,13 @@
 		"followers": "팔로워들"
 	},
 	"edit-profile-component": {
-		"title": "프로필 수정",
-		"display-name-label": "이름",
+		"title": "Edit Profile",
+		"display-name-label": "Username",
 		"status-message-label": "메시지",
-		"email-label": "이메일",
-		"mobile-label": "휴대폰",
+		"email-label": "Email",
+		"mobile-label": "Phone",
+		"gender-label": "Gender",
+		"birthday-label": "Birthday",
 		"country-label": "나라",
 		"password-label": "비밀번호",
 		"retype-password-label": "비밀번호 재입력",

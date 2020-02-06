@@ -1,11 +1,22 @@
+<ion-header no-border>
+	<div class="chatheader-component">
+		<ion-buttons slot="start">
+			<ion-menu-button>
+				<ion-img
+					[src]="'./assets/imgs/logo.png'"
+					class="chatheader-logo"
+				></ion-img>
+			</ion-menu-button>
+		</ion-buttons>
 
-<ion-header>
-	<ion-buttons slot="end">
-		<ion-button (click)="goBack()">
-			<i class="fa fa-angle-left back-btn"></i>
-			<span>Back</span>
-		</ion-button>
-	</ion-buttons>
+		<div class="ion-items">
+			<ion-img
+				[src]="'./assets/imgs/search.png'"
+				class="chatheader-search"
+			></ion-img>
+			<ion-input placeholder="Search"></ion-input>
+		</div>
+	</div>
 </ion-header>
 <ion-content class="ion-padding">
 	<div class="content-wrapper" *ngIf="currentUser">
@@ -84,13 +95,8 @@
 <ion-footer>
 	<ion-toolbar class="custom-form">
 		<ion-buttons slot="start">
-			<ion-button
-				class="circle"
-				fill="clear"
-				color="primary"
-				(click)="sendPhoto()"
-			>
-				<ion-icon src="assets/icons/camera.svg"></ion-icon>
+			<ion-button class="circle" fill="clear" (click)="sendPhoto()">
+				<ion-icon name="camera"></ion-icon>
 			</ion-button>
 		</ion-buttons>
 
@@ -110,7 +116,7 @@
 				color="primary"
 				(click)="send(textMsg)"
 			>
-				<ion-icon src="assets/icons/send.svg"></ion-icon>
+				<ion-icon name="send"></ion-icon>
 			</ion-button>
 		</ion-buttons>
 	</ion-toolbar>
