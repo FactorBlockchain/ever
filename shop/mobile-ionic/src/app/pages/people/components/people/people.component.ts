@@ -5,6 +5,7 @@ import {
 	OnInit,
 	ViewChild
 } from '@angular/core';
+import { Platform } from '@ionic/angular';
 import { IUser } from 'app/pages/auth/helpers/model';
 import { AuthService } from 'app/pages/auth/services/auth/auth.service';
 import { MessagesService } from 'app/pages/messages/services/messages/messages.service';
@@ -25,8 +26,9 @@ import {
 	ContactName,
 	ContactFindOptions
 } from '@ionic-native/contacts';
+
 /**
- * get list of people fro users collection, group them by first letter of their display names.
+ * get list of people fro users collection, d them by first letter of their display names.
  * using a href to scroll to category by letter in the user list.
  * you can follow and unfollow users, call and start message
  */
@@ -58,7 +60,7 @@ export class PeopleComponent extends Extender implements OnInit {
 	public selectedIndex: number = 0;
 	public friends: any;
 	public allContacts: any;
-	private contactlist: any[];
+	private contactlist: any[] = [];
 
 	/** references content area of content page */
 	@ViewChild('content', null) public content: ElementRef;
@@ -72,26 +74,13 @@ export class PeopleComponent extends Extender implements OnInit {
 		private commonService: CommonService,
 		private callService: CallsService,
 		private androidPermissions: AndroidPermissions,
-		private contacts: Contacts
+		private contacts: Contacts,
+		protected platform: Platform
 	) {
 		super(injector);
 		this.alpha = this.peopleService.alpha;
 		this.views = this.peopleService.views;
-		//		this.fetchDeviceContact();
-
-		this.contacts
-			.find(['displayName', 'name', 'phoneNumbers', 'emails'], {
-				filter: '',
-				multiple: true
-			})
-			.then((data) => {
-				this.allContacts = data;
-			});
-		/*
-		this.contacts.find(['displayName', 'phoneNumbers'], {multiple: true}).then((contac) => {
-			this.contactlist = contac;
-		}).catch(error => console.log(error));
-		*/
+		this.fetchDeviceContact();
 	}
 
 	/** get currentUser, get users friends ids and get all users from user collection */
@@ -119,50 +108,59 @@ export class PeopleComponent extends Extender implements OnInit {
 		);
 	}
 
-	/*
-	fetchDeviceContact(){
+	fetchDeviceContact() {
 		const options = {
-			filter : '',
+			filter: '',
 			multiple: true,
 			hasPhoneNumber: true
 		};
-		this.contacts.find(["*"], options).then((res) => {
+		this.platform.ready().then(() => {
+			this.contacts
+				.find(['*'], options)
+				.then((res) => {
+					for (var i = 0; i < res.length; i++) {
+						const contact = res[i];
+						const no = res[i].name.formatted;
+						const phonenumber = res[i].phoneNumbers;
+						if (phonenumber != null) {
+							for (var n = 0; n < phonenumber.length; n++) {
+								var type = phonenumber[n].type;
+								if (type == 'mobile') {
+									var phone = phonenumber[n].value;
+									var mobile;
+									if (
+										phone.slice(0, 1) === '+' ||
+										phone.slice(0, 1) === '0'
+									) {
+										mobile = phone.replace(
+											/[^a-zA-Z0-9+]/g,
+											''
+										);
+									} else {
+										var mobile_no = phone.replace(
+											/[^a-zA-Z0-9]/g,
+											''
+										);
+										mobile = mobile_no;
+									}
 
-			for (var i = 0; i < res.length; i++) {
-				const contact = res[i];
-				const no = res[i].name.formatted;
-				const phonenumber = res[i].phoneNumbers;
-				if (phonenumber != null) {
-					for (var n = 0; n < phonenumber.length; n++) {
-						var type = phonenumber[n].type;
-						if (type == 'mobile') {
-							var phone = phonenumber[n].value;
-							var mobile;
-							if (phone.slice(0, 1) === '+' || phone.slice(0, 1) == '0'){
-								mobile = phone.replace(/[^a-zA-Z0-9+]/g, '');
+									var contactData = {
+										displayName: no,
+										phoneNumbers: mobile
+									};
+									this.contactlist.push(contactData);
+								}
 							}
-							else {
-								var mobile_no = phone.replace(/[^a-zA-Z0-9]/g, '');
-								mobile = mobile_no;
-							}
-
-							var contactData = {
-								'displayName': no,
-								'phoneNumbers': mobile,
-							};
-							this.contactlist.push(contactData);
 						}
 					}
-				}
-			}
 
-			console.log('contactlist >>>', this.contactlist);
-
-		}).catch((err) => {
-				console.log('err', err);
+					console.log('contactlist >>>', this.contactlist);
+				})
+				.catch((err) => {
+					console.log('err', err);
+				});
 		});
 	}
-	*/
 
 	/** if you navigate to this page with query params, open person modal and use id in query param to find user details */
 	public openProfileFromUrl() {

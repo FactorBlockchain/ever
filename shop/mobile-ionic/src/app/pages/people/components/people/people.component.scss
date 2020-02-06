@@ -1,11 +1,12 @@
 :host {
+	background-color: white;
 	.content-wrapper {
-		margin-top: 5px;
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
 		.header {
+			/*background-color: white;*/
 			.title {
 				align-items: center;
 
@@ -24,31 +25,40 @@
 				height: 100% !important;
 				width: 100%;
 				overflow: auto;
+				.title {
+					font-size: 15px;
+					font-weight: normal;
+					padding: 10px 0 5px 10px;
+					text-transform: capitalize;
+					color: #b8bbc6;
+				}
 				.group {
 					display: flex;
 					flex-direction: column;
 
-					.title {
-						font-size: 22px;
-						font-weight: 600;
-						padding: 10px 0 5px 30px;
-						text-transform: uppercase;
-					}
-
 					.contact {
-						margin: 5px 20px 5px 0;
+						margin: 5px 5px 5px 5px;
 						display: flex;
-						padding: 10px 10px 10px 15px;
-						box-shadow: 1px 1px 12px var(--ion-color-light-shade);
+						padding: 5px 5px 5px 15px;
+						/*box-shadow: 1px 1px 12px var(--ion-color-light-shade);*/
 						align-items: center;
 
 						.image {
-							width: 55px;
-							height: 55px;
-							border-radius: 6px;
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
 							background-size: cover !important;
-							box-shadow: 1px 1px 12px
-								var(--ion-color-light-shade);
+							/* 사진 겉에 희미하게 그림자 없애기box-shadow: 1px 1px 12px
+						 var(--ion-color-light-shade);*/
+						}
+
+						.contactimage {
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
+							background-size: cover !important;
+							/* 사진 겉에 희미하게 그림자 없애기box-shadow: 1px 1px 12px
+						var(--ion-color-light-shade);*/
 						}
 
 						.detail {
@@ -58,9 +68,15 @@
 							flex: 1;
 
 							.name {
-								font-size: 14px;
+								font-size: 16 px;
 								font-weight: 500;
 								padding: 0 0 4px 0;
+							}
+							.nativecontactphonenumber {
+								font-size: 16px;
+								font-weight: 500;
+								padding: 0 0 4px 0;
+								right: 10px;
 							}
 
 							.job {
