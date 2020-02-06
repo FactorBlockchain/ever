@@ -61,6 +61,7 @@ import {
 	ContactFieldType,
 	ContactFindOptions
 } from '@ionic-native/contacts';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -147,6 +148,7 @@ import {
 		DialogflowService,
 		AndroidPermissions,
 		Toast,
+		File,
 		Contacts,
 		Contact
 	],
