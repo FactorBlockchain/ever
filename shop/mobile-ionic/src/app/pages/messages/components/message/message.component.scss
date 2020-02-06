@@ -118,4 +118,39 @@
 			border-radius: 3px;
 		}
 	}
+	.tabs {
+		width: 373px;
+		height: 80px;
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba(248, 248, 248, 0.92);
+
+		.phone {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+		.gallery {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+		.camera {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+
+		.video {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+
+		.contact {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+	}
 }

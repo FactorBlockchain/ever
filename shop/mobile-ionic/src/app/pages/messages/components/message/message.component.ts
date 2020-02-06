@@ -324,7 +324,26 @@ export class MessageComponent extends Extender
 		this.toast(err);
 	};
 
-	goBack(){
+	goBack() {
 		this.closeModal();
+	}
+	public gotophone() {
+		this.router.navigateByUrl('/profile');
+	}
+
+	public gotogallery() {
+		this.router.navigateByUrl('');
+	}
+
+	public gotocamera() {
+		this.router.navigateByUrl('');
+	}
+
+	public gotovideo() {
+		this.router.navigateByUrl('/products');
+	}
+
+	public gotocontact() {
+		this.router.navigateByUrl('/people');
 	}
 }
