@@ -253,7 +253,7 @@ export class MessagesComponent extends Extender implements OnInit {
 	}
 
 	public gotochat() {
-		this.router.navigateByUrl('/products');
+		this.router.navigateByUrl('/messages');
 	}
 
 	public gotofriend() {
