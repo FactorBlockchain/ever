@@ -239,6 +239,26 @@ export class MessagesComponent extends Extender implements OnInit {
 			return message;
 		});
 	}
+
+	public gotosetting() {
+		this.router.navigateByUrl('/profile');
+	}
+
+	public gotopay() {
+		this.router.navigateByUrl('');
+	}
+
+	public gototranslator() {
+		this.router.navigateByUrl('');
+	}
+
+	public gotochat() {
+		this.router.navigateByUrl('/products');
+	}
+
+	public gotofriend() {
+		this.router.navigateByUrl('/people');
+	}
 }
 
 interface IViews {

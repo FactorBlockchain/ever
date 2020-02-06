@@ -40,3 +40,33 @@ ion-content {
 		margin-top: 20px;
 	}
 }
+
+.tabs {
+	width: 373px;
+	height: 80px;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	background-color: rgba(248, 248, 248, 0.92);
+
+	.explorer {
+		width: 79px;
+		height: 96px;
+		--box-shadow: none;
+	}
+	.myorder {
+		width: 79px;
+		height: 96px;
+		--box-shadow: none;
+	}
+	.friend {
+		width: 79px;
+		height: 96px;
+		--box-shadow: none;
+	}
+
+	.profile {
+		width: 79px;
+		height: 96px;
+		--box-shadow: none;
+	}
+}

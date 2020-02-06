@@ -64,6 +64,41 @@
 			}
 		}
 	}
+	.tabs {
+		width: 373px;
+		height: 80px;
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba(248, 248, 248, 0.92);
+
+		.friend {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+		.chat {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+		.translator {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+
+		.pay {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+
+		.setting {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+	}
 	ion-footer {
 		.buttons {
 			margin: 5px 0 5px 15px;

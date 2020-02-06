@@ -52,4 +52,33 @@
 			margin-left: 18px;
 		}
 	}
+	.tabs {
+		width: 373px;
+		height: 80px;
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba(248, 248, 248, 0.92);
+
+		.explorer {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+		.myorder {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+		.friend {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+
+		.profile {
+			width: 66px;
+			height: 80px;
+			--box-shadow: none;
+		}
+	}
 }

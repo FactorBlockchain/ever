@@ -12,97 +12,113 @@ const db = admin.firestore();
  * get recipient settings
  * for each token, if recipient has not turned off notifications, send notification to devices
  */
-export const newMessageNotification = functions.firestore.document('messages/{messageId}').onUpdate(async (event) => {
-  const _data = event.after.data();
-  const data = _data !== undefined ? _data : { messages: [] };
+export const newMessageNotification = functions.firestore
+	.document('messages/{messageId}')
+	.onUpdate(async (event) => {
+		const _data = event.after.data();
+		const data = _data !== undefined ? _data : { messages: [] };
 
-  /** get user of message so that */
-  const userId = data.messages[data.messages.length - 1].uid;
-  const _user = await db.doc(`users/${userId}`).get();
-  const _userData = _user.data();
-  const user = _userData !== undefined ? _userData : { displayName: 'unknown' };
+		/** get user of message so that */
+		const userId = data.messages[data.messages.length - 1].uid;
+		const _user = await db.doc(`users/${userId}`).get();
+		const _userData = _user.data();
+		const user =
+			_userData !== undefined ? _userData : { displayName: 'unknown' };
 
-  /** get recipient of message so that */
-  const recipientId = (data.participantsId as string[]).find((id) => id !== userId);
+		/** get recipient of message so that */
+		const recipientId = (data.participantsId as string[]).find(
+			(id) => id !== userId
+		);
 
-  const _settings = await db.doc(`preferences/${recipientId}`).get();
-  const _settingsData = _settings.data();
-  const settings = _settingsData !== undefined ? _settingsData : { messagePreview: true };
+		const _settings = await db.doc(`preferences/${recipientId}`).get();
+		const _settingsData = _settings.data();
+		const settings =
+			_settingsData !== undefined
+				? _settingsData
+				: { messagePreview: true };
 
-  // Notification content
-  const payload = {
-    notification: {
-      title: 'New Message',
-      body: `${user.displayName} sent you message!`,
-      imageUrl: user.photoURL || ''
-    }
-  };
+		// Notification content
+		const payload = {
+			notification: {
+				title: 'New Message',
+				body: `${user.displayName} sent you message!`,
+				imageUrl: user.photoURL || ''
+			}
+		};
 
-  // ref to the device collection for the user
-  const devicesRef = db.collection('fcm-devices').where('uid', '==', recipientId);
+		// ref to the device collection for the user
+		const devicesRef = db
+			.collection('fcm-devices')
+			.where('uid', '==', recipientId);
 
-  // get the user's tokens and send notifications
-  const devices = await devicesRef.get();
+		// get the user's tokens and send notifications
+		const devices = await devicesRef.get();
 
-  const tokens: any[] = [];
+		const tokens: any[] = [];
 
-  // send a notification to each device token
-  devices.forEach((result) => {
-    const token = result.data().token;
-    tokens.push(token);
-  });
-  if (tokens.length && settings.messagePreview) {
-    return admin.messaging().sendToDevice(tokens, payload);
-  }
-  return;
-});
+		// send a notification to each device token
+		devices.forEach((result) => {
+			const token = result.data().token;
+			tokens.push(token);
+		});
+		if (tokens.length && settings.messagePreview) {
+			return admin.messaging().sendToDevice(tokens, payload);
+		}
+		return;
+	});
 
+export const newCallNotification = functions.firestore
+	.document('calls/{messageId}')
+	.onCreate(async (event) => {
+		const _data = event.data();
+		const data = _data !== undefined ? _data : { messages: [] };
 
-export const newCallNotification = functions.firestore.document('calls/{messageId}').onCreate(async (event) => {
-  const _data = event.data();
-  const data = _data !== undefined ? _data : { messages: [] };
+		/** get user of message so that */
+		// const userId = data.messages[data.messages.length - 1].uid;
+		// const _user = await db.doc(`users/${userId}`).get();
+		// const _userData = _user.data();
+		// const user = _userData !== undefined ? _userData : { displayName: 'unknown' };
 
-  /** get user of message so that */
-  // const userId = data.messages[data.messages.length - 1].uid;
-  // const _user = await db.doc(`users/${userId}`).get();
-  // const _userData = _user.data();
-  // const user = _userData !== undefined ? _userData : { displayName: 'unknown' };
+		// /** get recipient of message so that */
+		// const recipientId = (data.participantsId as string[]).find((id) => id !== userId);
 
-  // /** get recipient of message so that */
-  // const recipientId = (data.participantsId as string[]).find((id) => id !== userId);
+		const recipientId: string = data.participantsId[0];
+		//const userId: string = data.participantsId[1];
+		//const _user = await db.doc(`users/${userId}`).get();
+		//const _userData = _user.data();
+		//const user = _userData !== undefined ? _userData : { displayName: 'unknown' };
 
-  const recipientId: string = data.participantsId[0];
-  //const userId: string = data.participantsId[1];
-  //const _user = await db.doc(`users/${userId}`).get();
-  //const _userData = _user.data();
-  //const user = _userData !== undefined ? _userData : { displayName: 'unknown' };
+		const _settings = await db.doc(`preferences/${recipientId}`).get();
+		const _settingsData = _settings.data();
+		const settings =
+			_settingsData !== undefined
+				? _settingsData
+				: { messagePreview: true };
 
-  const _settings = await db.doc(`preferences/${recipientId}`).get();
-  const _settingsData = _settings.data();
-  const settings = _settingsData !== undefined ? _settingsData : { messagePreview: true };
+		// Notification content
+		const payload = {
+			data: {
+				sessionToken: data.sessionToken
+			}
+		};
 
-  // Notification content
-  const payload = {
-    data: {
-      sessionToken: data.sessionToken
-    }
-  };
+		// ref to the device collection for the user
+		const devicesRef = db
+			.collection('fcm-devices')
+			.where('uid', '==', recipientId);
 
-  // ref to the device collection for the user
-  const devicesRef = db.collection('fcm-devices').where('uid', '==', recipientId);
+		// get the user's tokens and send notifications
+		const devices = await devicesRef.get();
 
-  // get the user's tokens and send notifications
-  const devices = await devicesRef.get();
+		const tokens: any[] = [];
 
-  const tokens: any[] = [];
-
-  // send a notification to each device token
-  devices.forEach((result) => {
-    const token = result.data().token;
-    tokens.push(token);
-  });
-  if (tokens.length && settings.messagePreview) {
-    return admin.messaging().sendToDevice(tokens, payload);
-  }
-  return;
-});
+		// send a notification to each device token
+		devices.forEach((result) => {
+			const token = result.data().token;
+			tokens.push(token);
+		});
+		if (tokens.length && settings.messagePreview) {
+			return admin.messaging().sendToDevice(tokens, payload);
+		}
+		return;
+	});

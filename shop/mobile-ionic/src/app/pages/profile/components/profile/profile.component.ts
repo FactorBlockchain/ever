@@ -121,8 +121,21 @@ export class ProfileComponent extends Extender implements OnInit {
 	}
 
 	public signout() {
-		this.authService
-			.signOut()
-			.then(() => this.goto(this.routes.auth));
+		this.authService.signOut().then(() => this.goto(this.routes.auth));
+	}
+	public gotoexplorer() {
+		this.router.navigateByUrl('/products');
+	}
+
+	public gotomyorder() {
+		this.router.navigateByUrl('/order-history');
+	}
+
+	public gotofriend() {
+		this.router.navigateByUrl('/people');
+	}
+
+	public gotoprofile() {
+		this.router.navigateByUrl('/profile');
 	}
 }

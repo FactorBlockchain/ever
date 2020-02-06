@@ -44,4 +44,19 @@ export class OrdersHistoryPage implements OnDestroy {
 	getStatusText(order: Order) {
 		return order.getStatusText(this._store.language);
 	}
+	public gotoexplorer() {
+		this.router.navigateByUrl('/products');
+	}
+
+	public gotomyorder() {
+		this.router.navigateByUrl('/order-history');
+	}
+
+	public gotofriend() {
+		this.router.navigateByUrl('/people');
+	}
+
+	public gotoprofile() {
+		this.router.navigateByUrl('/profile');
+	}
 }

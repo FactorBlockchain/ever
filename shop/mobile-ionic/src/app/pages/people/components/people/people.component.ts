@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { IUser } from 'app/pages/auth/helpers/model';
+import { Router } from '@angular/router';
 import { AuthService } from 'app/pages/auth/services/auth/auth.service';
 import { MessagesService } from 'app/pages/messages/services/messages/messages.service';
 import { Extender } from 'shared/helpers/extender';
@@ -61,6 +62,8 @@ export class PeopleComponent extends Extender implements OnInit {
 	public friends: any;
 	public allContacts: any;
 	private contactlist: any[] = [];
+
+	public router: Router;
 
 	/** references content area of content page */
 	@ViewChild('content', null) public content: ElementRef;
@@ -314,5 +317,25 @@ export class PeopleComponent extends Extender implements OnInit {
 				inline: 'nearest'
 			});
 		}
+	}
+
+	public gotosetting() {
+		this.router.navigateByUrl('/profile');
+	}
+
+	public gotopay() {
+		this.router.navigateByUrl('');
+	}
+
+	public gototranslator() {
+		this.router.navigateByUrl('');
+	}
+
+	public gotochat() {
+		this.router.navigateByUrl('/messages');
+	}
+
+	public gotofriend() {
+		this.router.navigateByUrl('/people');
 	}
 }
