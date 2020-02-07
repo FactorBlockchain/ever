@@ -26,7 +26,7 @@ import {
 	ContactFieldType,
 	ContactName,
 	ContactFindOptions
-} from '@ionic-native/contacts';
+} from '@ionic-native/contacts/ngx';
 
 /**
  * get list of people fro users collection, d them by first letter of their display names.
@@ -124,6 +124,7 @@ export class PeopleComponent extends Extender implements OnInit {
 					for (var i = 0; i < res.length; i++) {
 						const contact = res[i];
 						const no = res[i].name.formatted;
+						//						const no = res[i].name.givenName;
 						const phonenumber = res[i].phoneNumbers;
 						if (phonenumber != null) {
 							for (var n = 0; n < phonenumber.length; n++) {

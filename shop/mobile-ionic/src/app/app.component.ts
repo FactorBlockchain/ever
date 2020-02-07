@@ -22,6 +22,7 @@ import { FcmService } from 'shared/services/fcm/fcm.service';
 import { AppService, IAppPages } from 'app/services/app/app.service';
 import { Toast } from '@ionic-native/toast/ngx';
 
+//kevin kim
 @Component({
 	selector: 'e-cu-root',
 	templateUrl: 'app.component.html'
