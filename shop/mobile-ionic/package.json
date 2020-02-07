@@ -116,7 +116,7 @@
 		"card.io.cordova.mobilesdk": "^2.1.0",
 		"chart.js": "^2.8.0",
 		"com.paypal.cordova.mobilesdk": "^3.5.0",
-		"cordova-android": "8.1.0",
+		"cordova-android": "^8.1.0",
 		"cordova-android-support-gradle-release": "^3.0.1",
 		"cordova-browser": "^6.0.0",
 		"cordova-ios": "5.1.0",
@@ -300,7 +300,7 @@
 				"URL_SCHEME": "ionickcp"
 			},
 			"cordova-plugin-customurlscheme": {
-				"URL_SCHEME": "ionickcp",
+				"URL_SCHEME": "mycoolapp",
 				"ANDROID_SCHEME": " ",
 				"ANDROID_HOST": " ",
 				"ANDROID_PATHPREFIX": "/"
