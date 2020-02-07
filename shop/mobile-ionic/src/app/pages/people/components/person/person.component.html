@@ -6,58 +6,53 @@
 				<div class="profile-image" [image-loader]="user.photoURL">
 					<!-- show if following -->
 					<!--<ion-fab slot="fixed" *ngIf="isFriend">
-						<ion-fab-button>
-							<ion-icon name="add"></ion-icon>
-						</ion-fab-button>
-						<ion-fab-list side="bottom">
-							<ion-fab-button>
-								<ion-icon
-									name="call"
-									(click)="voicecall()"
-								></ion-icon>
-							</ion-fab-button>
-
-							<ion-fab-button>
-								<ion-icon
-									name="videocam"
-									(click)="call()"
-								></ion-icon>
-							</ion-fab-button>
-
-							<ion-fab-button>
-								<ion-icon
-									(click)="chat()"
-									src="assets/icons/message-square.svg"
-								></ion-icon>
-							</ion-fab-button>
-							<ion-fab-button>
-								<ion-icon
-									(click)="share()"
-									src="assets/icons/share-2.svg"
-								></ion-icon>
-							</ion-fab-button>
-						</ion-fab-list>
-					</ion-fab>-->
+				   <ion-fab-button>
+					  <ion-icon name="add"></ion-icon>
+				   </ion-fab-button>
+				   <ion-fab-list side="bottom">
+					  <ion-fab-button>
+						 <ion-icon
+							name="call"
+							(click)="voicecall()"
+						 ></ion-icon>
+					  </ion-fab-button>
+ 
+					  <ion-fab-button>
+						 <ion-icon
+							name="videocam"
+							(click)="call()"
+						 ></ion-icon>
+					  </ion-fab-button>
+ 
+					  <ion-fab-button>
+						 <ion-icon
+							(click)="chat()"
+							src="assets/icons/message-square.svg"
+						 ></ion-icon>
+					  </ion-fab-button>
+					  <ion-fab-button>
+						 <ion-icon
+							(click)="share()"
+							src="assets/icons/share-2.svg"
+						 ></ion-icon>
+					  </ion-fab-button>
+				   </ion-fab-list>
+				</ion-fab>-->
 
 					<!-- show if not following -->
-					<ion-button
+
+					<ion-img
 						*ngIf="isFriend"
 						class="chat"
-						color="primary"
 						(click)="chat()"
-					>
-						<ion-icon name="chatboxes" color="dark"></ion-icon>
-					</ion-button>
-					<ion-label *ngIf="isFriend" class="chatinfo"
-						>CHAT</ion-label
-					>
+						src="../../../../../assets/imgs/personchat.png"
+					></ion-img>
 
-					<ion-button *ngIf="isFriend" class="gift" color="primary">
-						<ion-icon name="gift" color="dark"></ion-icon>
-					</ion-button>
-					<ion-label *ngIf="isFriend" class="giftinfo"
-						>GIFT</ion-label
-					>
+					<ion-img
+						*ngIf="isFriend"
+						class="gift"
+						src="../../../../../assets/imgs/gift.png"
+					></ion-img>
 
 					<ion-button
 						*ngIf="!isFriend"
@@ -76,25 +71,25 @@
 					<div class="name" text-center>{{ user.displayName }}</div>
 					<div class="phone" text-center>
 						<!--<ion-icon src="assets/icons/phone.svg"></ion-icon
-						>-->{{ user.mobile || user.phone || 'misc.no-data' | translate }}
+				   >-->{{ user.mobile || user.phone || 'misc.no-data' | translate }}
 					</div>
 					<!--<div class="country">{{ user.country }}</div>
-
-					<div class="status">
-						{{
-							user.statusMessage ||
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis maximus ligula, quis luctus neque. Integer eu efficitur urna. Quisque rhoncus non est eu tristique.'
-						}}
-					</div>
-					<div class="email">
-						<ion-icon src="assets/icons/mail.svg"></ion-icon
-						>{{ user.email }}
-					</div>
-
-					<div class="town">
-						<ion-icon src="assets/icons/map-pin.svg"></ion-icon
-						>{{ user.town || 'misc.no-data' | translate }}
-					</div>-->
+ 
+				<div class="status">
+				   {{
+					  user.statusMessage ||
+						 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis maximus ligula, quis luctus neque. Integer eu efficitur urna. Quisque rhoncus non est eu tristique.'
+				   }}
+				</div>
+				<div class="email">
+				   <ion-icon src="assets/icons/mail.svg"></ion-icon
+				   >{{ user.email }}
+				</div>
+ 
+				<div class="town">
+				   <ion-icon src="assets/icons/map-pin.svg"></ion-icon
+				   >{{ user.town || 'misc.no-data' | translate }}
+				</div>-->
 				</div>
 
 				<!-- call user with hidden a tag -->

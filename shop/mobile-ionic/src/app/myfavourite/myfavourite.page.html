@@ -1,4 +1,61 @@
+<ion-header style="border-bottom: 1px solid gray;">
+	<ion-toolbar>
+		<!-- X -->
+		<!-- 화살표 -->
+		<ion-button
+			fill="clear"
+			size="small"
+			color="medium"
+			style="float: left;"
+		>
+			<ion-icon
+				mode="md"
+				src="assets/icons/arrow-round-back.svg"
+				style="color: black;"
+			></ion-icon>
+		</ion-button>
+
+		<ul>
+			<li>
+				<span id="notify-email">Notify by email</span>
+				<button
+					role="switch"
+					aria-checked="true"
+					aria-labelledby="notify-email"
+				>
+					<span>on</span>
+					<span>off</span>
+				</button>
+			</li>
+		</ul>
+	</ion-toolbar>
+
+	<!--서치바 영역-->
+	<div class="header">
+		<!--글자-->
+		<h1 class="sr">My favourite</h1>
+		<!--서치바-->
+		<ion-img
+			class="srbar"
+			src="../../assets/imgs/newPages/sr_bar.png"
+		></ion-img>
+	</div>
+</ion-header>
+
 <ion-content>
-	<ion-img class="img" src="/../assets/imgs/newPages/myfavourite.png">
-	</ion-img>
+	<h2>Notifications</h2>
+	<ul>
+		<li>
+			Notify by email
+			<span id="notify-email">Notify by email</span>
+			<button
+				role="switch"
+				aria-checked="true"
+				aria-labelledby="notify-email"
+			>
+				<span>on</span>
+				<span>off</span>
+			</button>
+		</li>
+	</ul>
 </ion-content>

@@ -1,0 +1,5 @@
+[role='switch'][aria-checked='true'] :first-child,
+[role='switch'][aria-checked='false'] :last-child {
+	background: #ff8c00;
+	color: red;
+}
