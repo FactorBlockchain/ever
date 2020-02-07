@@ -128,7 +128,7 @@ export class ProfileComponent extends Extender implements OnInit {
 	}
 
 	public gotomyorder() {
-		this.router.navigateByUrl('/order-history');
+		this.router.navigateByUrl('/orders-history');
 	}
 
 	public gotofriend() {

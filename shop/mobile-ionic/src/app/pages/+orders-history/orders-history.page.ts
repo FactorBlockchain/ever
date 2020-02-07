@@ -49,7 +49,7 @@ export class OrdersHistoryPage implements OnDestroy {
 	}
 
 	public gotomyorder() {
-		this.router.navigateByUrl('/order-history');
+		this.router.navigateByUrl('/orders-history');
 	}
 
 	public gotofriend() {
