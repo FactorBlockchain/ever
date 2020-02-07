@@ -68,21 +68,25 @@
 </ion-content>
 
 <ion-footer class="tabs">
-	<ion-button class="friend" color="gray5" (click)="gotofriend()">
-		<img src="/assets/imgs/friends.png" />
+	<ion-button class="friendbutton" color="gray5" (click)="gotofriend()">
+		<img class="friend" src="/assets/imgs/friends.png" />
 	</ion-button>
 
-	<ion-button class="chat" color="gray5" (click)="gotochat()">
-		<img src="/assets/imgs/chat.png" />
+	<ion-button class="chatbutton" color="gray5" (click)="gotochat()">
+		<img class="chat" src="/assets/imgs/chat.png" />
 	</ion-button>
-	<ion-button class="translator" color="gray5" (click)="gototranslator()">
-		<img src="/assets/imgs/translator.png" />
+	<ion-button
+		class="translatorbutton"
+		color="gray5"
+		(click)="gototranslator()"
+	>
+		<img class="translator" src="/assets/imgs/translator.png" />
 	</ion-button>
-	<ion-button class="pay" color="gray5" (click)="gotopay()">
-		<img src="/assets/imgs/pay.png" />
+	<ion-button class="paybutton" color="gray5" (click)="gotopay()">
+		<img class="pay" src="/assets/imgs/pay.png" />
 	</ion-button>
-	<ion-button class="setting" color="gray5" (click)="gotosetting()">
-		<img src="/assets/imgs/setting.png" />
+	<ion-button class="settingbutton" color="gray5" (click)="gotosetting()">
+		<img class="setting" src="/assets/imgs/setting.png" />
 	</ion-button>
 </ion-footer>
 

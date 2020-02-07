@@ -125,37 +125,54 @@
 
 	.tabs {
 		width: 100%;
-		height: 80px;
+		height: 10%;
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
 		background-color: rgba(248, 248, 248, 0.92);
 
-		.friend {
-			width: 75px;
-			height: 95px;
+		.friendbutton {
+			width: 18%;
 			--box-shadow: none;
-		}
-		.chat {
-			width: 66px;
-			height: 80px;
-			--box-shadow: none;
-		}
-		.translator {
-			width: 80px;
-			height: 100px;
-			--box-shadow: none;
+			.friend {
+				width: 180%;
+				max-height: 120%;
+				margin-bottom: 5%;
+			}
 		}
 
-		.pay {
-			width: 66px;
-			height: 80px;
+		.chatbutton {
+			width: 18%;
 			--box-shadow: none;
+			.chat {
+				width: 140%;
+				max-height: 120%;
+			}
+		}
+		.translatorbutton {
+			width: 18%;
+			--box-shadow: none;
+			.translator {
+				width: 200%;
+				max-height: 120%;
+			}
 		}
 
-		.setting {
-			width: 62px;
-			height: 76px;
+		.paybutton {
+			width: 18%;
 			--box-shadow: none;
+			.pay {
+				width: 100%;
+				max-height: 120%;
+			}
+		}
+
+		.settingbutton {
+			width: 18%;
+			--box-shadow: none;
+			.setting {
+				width: 80%;
+				max-height: 120%;
+			}
 		}
 	}
 }
