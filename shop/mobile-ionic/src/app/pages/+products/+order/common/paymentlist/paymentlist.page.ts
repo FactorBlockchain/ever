@@ -36,6 +36,7 @@ export class PaymentlistPage implements OnInit {
 
 	payWithPaypal() {
 		console.log('Pay ????');
+
 		this.payPal
 			.init({
 				PayPalEnvironmentProduction:

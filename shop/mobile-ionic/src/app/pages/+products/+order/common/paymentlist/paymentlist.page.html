@@ -1,25 +1,46 @@
 <!-- this files uses translations from ./language.i18n.json -->
 
 <ion-header no-border>
-	<ion-toolbar color="primary">
+	<ion-toolbar color="#FFF">
 		<ion-buttons slot="start">
-			<ion-button color="black" (click)="goBack()">
-				<i class="fa fa-angle-left back-btn"></i>
-				<span>Back</span>
+			<ion-button (click)="goBack()">
+				<ion-img src="../../../../../../assets/imgs/back.png"></ion-img>
+				<!--<i class="fa fa-angle-left back-btn"></i>
+				<span>Back</span>-->
 			</ion-button>
 		</ion-buttons>
-		<ion-title>Check out</ion-title>
+		<ion-title class="title">Check out</ion-title>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content scroll="false">
-	<ion-list>
-		<ion-item (click)="payWithIAMPORT()">
-			<ion-label>IAMPORT</ion-label>
-		</ion-item>
-		<ion-item (click)="payWithPaypal()">
-			<ion-label>PAYPAL</ion-label>
-		</ion-item>
+	<ion-card class="box">
+		<ion-list>
+			<ion-label class="subtitle">PAYMENT METHOD</ion-label>
+			<ion-button class="pay" (click)="payWithPaypal()">
+				<ion-img
+					class="img"
+					src="../../../../../../assets/imgs/paypal.png"
+				></ion-img>
+				<ion-label class="info">PAYPAL</ion-label>
+			</ion-button>
+			<ion-button class="pay" (click)="payWithIAMPORT()">
+				<ion-img
+					class="img"
+					src="../../../../../../assets/imgs/master.png"
+				></ion-img>
+				<ion-label class="info">IAMPORT</ion-label>
+			</ion-button>
+			<ion-button class="pay">
+				<ion-img
+					class="img"
+					src="../../../../../../assets/imgs/coin.png"
+				></ion-img>
+				<ion-label class="info">Packmam Blockchain FMX</ion-label>
+				<ion-checkbox class="check" color="packmam"></ion-checkbox>
+			</ion-button>
+		</ion-list>
+
 		<!-- <ion-item>
 				<ion-label>עברית</ion-label>
 				
@@ -28,5 +49,5 @@
 				<ion-label>Русский</ion-label>
 				
 			</ion-item> -->
-	</ion-list>
+	</ion-card>
 </ion-content>
