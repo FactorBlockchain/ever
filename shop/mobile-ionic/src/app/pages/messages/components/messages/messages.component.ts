@@ -249,7 +249,7 @@ export class MessagesComponent extends Extender implements OnInit {
 	}
 
 	public gototranslator() {
-		this.router.navigateByUrl('');
+		this.router.navigateByUrl('/translator');
 	}
 
 	public gotochat() {
