@@ -70,6 +70,8 @@
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
 		background-color: rgba(248, 248, 248, 0.92);
+		position: relative;
+		top: 50%;
 
 		.friend {
 			width: 75px;

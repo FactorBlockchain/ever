@@ -1,0 +1,15 @@
+.buttons {
+	width: 350px;
+	height: 25px;
+	font-size: 17px;
+}
+
+.title {
+	margin: 0 auto;
+}
+
+.done {
+	color: #ff8c00;
+	float: right;
+	text-align: right;
+}

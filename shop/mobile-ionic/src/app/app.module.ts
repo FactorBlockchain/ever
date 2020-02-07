@@ -63,7 +63,6 @@ import {
 } from '@ionic-native/contacts';
 import { File } from '@ionic-native/file/ngx';
 
-// git fetch origin UI -> git pull testing by kevin
 @NgModule({
 	declarations: [AppComponent],
 	imports: [

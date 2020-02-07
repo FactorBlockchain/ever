@@ -1,0 +1,111 @@
+.header {
+	height: 180px;
+}
+
+.sr {
+	margin: 45px 0 0 12px;
+	float: left;
+}
+
+.srbar {
+	width: 343px;
+	height: 36px;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.call {
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.33;
+	letter-spacing: -0.24px;
+	color: #ff8c00;
+	float: right;
+	text-align: right;
+}
+
+.img {
+	width: 165px;
+	height: 191px;
+	border-radius: 8px;
+}
+
+.box {
+	width: 345px;
+	height: 129px;
+	border-radius: 8px;
+	box-shadow: 0 8px 10px 0 #d2d3d7;
+	background-color: #ffffff;
+	margin: 15px 5px 15px 9px;
+}
+.pic {
+	position: relative;
+	float: left;
+	margin: 20px 15px 19px 15px;
+}
+.letter {
+	position: relative;
+	float: left;
+	margin-top: 20px;
+}
+.bookmark {
+	position: relative;
+	float: left;
+	width: 25.7px;
+	height: 33.6px;
+}
+
+.pin_part {
+	position: relative;
+	float: left;
+	margin: 5px 0 5px 0;
+}
+
+.pin {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	float: left;
+	margin: 0 0 0 0;
+}
+
+.lit_letter {
+	height: 20px;
+	position: relative;
+	float: left;
+}
+
+.score_part {
+	position: relative;
+	float: left;
+}
+
+.star {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	float: left;
+}
+
+.score {
+	height: 17px;
+	position: relative;
+	float: left;
+}
+
+.rating {
+	height: 17px;
+	position: relative;
+	float: left;
+}
+.free {
+	width: 77px;
+	height: 17px;
+	position: relative;
+	float: left;
+	margin-left: 20px;
+}
