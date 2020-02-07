@@ -19,49 +19,49 @@ iframe {
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	background-color: rgba(248, 248, 248, 0.92);
+}
+.friendbutton {
+	width: 18%;
+	--box-shadow: none;
+}
+.friend {
+	width: 180%;
+	max-height: 120%;
+	margin-bottom: 5%;
+}
 
-	.friendbutton {
-		width: 18%;
-		--box-shadow: none;
-		.friend {
-			width: 180%;
-			max-height: 120%;
-			margin-bottom: 5%;
-		}
-	}
+.chatbutton {
+	width: 18%;
+	--box-shadow: none;
+}
+.chat {
+	width: 140%;
+	max-height: 120%;
+}
 
-	.chatbutton {
-		width: 18%;
-		--box-shadow: none;
-		.chat {
-			width: 140%;
-			max-height: 120%;
-		}
-	}
-	.translatorbutton {
-		width: 18%;
-		--box-shadow: none;
-		.translator {
-			width: 200%;
-			max-height: 120%;
-		}
-	}
+.translatorbutton {
+	width: 18%;
+	--box-shadow: none;
+}
+.translator {
+	width: 200%;
+	max-height: 120%;
+}
 
-	.paybutton {
-		width: 18%;
-		--box-shadow: none;
-		.pay {
-			width: 100%;
-			max-height: 120%;
-		}
-	}
+.paybutton {
+	width: 18%;
+	--box-shadow: none;
+}
+.pay {
+	width: 100%;
+	max-height: 120%;
+}
 
-	.settingbutton {
-		width: 18%;
-		--box-shadow: none;
-		.setting {
-			width: 80%;
-			max-height: 120%;
-		}
-	}
+.settingbutton {
+	width: 18%;
+	--box-shadow: none;
+}
+.setting {
+	width: 80%;
+	max-height: 120%;
 }

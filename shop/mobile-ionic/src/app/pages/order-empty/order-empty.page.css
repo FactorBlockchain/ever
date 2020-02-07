@@ -1,3 +1,6 @@
+.title {
+	text-align: center;
+}
 .ion-content {
 	background-color: beige;
 }
@@ -6,9 +9,6 @@
 	margin-right: 10px;
 	margin-bottom: 4px;
 	color: black;
-}
-.myorder {
-	margin-left: 85px;
 }
 .emptylogo {
 	width: 80%;
