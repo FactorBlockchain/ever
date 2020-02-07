@@ -15,11 +15,11 @@
 			},
 			"oauth_client": [
 				{
-					"client_id": "260548356737-ajqvb92rpujdubcn83r1tg5u6kgjesgb.apps.googleusercontent.com",
+					"client_id": "260548356737-j502fa8aum8rt6qnfeug17pltnnvgjo0.apps.googleusercontent.com",
 					"client_type": 1,
 					"android_info": {
 						"package_name": "com.factor.messenger",
-						"certificate_hash": "c96411f9592d21d4af6f4375936dd26c6ae49cf0"
+						"certificate_hash": "033fccc0b98e40fb92237670ad790192173e6527"
 					}
 				},
 				{
