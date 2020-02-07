@@ -5,6 +5,7 @@
 	<div class="content-wrapper">
 		<ion-card>
 			<ion-card-content>
+				<ion-img class="user" src="./assets/imgs/avatar.jpg"></ion-img>
 				<!-- image of receipeint -->
 				<!--<div
 					class="image"
@@ -17,7 +18,7 @@
 				></div>-->
 
 				<!-- details of chat -->
-				<div class="detail" (click)="openChat(item.id)">
+				<!--<div class="detail" (click)="openChat(item.id)">
 					<div class="name">{{ getSender(item).displayName }}</div>
 					<div class="msg">
 						{{
@@ -25,7 +26,7 @@
 								'messages-component.start-chatting' | translate
 						}}
 					</div>
-				</div>
+				</div>-->
 
 				<!--<div class="Cameron-Cook">
 					<ion-label>
@@ -149,17 +150,25 @@
 		</ion-list>
 	</div>
 	<ion-footer class="tabs">
-		<ion-button class="explorer" color="gray5" (click)="gotoexplorer()">
-			<img src="/assets/imgs/tabexplorer.png" />
+		<ion-button
+			class="explorerbutton"
+			color="gray5"
+			(click)="gotoexplorer()"
+		>
+			<img
+				class="explorer"
+				width="150%"
+				src="/assets/imgs/tabexplorer.png"
+			/>
 		</ion-button>
-		<ion-button class="myorder" color="gray5" (click)="gotomyorder()">
-			<img src="/assets/imgs/myorder.png" />
+		<ion-button class="myorderbutton" color="gray5" (click)="gotomyorder()">
+			<img class="myorder" src="/assets/imgs/myorder.png" />
 		</ion-button>
-		<ion-button class="friend" color="gray5" (click)="gotofriend()">
-			<img src="/assets/imgs/tabfavorite.png" />
+		<ion-button class="friendbutton" color="gray5" (click)="gotofriend()">
+			<img class="friend" src="/assets/imgs/tabfavorite.png" />
 		</ion-button>
-		<ion-button class="profile" color="gray5" (click)="gotoprofile()">
-			<img src="/assets/imgs/tabprofile.png" />
+		<ion-button class="profilebutton" color="gray5" (click)="gotoprofile()">
+			<img class="profile" src="/assets/imgs/tabprofile.png" />
 		</ion-button>
 	</ion-footer>
 </ion-content>
