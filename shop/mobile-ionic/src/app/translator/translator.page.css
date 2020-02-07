@@ -25,7 +25,7 @@ iframe {
 	--box-shadow: none;
 }
 .friend {
-	width: 180%;
+	width: 200%;
 	max-height: 120%;
 	margin-bottom: 5%;
 }
@@ -35,7 +35,7 @@ iframe {
 	--box-shadow: none;
 }
 .chat {
-	width: 140%;
+	width: 130%;
 	max-height: 120%;
 }
 
@@ -44,7 +44,7 @@ iframe {
 	--box-shadow: none;
 }
 .translator {
-	width: 200%;
+	width: 250%;
 	max-height: 120%;
 }
 
