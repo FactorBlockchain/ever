@@ -12,14 +12,14 @@ h1 {
 	width: 220px;
 	font-weight: 200;
 	text-align: center;
-	color: #fff;
+	color: black;
 	margin: 13px auto 0 auto;
 }
 
 h2 {
 	font-family: 'Open Sans Hebrew', '-apple-system', 'Helvetica Neue', 'Roboto',
 		'Segoe UI', sans-serif;
-	color: #fff;
+	color: black;
 	opacity: 0.6;
 	font-size: 14px;
 	line-height: 20px;
@@ -32,6 +32,7 @@ select {
 	@extend .everbie-input;
 	margin: 10px auto;
 	width: 100%;
+	color: black;
 	background-color: transparent !important;
 }
 
@@ -47,6 +48,7 @@ select {
 
 		input {
 			margin: 0;
+			color: black;
 		}
 	}
 
@@ -64,12 +66,13 @@ select {
 		}
 		input {
 			margin: 0;
+			color: black;
 		}
 	}
 
 	.is-apartment {
 		margin-top: 10px;
-		color: #eee;
+		color: black;
 		border: none;
 
 		.description {
@@ -120,6 +123,6 @@ ion-toggle#toggle {
 #toggleLabel {
 	display: inline-block;
 	width: 100px;
-	color: white;
+	color: black;
 	padding-top: 12px;
 }

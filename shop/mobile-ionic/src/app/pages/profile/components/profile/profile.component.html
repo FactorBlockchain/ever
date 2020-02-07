@@ -5,15 +5,33 @@
 	<div class="content-wrapper">
 		<ion-card>
 			<ion-card-content>
-				<div class="imageRectangle">
-					<img src="/assets/xd/profilepic.png" />
+				<!-- image of receipeint -->
+				<!--<div
+					class="image"
+					[image-loader]="getSender(item).photoURL"
+					(click)="
+						goto(routes.people, {
+							queryParams: { id: getSender(item).uid }
+						})
+					"
+				></div>-->
+
+				<!-- details of chat -->
+				<div class="detail" (click)="openChat(item.id)">
+					<div class="name">{{ getSender(item).displayName }}</div>
+					<div class="msg">
+						{{
+							getLastMessage(item)?.value ||
+								'messages-component.start-chatting' | translate
+						}}
+					</div>
 				</div>
 
-				<div class="Cameron-Cook">
+				<!--<div class="Cameron-Cook">
 					<ion-label>
 						Cameron Cook
 					</ion-label>
-				</div>
+				</div>-->
 			</ion-card-content>
 		</ion-card>
 
