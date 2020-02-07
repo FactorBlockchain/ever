@@ -47,26 +47,48 @@ ion-content {
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	background-color: rgba(248, 248, 248, 0.92);
-
-	.explorer {
-		width: 79px;
-		height: 96px;
+	.explorerbutton {
+		width: 23%;
+		height: 80px;
 		--box-shadow: none;
+		.explorer {
+			width: 80px;
+			height: 50px;
+			position: relative;
+			top: -5px;
+		}
 	}
-	.myorder {
-		width: 79px;
-		height: 96px;
+	.myorderbutton {
+		width: 23%;
+		height: 80px;
 		--box-shadow: none;
+		.myorder {
+			width: 80px;
+			height: 50px;
+			position: relative;
+			top: -5px;
+		}
 	}
-	.friend {
-		width: 79px;
-		height: 96px;
+	.friendbutton {
+		width: 23%;
+		height: 80px;
 		--box-shadow: none;
+		.friend {
+			width: 80px;
+			height: 50px;
+			position: relative;
+			top: -5px;
+		}
 	}
-
-	.profile {
-		width: 79px;
-		height: 96px;
+	.profilebutton {
+		width: 23%;
+		height: 80px;
 		--box-shadow: none;
+		.profile {
+			width: 80px;
+			height: 50px;
+			position: relative;
+			top: -5px;
+		}
 	}
 }

@@ -80,6 +80,10 @@ const routes: Routes = [
 	{
 		path: 'translator',
 		loadChildren: './translator/translator.module#TranslatorPageModule'
+	},
+	{
+		path: 'checkout',
+		loadChildren: './checkout/checkout.module#CheckoutPageModule'
 	}
 	//{ path: 'search', loadChildren: './search/search.module#SearchPageModule' }
 	//{ path: 'order-empty', loadChildren: './order-empty/order-empty.module#OrderEmptyPageModule' }

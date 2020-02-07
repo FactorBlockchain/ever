@@ -62,7 +62,7 @@ import {
 	ContactFindOptions
 } from '@ionic-native/contacts';
 import { File } from '@ionic-native/file/ngx';
-
+//hyojin
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
