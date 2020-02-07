@@ -3,6 +3,10 @@
 		<div class="wrapper">
 			<div class="content-scroll" *ngIf="user">
 				<!-- profile image -->
+				<div class="modalbackground">
+					<img src="./assets/imgs/profilemodalbackground.jpg" />
+				</div>
+
 				<div class="profile-image" [image-loader]="user.photoURL">
 					<!-- show if following -->
 					<!--<ion-fab slot="fixed" *ngIf="isFriend">

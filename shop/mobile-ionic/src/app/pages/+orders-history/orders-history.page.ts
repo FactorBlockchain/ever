@@ -39,7 +39,7 @@ export class OrdersHistoryPage implements OnDestroy {
 		this._ngDestroy$.complete();
 	}
 	goToProductPage() {
-		this.router.navigateByUrl(this.prevUrl);
+		this.router.navigateByUrl('/products');
 	}
 	getStatusText(order: Order) {
 		return order.getStatusText(this._store.language);

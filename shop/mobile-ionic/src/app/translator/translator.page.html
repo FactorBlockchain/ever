@@ -1,11 +1,32 @@
-<ion-header no-border>
-	<app-chatheader></app-chatheader>
-</ion-header>
-
 <ion-content>
-	<iframe
-		src="https://translate.kakao.com/"
-		class="iframe"
-		scrolling="yes"
-	></iframe>
+	<div class="translatorclass">
+		<iframe
+			src="https://translate.kakao.com/"
+			class="iframe"
+			scrolling="yes"
+		></iframe>
+	</div>
+
+	<ion-footer class="tabs">
+		<ion-button class="friendbutton" color="gray5" (click)="gotofriend()">
+			<img class="friend" src="/assets/imgs/friends.png" />
+		</ion-button>
+
+		<ion-button class="chatbutton" color="gray5" (click)="gotochat()">
+			<img class="chat" src="/assets/imgs/chat.png" />
+		</ion-button>
+		<ion-button
+			class="translatorbutton"
+			color="gray5"
+			(click)="gototranslator()"
+		>
+			<img class="translator" src="/assets/imgs/translator.png" />
+		</ion-button>
+		<ion-button class="paybutton" color="gray5" (click)="gotopay()">
+			<img class="pay" src="/assets/imgs/pay.png" />
+		</ion-button>
+		<ion-button class="settingbutton" color="gray5" (click)="gotosetting()">
+			<img class="setting" src="/assets/imgs/setting.png" />
+		</ion-button>
+	</ion-footer>
 </ion-content>

@@ -16,11 +16,19 @@
 				.content-scroll {
 					height: calc(100% - 45px);
 
+					.modalbackground {
+						position: relative;
+						margin-top: -50px;
+						left: 4px;
+					}
+
 					.profile-image {
 						height: 100px;
 						width: 100px;
 						margin: 20% auto 0px;
 						border-radius: 50%;
+						position: relative;
+						margin-top: -50px;
 
 						.chat {
 							position: relative;
